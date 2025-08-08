@@ -188,7 +188,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
             margin-bottom: 3rem;
         }
@@ -835,6 +835,7 @@
             .packages-grid,
             .pricing-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
             
             .newsletter-form {
@@ -882,6 +883,11 @@
                     <div class="service-icon">📝</div>
                     <h3>Prompt Engineering</h3>
                     <p>Specjalistyczne tworzenie i optymalizacja promptów dla modeli AI. Maksymalizujemy efektywność komunikacji z AI poprzez precyzyjne instrukcje i zaawansowane techniki promptowania.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Materiały Marketingowe AI</h3>
+                    <p>Tworzenie profesjonalnych materiałów marketingowych z wykorzystaniem sztucznej inteligencji. Treści reklamowe, posty społecznościowe, kampanie e-mailowe i grafiki generowane przez AI.</p>
                 </div>
             </div>
         </div>
@@ -984,6 +990,7 @@
                             <option value="fit-ai">Pakiet Fit-AI</option>
                             <option value="doradztwo">Doradztwo AI dla Firm</option>
                             <option value="prompt-engineering">Prompt Engineering</option>
+                            <option value="materialy-marketingowe">Materiały Marketingowe AI</option>
                             <option value="inne">Inne</option>
                         </select>
                     </div>
@@ -1009,7 +1016,7 @@
                         <input type="checkbox" id="privacy" name="privacy" required>
                         <label for="privacy">
                             Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z 
-                            <a href="#" style="color: #00f5ff; text-decoration: underline;">Polityką Prywatności</a> 
+                            <a href="#" onclick="openPrivacyModal()" style="color: #00f5ff; text-decoration: underline;">Polityką Prywatności</a> 
                             w celu kontaktu związanego z zapytaniem. *
                         </label>
                     </div>
@@ -1030,6 +1037,95 @@
         </div>
     </section>
 
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content" style="max-width: 800px; max-height: 80vh; overflow-y: auto;">
+            <span class="close" onclick="closePrivacyModal()">&times;</span>
+            <h2 style="color: #00f5ff; margin-bottom: 2rem; font-size: 2rem; text-align: center;">Polityka Prywatności</h2>
+            
+            <div style="line-height: 1.8; color: #e0e0e0;">
+                <h3 style="color: #ffffff; margin: 2rem 0 1rem 0; font-size: 1.3rem;">1. Administrator Danych</h3>
+                <p>Administratorem Państwa danych osobowych jest <strong>BrightMind AI Solutions</strong>.</p>
+                
+                <h3 style="color: #ffffff; margin: 2rem 0 1rem 0; font-size: 1.3rem;">2. Cele Przetwarzania Danych</h3>
+                <p>Dane osobowe są przetwarzane w następujących celach:</p>
+                <ul style="margin: 1rem 0; padding-left: 2rem;">
+                    <li>Kontakt w związku z zapytaniem przesłanym przez formularz</li>
+                    <li>Przygotowanie i przedstawienie oferty usług</li>
+                    <li>Realizacja zawartej umowy</li>
+                    <li>Wysyłanie newslettera (za zgodą)</li>
+                    <li>Marketing bezpośredni własnych produktów i usług (za zgodą)</li>
+                </ul>
+                
+                <h3 style="color: #ffffff; margin: 2rem 0 1rem 0; font-size: 1.3rem;">3. Podstawa Prawna</h3>
+                <p>Podstawą prawną przetwarzania danych jest:</p>
+                <ul style="margin: 1rem 0; padding-left: 2rem;">
+                    <li><strong>Art. 6 ust. 1 lit. a RODO</strong> - zgoda (newsletter, marketing)</li>
+                    <li><strong>Art. 6 ust. 1 lit. b RODO</strong> - wykonanie umowy</li>
+                    <li><strong>Art. 6 ust. 1 lit. f RODO</strong> - prawnie uzasadniony interes (kontakt biznesowy)</li>
+                </ul>
+                
+                <h3 style="color: #ffffff; margin: 2rem 0 1rem 0; font-size: 1.3rem;">4. Odbiorcy Danych</h3>
+                <p>Dane osobowe mogą być przekazywane:</p>
+                <ul style="margin: 1rem 0; padding-left: 2rem;">
+                    <li>Dostawcom usług IT (hosting, e-mail)</li>
+                    <li>Firmom księgowym</li>
+                    <li>Organom państwowym na podstawie przepisów prawa</li>
+                </ul>
+                
+                <h3 style="color: #ffffff; margin: 2rem 0 1rem 0; font-size: 1.3rem;">5. Okres Przechowywania</h3>
+                <p>Dane będą przechowywane:</p>
+                <ul style="margin: 1rem 0; padding-left: 2rem;">
+                    <li>Do realizacji umowy i rozliczenia zobowiązań</li>
+                    <li>Do czasu cofnięcia zgody (newsletter, marketing)</li>
+                    <li>Przez okres wymagany przepisami prawa</li>
+                    <li>Maksymalnie przez 6 lat od ostatniego kontaktu</li>
+                </ul>
+                
+                <h3 style="color: #ffffff; margin: 2rem 0 1rem 0; font-size: 1.3rem;">6. Prawa Osoby, Której Dane Dotyczą</h3>
+                <p>Przysługują Państwu następujące prawa:</p>
+                <ul style="margin: 1rem 0; padding-left: 2rem;">
+                    <li><strong>Prawo dostępu</strong> do swoich danych osobowych</li>
+                    <li><strong>Prawo do sprostowania</strong> nieprawidłowych danych</li>
+                    <li><strong>Prawo do usunięcia</strong> danych ("prawo do bycia zapomnianym")</li>
+                    <li><strong>Prawo do ograniczenia</strong> przetwarzania</li>
+                    <li><strong>Prawo do przenoszenia</strong> danych</li>
+                    <li><strong>Prawo sprzeciwu</strong> wobec przetwarzania</li>
+                    <li><strong>Prawo do cofnięcia zgody</strong> w dowolnym momencie</li>
+                </ul>
+                
+                <h3 style="color: #ffffff; margin: 2rem 0 1rem 0; font-size: 1.3rem;">7. Skarga do Organu Nadzorczego</h3>
+                <p>W przypadku naruszenia przepisów o ochronie danych osobowych, przysługuje Państwu prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych.</p>
+                
+                <h3 style="color: #ffffff; margin: 2rem 0 1rem 0; font-size: 1.3rem;">8. Automatyczne Podejmowanie Decyzji</h3>
+                <p>Państwa dane nie będą podlegać zautomatyzowanemu podejmowaniu decyzji, w tym profilowaniu.</p>
+                
+                <h3 style="color: #ffffff; margin: 2rem 0 1rem 0; font-size: 1.3rem;">9. Dobrowolność Podania Danych</h3>
+                <p>Podanie danych osobowych jest dobrowolne, jednak niezbędne do realizacji usługi lub kontaktu. Pola oznaczone gwiazdką (*) są obowiązkowe.</p>
+                
+                <h3 style="color: #ffffff; margin: 2rem 0 1rem 0; font-size: 1.3rem;">10. Kontakt w Sprawach Ochrony Danych</h3>
+                <p>W sprawach dotyczących ochrony danych osobowych można kontaktować się:</p>
+                <ul style="margin: 1rem 0; padding-left: 2rem;">
+                    <li>Mailowo: <strong style="color: #00f5ff;">privacy@brightmind-ai.com</strong></li>
+                    <li>Pisemnie na adres siedziby firmy</li>
+                </ul>
+                
+                <div style="margin-top: 3rem; padding: 1.5rem; background: rgba(0, 245, 255, 0.1); border-radius: 12px; border: 1px solid rgba(0, 245, 255, 0.3);">
+                    <p style="color: #00f5ff; font-weight: 600; margin-bottom: 1rem;">⚡ Ważne informacje:</p>
+                    <ul style="margin: 0; padding-left: 2rem; color: #b0b0b0;">
+                        <li>Zgoda może być cofnięta w dowolnym momencie</li>
+                        <li>Cofnięcie zgody nie wpływa na zgodność z prawem przetwarzania przed cofnięciem</li>
+                        <li>Dane są chronione zgodnie z najwyższymi standardami bezpieczeństwa</li>
+                    </ul>
+                </div>
+                
+                <p style="margin-top: 2rem; text-align: center; color: #b0b0b0; font-size: 0.9rem;">
+                    Ostatnia aktualizacja: <strong>8 sierpnia 2025</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
         <p>&copy; 2024 BrightMind AI Solutions. Wszystkie prawa zastrzeżone.</p>
         <p>Transformujemy przyszłość biznesu z pomocą sztucznej inteligencji.</p>
@@ -1041,6 +1137,30 @@
                 behavior: 'smooth'
             });
         }
+
+        // Privacy Modal Functions
+        function openPrivacyModal() {
+            document.getElementById('privacyModal').style.display = 'block';
+        }
+
+        function closePrivacyModal() {
+            document.getElementById('privacyModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('privacyModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closePrivacyModal();
+            }
+        });
 
         // Form submission handling
         document.getElementById('contactForm').addEventListener('submit', function(e) {
