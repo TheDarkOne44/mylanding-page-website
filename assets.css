@@ -584,6 +584,46 @@ body {
     background: rgba(255, 255, 255, 0.08);
 }
 
+/* Stylowanie scrollbara dla select */
+.form-group select {
+    scrollbar-width: thin;
+    scrollbar-color: #00f5ff rgba(255, 255, 255, 0.1);
+}
+
+.form-group select::-webkit-scrollbar {
+    width: 8px;
+}
+
+.form-group select::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.form-group select::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #00f5ff, #ff00ff);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-group select::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #00d4e6, #e600e6);
+    box-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+}
+
+/* Stylowanie opcji w select */
+.form-group select option {
+    background: #1a1a2e;
+    color: #ffffff;
+    padding: 0.5rem;
+    border: none;
+}
+
+.form-group select option:hover,
+.form-group select option:checked {
+    background: linear-gradient(135deg, rgba(0, 245, 255, 0.2), rgba(255, 0, 255, 0.2));
+    color: #00f5ff;
+}
+
 .form-group textarea {
     min-height: 120px;
     resize: vertical;
