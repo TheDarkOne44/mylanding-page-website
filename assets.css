@@ -612,7 +612,7 @@ body {
 
 /* Stylowanie opcji w select */
 .form-group select option {
-    background: #1a1a2e;
+    background: #1a1a2e !important;
     color: #ffffff;
     padding: 0.5rem;
     border: none;
@@ -620,8 +620,19 @@ body {
 
 .form-group select option:hover,
 .form-group select option:checked {
-    background: linear-gradient(135deg, rgba(0, 245, 255, 0.2), rgba(255, 0, 255, 0.2));
-    color: #00f5ff;
+    background: #0f0f23 !important;
+    color: #00f5ff !important;
+}
+
+/* Dodatkowe stylowanie dla różnych przeglądarek */
+.form-group select {
+    background: rgba(26, 26, 46, 0.9) !important;
+    color: #ffffff !important;
+}
+
+.form-group select optgroup {
+    background: #1a1a2e !important;
+    color: #ffffff !important;
 }
 
 .form-group textarea {
