@@ -1,0 +1,19 @@
+# Robots.txt for BrightMind AI Solutions
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://brightmind-ai.netlify.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block access to admin areas (if any in future)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.log$
+
+# Allow important files
+Allow: /assets.css
+Allow: /assets.js
+Allow: /_headers
