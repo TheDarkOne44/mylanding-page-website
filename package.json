@@ -1,0 +1,14 @@
+{
+  "name": "brightmind-ai-website",
+  "version": "1.0.0",
+  "description": "BrightMind AI Solutions - Professional AI implementation website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": ["ai", "artificial-intelligence", "business", "consulting"],
+  "author": "BrightMind AI Solutions",
+  "license": "MIT",
+  "type": "module"
+}
