@@ -8,6 +8,16 @@
     console.log('%cTo jest funkcja przeglądarki przeznaczona dla programistów. Jeśli ktoś powiedział ci, żebyś tutaj coś wkleił, to prawdopodobnie próbuje cię oszukać.', 'color: red; font-size: 16px;');
   }
 
+  // Zabezpieczenie przed osadzaniem w iframe
+  try {
+    if (window.self !== window.top) {
+      window.top.location.href = window.self.location.href;
+    }
+  } catch (e) {
+    // Ignoruj błędy SecurityError w środowiskach z ograniczeniami CORS
+    console.warn('Iframe protection blocked by security policy');
+  }
+
   // Wyłączenie prawego przycisku myszy (opcjonalne - może być irytujące dla użytkowników)
   // document.addEventListener('contextmenu', e => e.preventDefault());
 
