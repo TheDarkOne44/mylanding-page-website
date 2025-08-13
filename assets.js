@@ -8,11 +8,6 @@
     console.log('%cTo jest funkcja przeglądarki przeznaczona dla programistów. Jeśli ktoś powiedział ci, żebyś tutaj coś wkleił, to prawdopodobnie próbuje cię oszukać.', 'color: red; font-size: 16px;');
   }
 
-  // Zabezpieczenie przed otwieraniem w iframe
-  if (window.top !== window.self) {
-    window.top.location = window.self.location;
-  }
-
   // Wyłączenie prawego przycisku myszy (opcjonalne - może być irytujące dla użytkowników)
   // document.addEventListener('contextmenu', e => e.preventDefault());
 
