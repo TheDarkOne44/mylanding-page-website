@@ -507,6 +507,95 @@ body {
     z-index: 1;
 }
 
+.contact-info {
+    margin-bottom: 4rem;
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 245, 255, 0.3);
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 245, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.contact-item:hover::before {
+    opacity: 1;
+}
+
+.contact-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 245, 255, 0.25);
+    border-color: rgba(0, 245, 255, 0.5);
+}
+
+.contact-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(45deg, #00f5ff, #ff00ff);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    position: relative;
+    animation: iconPulse 3s ease-in-out infinite;
+    box-shadow: 0 8px 25px rgba(0, 245, 255, 0.3);
+}
+
+@keyframes iconPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.contact-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-item a {
+    color: #00f5ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-item a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.8);
+}
+
 .success-message {
     background: linear-gradient(135deg, rgba(0, 255, 0, 0.1), rgba(0, 255, 255, 0.1));
     border: 1px solid rgba(0, 255, 0, 0.3);
@@ -852,6 +941,21 @@ body {
         padding: 2rem 1.5rem;
     }
     
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .contact-item {
+        padding: 2rem 1.5rem;
+    }
+    
+    .contact-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+    
     .modal-content {
         margin: 10% auto;
         padding: 2rem;
@@ -880,6 +984,16 @@ body {
     
     .contact-form {
         padding: 1.5rem 1rem;
+    }
+    
+    .contact-item {
+        padding: 1.5rem 1rem;
+    }
+    
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
     }
     
     .checkbox-group {
