@@ -4,8 +4,10 @@
 
   // Zabezpieczenie przed console manipulation
   if (typeof console !== 'undefined') {
-    console.log('%cSTOP!', 'color: red; font-size: 50px; font-weight: bold;');
-    console.log('%cTo jest funkcja przeglądarki przeznaczona dla programistów. Jeśli ktoś powiedział ci, żebyś tutaj coś wkleił, to prawdopodobnie próbuje cię oszukać.', 'color: red; font-size: 16px;');
+    const warningStyle = 'color: red; font-size: 50px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);';
+    const messageStyle = 'color: red; font-size: 16px; font-weight: bold; background: yellow; padding: 10px; border-radius: 5px;';
+    console.log('%cSTOP!', warningStyle);
+    console.log('%c⚠️ UWAGA! To jest funkcja przeglądarki przeznaczona dla programistów. Jeśli ktoś powiedział ci, żebyś tutaj coś wkleił, to prawdopodobnie próbuje cię oszukać i ukraść Twoje dane! NIE WKLEJAJ TUTAJ ŻADNEGO KODU!', messageStyle);
   }
 
   // Zabezpieczenie przed osadzaniem w iframe
@@ -56,13 +58,30 @@
   // Stan ładowania dla przycisków submit (nie blokujemy POST do Netlify!)
   document.querySelectorAll('form').forEach(form => {
     form.addEventListener('submit', () => {
-      // Walidacja formularza przed wysłaniem
+      // Dodatkowa walidacja bezpieczeństwa przed wysłaniem
       const requiredFields = form.querySelectorAll('[required]');
       let isValid = true;
       
       requiredFields.forEach(field => {
-        if (!field.value.trim()) {
+        const value = field.value.trim();
+        if (!value) {
           isValid = false;
+          return;
+        }
+        
+        // Sprawdzenie na potencjalnie niebezpieczne znaki
+        if (/<script|javascript:|data:|vbscript:|on\w+\s*=/i.test(value)) {
+          console.warn('Wykryto potencjalnie niebezpieczną zawartość w polu:', field.name);
+          isValid = false;
+          alert('Wykryto nieprawidłowe znaki w formularzu. Proszę sprawdzić wprowadzone dane.');
+          return;
+        }
+        
+        // Sprawdzenie długości pól
+        if (value.length > (field.maxLength || 2000)) {
+          isValid = false;
+          alert('Jedno z pól zawiera zbyt długi tekst.');
+          return;
         }
       });
       
@@ -81,10 +100,12 @@
   // Zabezpieczenie przed XSS w URL parameters
   const urlParams = new URLSearchParams(window.location.search);
   urlParams.forEach((value, key) => {
-    if (/<script|javascript:|data:|vbscript:/i.test(value)) {
+    if (/<script|javascript:|data:|vbscript:|on\w+\s*=|eval\(|expression\(/i.test(value)) {
       console.warn('Potencjalnie niebezpieczny parametr URL wykryty:', key, value);
-      // Opcjonalnie: przekieruj na czystą stronę
-      // window.location.href = window.location.pathname;
+      // Przekieruj na czystą stronę dla bezpieczeństwa
+      if (window.location.search) {
+        window.location.href = window.location.pathname;
+      }
     }
   });
 
@@ -93,13 +114,28 @@
     mutations.forEach(mutation => {
       mutation.addedNodes.forEach(node => {
         if (node.nodeType === 1) { // Element node
-          // Sprawdź czy dodany element zawiera potencjalnie niebezpieczne atrybuty
+          // Sprawdź czy dodany element zawiera potencjalnie niebezpieczne atrybuty lub zawartość
           if (node.hasAttribute && (
             node.hasAttribute('onload') ||
             node.hasAttribute('onerror') ||
-            node.hasAttribute('onclick')
+            node.hasAttribute('onclick') ||
+            node.hasAttribute('onmouseover') ||
+            node.hasAttribute('onfocus') ||
+            /on\w+/.test(node.outerHTML)
           )) {
             console.warn('Wykryto potencjalnie niebezpieczny element:', node);
+            // Usuń niebezpieczny element
+            if (node.parentNode) {
+              node.parentNode.removeChild(node);
+            }
+          }
+          
+          // Sprawdź zawartość tekstową na niebezpieczne skrypty
+          if (node.innerHTML && /<script|javascript:|vbscript:/i.test(node.innerHTML)) {
+            console.warn('Wykryto potencjalnie niebezpieczną zawartość:', node);
+            if (node.parentNode) {
+              node.parentNode.removeChild(node);
+            }
           }
         }
       });
@@ -110,4 +146,20 @@
     childList: true,
     subtree: true
   });
+
+  // Dodatkowe zabezpieczenie przed manipulacją formularza
+  const originalFormAction = document.querySelector('form')?.action;
+  setInterval(() => {
+    const form = document.querySelector('form');
+    if (form && form.action !== originalFormAction && form.action !== '/success.html') {
+      console.warn('Wykryto próbę zmiany akcji formularza!');
+      form.action = '/success.html';
+    }
+  }, 1000);
+
+  // Zabezpieczenie przed clickjacking
+  if (window.self !== window.top) {
+    document.body.style.display = 'none';
+    alert('Ta strona nie może być wyświetlana w ramce z powodów bezpieczeństwa.');
+  }
 })();

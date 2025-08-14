@@ -7,6 +7,7 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.netlify.com; form-action 'self' https://brightmind-ai.netlify.app;">
     <title>BrightMind AI Solutions - Eksperckie Wdrożenia AI dla Biznesu | Doradztwo AI</title>
     <meta name="description" content="🚀 Profesjonalne wdrożenia sztucznej inteligencji dla firm. Doradztwo AI, korepetycje, prompt engineering i materiały marketingowe. Transformuj swój biznes z AI!">
     <meta name="keywords" content="sztuczna inteligencja, AI dla biznesu, doradztwo AI, wdrożenia AI, prompt engineering, korepetycje AI, automatyzacja procesów, ChatGPT dla firm, Claude AI, materiały marketingowe AI">
@@ -243,22 +244,22 @@
                     
                     <div class="form-group">
                         <label for="name">Imię i nazwisko *</label>
-                        <input type="text" id="name" name="name" required placeholder="Wprowadź swoje imię i nazwisko">
+                        <input type="text" id="name" name="name" required placeholder="Wprowadź swoje imię i nazwisko" maxlength="100" pattern="[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż\s]{2,100}" title="Tylko litery i spacje, 2-100 znaków">
                     </div>
                     
                     <div class="form-group">
                         <label for="email">Adres e-mail *</label>
-                        <input type="email" id="email" name="email" required placeholder="twoj@email.com">
+                        <input type="email" id="email" name="email" required placeholder="twoj@email.com" maxlength="254" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Wprowadź poprawny adres email">
                     </div>
                     
                     <div class="form-group">
                         <label for="phone">Numer telefonu</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+48 123 456 789">
+                        <input type="tel" id="phone" name="phone" placeholder="+48 123 456 789" maxlength="20" pattern="[\+]?[0-9\s\-\(\)]{9,20}" title="Wprowadź poprawny numer telefonu">
                     </div>
                     
                     <div class="form-group">
                         <label for="company">Nazwa firmy</label>
-                        <input type="text" id="company" name="company" placeholder="Nazwa Twojej firmy (opcjonalne)">
+                        <input type="text" id="company" name="company" placeholder="Nazwa Twojej firmy (opcjonalne)" maxlength="200" pattern="[A-Za-z0-9ĄąĆćĘęŁłŃńÓóŚśŹźŻż\s\.\-&]{0,200}" title="Tylko litery, cyfry i podstawowe znaki interpunkcyjne">
                     </div>
                     
                     <div class="form-group">
@@ -289,7 +290,7 @@
                     
                     <div class="form-group">
                         <label for="message">Opis projektu / Dodatkowe informacje *</label>
-                        <textarea id="message" name="message" required placeholder="Opisz swoje potrzeby, oczekiwania i cele projektu. Im więcej szczegółów, tym lepiej będziemy mogli dopasować nasze usługi do Twoich potrzeb."></textarea>
+                        <textarea id="message" name="message" required placeholder="Opisz swoje potrzeby, oczekiwania i cele projektu. Im więcej szczegółów, tym lepiej będziemy mogli dopasować nasze usługi do Twoich potrzeb." maxlength="2000" minlength="10"></textarea>
                     </div>
                     
                     <div class="checkbox-group">
