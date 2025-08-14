@@ -81,10 +81,19 @@
         const maxLen = field.maxLength || (field.type === 'email' ? 254 : field.tagName === 'TEXTAREA' ? 2000 : 200);
         if (value.length > maxLen) {
           isValid = false;
-          alert(`Pole "${field.labels?.[0]?.textContent || field.name}" zawiera zbyt długi tekst (max ${maxLen} znaków).`);
+          const fieldLabel = field.labels?.[0]?.textContent || field.placeholder || field.name;
+          alert(`Pole "${fieldLabel}" zawiera zbyt dlugi tekst (max ${maxLen} znakow).`);
           return;
         }
       });
+      
+      // Sprawdzenie checkboxa zgody na politykę prywatności
+      const privacyCheckbox = form.querySelector('#privacy');
+      if (privacyCheckbox && !privacyCheckbox.checked) {
+        isValid = false;
+        alert('Musisz wyrazic zgode na przetwarzanie danych osobowych.');
+        return;
+      }
       
       if (!isValid) return;
       
