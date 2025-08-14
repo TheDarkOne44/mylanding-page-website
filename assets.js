@@ -78,9 +78,10 @@
         }
         
         // Sprawdzenie długości pól
-        if (value.length > (field.maxLength || 2000)) {
+        const maxLen = field.maxLength || (field.type === 'email' ? 254 : field.tagName === 'TEXTAREA' ? 2000 : 200);
+        if (value.length > maxLen) {
           isValid = false;
-          alert('Jedno z pól zawiera zbyt długi tekst.');
+          alert(`Pole "${field.labels?.[0]?.textContent || field.name}" zawiera zbyt długi tekst (max ${maxLen} znaków).`);
           return;
         }
       });
