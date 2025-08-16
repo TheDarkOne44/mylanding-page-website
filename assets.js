@@ -58,45 +58,6 @@
   // Stan ładowania dla przycisków submit (nie blokujemy POST do Netlify!)
   document.querySelectorAll('form').forEach(form => {
     form.addEventListener('submit', () => {
-      // Dodatkowa walidacja bezpieczeństwa przed wysłaniem
-      const requiredFields = form.querySelectorAll('[required]');
-      let isValid = true;
-      
-      requiredFields.forEach(field => {
-        const value = field.value.trim();
-        if (!value) {
-          isValid = false;
-          return;
-        }
-        
-        // Sprawdzenie na potencjalnie niebezpieczne znaki
-        if (/<script|javascript:|data:|vbscript:|on\w+\s*=/i.test(value)) {
-          console.warn('Wykryto potencjalnie niebezpieczną zawartość w polu:', field.name);
-          isValid = false;
-          alert('Wykryto nieprawidłowe znaki w formularzu. Proszę sprawdzić wprowadzone dane.');
-          return;
-        }
-        
-        // Sprawdzenie długości pól
-        const maxLen = field.maxLength || (field.type === 'email' ? 254 : field.tagName === 'TEXTAREA' ? 2000 : 200);
-        if (value.length > maxLen) {
-          isValid = false;
-          const fieldLabel = field.labels?.[0]?.textContent || field.placeholder || field.name;
-          alert(`Pole "${fieldLabel}" zawiera zbyt dlugi tekst (max ${maxLen} znakow).`);
-          return;
-        }
-      });
-      
-      // Sprawdzenie checkboxa zgody na politykę prywatności
-      const privacyCheckbox = form.querySelector('#privacy');
-      if (privacyCheckbox && !privacyCheckbox.checked) {
-        isValid = false;
-        alert('Musisz wyrazic zgode na przetwarzanie danych osobowych.');
-        return;
-      }
-      
-      if (!isValid) return;
-      
       const btn = form.querySelector('button[type="submit"]');
       if (!btn) return;
       const original = btn.textContent;
@@ -105,6 +66,54 @@
       // Po submit strona przeładuje się (redirect do /success.html)
       setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 8000);
     });
+  });
+
+  // Walidacja formularza w czasie rzeczywistym
+  document.querySelectorAll('form').forEach(form => {
+    const submitBtn = form.querySelector('button[type="submit"]');
+    
+    // Funkcja sprawdzająca czy formularz jest poprawny
+    const validateForm = () => {
+      const requiredFields = form.querySelectorAll('[required]');
+      let isValid = true;
+      
+      requiredFields.forEach(field => {
+        const value = field.value.trim();
+        
+        // Sprawdź czy pole jest wypełnione
+        if (!value) {
+          isValid = false;
+          return;
+        }
+        
+        // Sprawdź checkbox zgody
+        if (field.type === 'checkbox' && !field.checked) {
+          isValid = false;
+          return;
+        }
+        
+        // Sprawdź na niebezpieczne znaki
+        if (/<script|javascript:|data:|vbscript:|on\w+\s*=/i.test(value)) {
+          isValid = false;
+          return;
+        }
+      });
+      
+      // Aktualizuj stan przycisku
+      if (submitBtn) {
+        submitBtn.disabled = !isValid;
+        submitBtn.style.opacity = isValid ? '1' : '0.6';
+      }
+      
+      return isValid;
+    };
+    
+    // Waliduj przy każdej zmianie
+    form.addEventListener('input', validateForm);
+    form.addEventListener('change', validateForm);
+    
+    // Początkowa walidacja
+    validateForm();
   });
 
   // Zabezpieczenie przed XSS w URL parameters
