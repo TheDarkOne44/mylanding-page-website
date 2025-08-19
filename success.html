@@ -13,76 +13,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Dodajemy główny arkusz stylów -->
+    <link rel="stylesheet" href="assets.css">
+    
+    <!-- Style specyficzne dla strony sukcesu -->
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #ffffff;
-            overflow-x: hidden;
-            background: #0a0a0a;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(255, 0, 255, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 80%, rgba(0, 100, 255, 0.15) 0%, transparent 50%);
-            animation: pulse 6s ease-in-out infinite alternate;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E") repeat;
-            animation: float 20s linear infinite;
-        }
-
-        @keyframes pulse {
-            0% { opacity: 0.4; transform: scale(1); }
-            100% { opacity: 0.8; transform: scale(1.05); }
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px) translateX(0px); }
-            25% { transform: translateY(-10px) translateX(5px); }
-            50% { transform: translateY(-5px) translateX(-5px); }
-            75% { transform: translateY(-15px) translateX(3px); }
-            100% { transform: translateY(0px) translateX(0px); }
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-
         .success-icon {
             width: 120px;
             height: 120px;
@@ -109,62 +45,9 @@
             animation: iconGlow 4s ease-in-out infinite;
         }
 
-        @keyframes iconPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
         @keyframes iconGlow {
             0%, 100% { opacity: 0; transform: scale(0.8) rotate(0deg); }
             50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            margin-bottom: 1.5rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #00f5ff 0%, #ff00ff 30%, #00ff88 60%, #ffaa00 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            background-size: 300% 300%;
-            animation: slideInUp 1s ease-out, gradientShift 8s ease-in-out infinite, textGlow 4s ease-in-out infinite alternate;
-            text-shadow: 0 0 20px rgba(0, 245, 255, 0.2);
-            letter-spacing: -0.02em;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        @keyframes textGlow {
-            0% { filter: brightness(1) drop-shadow(0 0 8px rgba(0, 245, 255, 0.15)); }
-            100% { filter: brightness(1.1) drop-shadow(0 0 15px rgba(0, 245, 255, 0.25)); }
-        }
-
-        .hero p {
-            font-size: clamp(1.1rem, 3vw, 1.5rem);
-            margin-bottom: 3rem;
-            opacity: 0.9;
-            animation: slideInUp 1s ease-out 0.3s both;
-            color: #c0c0c0;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.7;
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(60px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .highlight-box {
@@ -269,290 +152,20 @@
             padding-left: 3.5rem;
         }
 
-        .cta-button {
-            background: linear-gradient(45deg, #00f5ff, #ff00ff, #00ff88);
-            background-size: 300% 300%;
-            color: white;
-            padding: 1.5rem 3rem;
-            border: none;
-            border-radius: 60px;
-            font-size: 1.3rem;
-            font-weight: 800;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 15px 40px rgba(0, 245, 255, 0.4), 0 5px 15px rgba(255, 0, 255, 0.3);
-            animation: slideInUp 1s ease-out 1.2s both, buttonPulse 4s ease-in-out infinite;
-            position: relative;
-            overflow: hidden;
-            text-decoration: none;
-            display: inline-block;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin: 2rem 0;
-        }
-
-        @keyframes buttonPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
-            transform: rotate(45deg);
-            transition: all 0.6s;
-            opacity: 0;
-        }
-
-        .cta-button:hover::before {
-            animation: shine 0.8s ease-out;
-            opacity: 1;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 25px 50px rgba(0, 245, 255, 0.6), 0 10px 25px rgba(255, 0, 255, 0.4);
-            background-position: 100% 50%;
-        }
-
-        @keyframes shine {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-        }
-
-        .contact-section {
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, #0d1421 0%, #1a1a2e 100%);
-            position: relative;
-            margin-top: 4rem;
-        }
-
-        .contact-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.08) 0%, transparent 70%);
-        }
-
-        .contact-container {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: clamp(2rem, 6vw, 2.5rem);
-            margin-bottom: 3rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #00f5ff 0%, #ff00ff 50%, #00ff88 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            background-size: 200% 200%;
-            animation: gradientShift 6s ease-in-out infinite;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, #00f5ff, #ff00ff);
-            border-radius: 2px;
-            animation: lineGlow 3s ease-in-out infinite alternate;
-        }
-
-        @keyframes lineGlow {
-            0% { box-shadow: 0 0 10px rgba(0, 245, 255, 0.5); }
-            100% { box-shadow: 0 0 25px rgba(255, 0, 255, 0.8); }
-        }
-
-        .contact-info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .contact-item {
-            background: rgba(255, 255, 255, 0.08);
-            padding: 2.5rem 2rem;
-            border-radius: 20px;
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(0, 245, 255, 0.3);
-            text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            animation: cardFloat 6s ease-in-out infinite;
-        }
-
-        .contact-item:nth-child(2) { animation-delay: -3s; }
-
-        @keyframes cardFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .contact-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(0, 245, 255, 0.1) 0%, rgba(255, 0, 255, 0.1) 100%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .contact-item:hover::before {
-            opacity: 1;
-        }
-
-        .contact-item:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 30px 60px rgba(0, 245, 255, 0.3), 0 15px 30px rgba(255, 0, 255, 0.2);
-            border-color: rgba(0, 245, 255, 0.6);
-        }
-
-        .contact-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1.5rem;
-            background: linear-gradient(45deg, #00f5ff, #ff00ff);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            position: relative;
-            animation: iconRotate 8s linear infinite;
-            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.4);
-        }
-
-        @keyframes iconRotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .contact-item h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: #ffffff;
-            font-weight: 700;
-            position: relative;
-            z-index: 1;
-        }
-
-        .contact-item a {
-            color: #00f5ff;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            position: relative;
-            z-index: 1;
-        }
-
-        .contact-item a:hover {
-            color: #ffffff;
-            text-shadow: 0 0 10px rgba(0, 245, 255, 0.8);
-        }
-
-        .footer {
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
-            padding: 3rem 2rem;
-            text-align: center;
-            border-top: 1px solid rgba(0, 245, 255, 0.2);
-            position: relative;
-        }
-
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 0%, rgba(0, 245, 255, 0.05) 0%, transparent 50%);
-        }
-
-        .footer p {
-            color: #b0b0b0;
-            margin-bottom: 0.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .footer p:first-child {
-            font-weight: 600;
-            color: #ffffff;
-        }
-
-        /* Responsive Design */
+        /* Responsywność dla specyficznych elementów strony sukcesu */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            .cta-button {
-                padding: 1.2rem 2rem;
-                font-size: 1.1rem;
-            }
-            
-            .highlight-box {
-                padding: 2rem 1.5rem;
-            }
-            
-            .contact-section {
-                padding: 3rem 1rem;
-            }
-            
-            .contact-info-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .contact-item {
-                padding: 2rem 1.5rem;
-            }
-            
-            .contact-icon {
-                width: 70px;
-                height: 70px;
-                font-size: 2rem;
-            }
-            
             .success-icon {
                 width: 100px;
                 height: 100px;
                 font-size: 3rem;
             }
+            
+            .highlight-box {
+                padding: 2rem 1.5rem;
+            }
         }
 
         @media (max-width: 480px) {
-            .hero-content {
-                padding: 1rem;
-            }
-            
             .success-icon {
                 width: 80px;
                 height: 80px;
@@ -561,16 +174,6 @@
             
             .highlight-box {
                 padding: 1.5rem 1rem;
-            }
-            
-            .contact-item {
-                padding: 1.5rem 1rem;
-            }
-            
-            .contact-icon {
-                width: 60px;
-                height: 60px;
-                font-size: 1.8rem;
             }
             
             .features-list li {
