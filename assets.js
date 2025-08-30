@@ -175,7 +175,26 @@
       form.action = '/success.html';
     }
   }, 1000);
+  <script>
+  // Śledzenie wysłania formularza
+  document.getElementById('contactForm').addEventListener('submit', function() {
+    fbq('track', 'Contact');
+  });
+</script>
+// Śledzenie kliknięć w CTA
+document.querySelectorAll('.cta-button').forEach(button => {
+  button.addEventListener('click', () => {
+    fbq('track', 'InitiateCheckout');
+  });
+});
 
+// Śledzenie czasu spędzonego na stronie
+setTimeout(() => {
+  fbq('track', 'ViewContent', {
+    content_name: 'Homepage',
+    content_category: 'AI Services'
+  });
+}, 30000); // Po 30 sekundach
   // Zabezpieczenie przed clickjacking
   if (window.self !== window.top) {
     document.body.style.display = 'none';
