@@ -175,12 +175,11 @@
       form.action = '/success.html';
     }
   }, 1000);
-  <script>
+
   // Śledzenie wysłania formularza
   document.getElementById('contactForm').addEventListener('submit', function() {
     fbq('track', 'Contact');
   });
-</script>
 // Śledzenie kliknięć w CTA
 document.querySelectorAll('.cta-button').forEach(button => {
   button.addEventListener('click', () => {
