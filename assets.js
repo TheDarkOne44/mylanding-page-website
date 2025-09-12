@@ -199,4 +199,93 @@ setTimeout(() => {
     document.body.style.display = 'none';
     alert('Ta strona nie może być wyświetlana w ramce z powodów bezpieczeństwa.');
   }
+
+  // FAQ toggle functionality
+  window.toggleFaq = function(element) {
+    const faqItem = element.parentElement;
+    const isActive = faqItem.classList.contains('active');
+    
+    // Close all FAQ items
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.classList.remove('active');
+    });
+    
+    // Open clicked item if it wasn't active
+    if (!isActive) {
+      faqItem.classList.add('active');
+    }
+  };
+
+  // Smooth scroll animations on scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const fadeInObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+
+  // Apply fade-in animations to elements
+  document.querySelectorAll('.service-card, .benefit-item, .testimonial-card, .faq-item, .package-card, .pricing-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    fadeInObserver.observe(el);
+  });
+
+  // Parallax effect for hero section
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const hero = document.querySelector('.hero');
+    if (hero) {
+      hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+    }
+  });
+
+  // Enhanced form validation with better UX
+  document.querySelectorAll('input, textarea, select').forEach(field => {
+    const formGroup = field.closest('.form-group');
+    
+    field.addEventListener('focus', () => {
+      formGroup?.classList.add('focused');
+    });
+    
+    field.addEventListener('blur', () => {
+      formGroup?.classList.remove('focused');
+      if (field.value) {
+        formGroup?.classList.add('filled');
+      } else {
+        formGroup?.classList.remove('filled');
+      }
+    });
+
+    // Real-time validation feedback
+    field.addEventListener('input', () => {
+      const isValid = field.checkValidity();
+      formGroup?.classList.toggle('valid', isValid && field.value);
+      formGroup?.classList.toggle('invalid', !isValid && field.value);
+    });
+  });
+
+  // Add loading animation to CTA buttons
+  document.querySelectorAll('.cta-button, .submit-btn').forEach(button => {
+    button.addEventListener('click', function(e) {
+      if (!button.classList.contains('loading')) {
+        button.classList.add('loading');
+        const originalText = button.textContent;
+        button.innerHTML = '<span class="loading-spinner"></span> Ładowanie...';
+        
+        setTimeout(() => {
+          button.classList.remove('loading');
+          button.innerHTML = originalText;
+        }, 2000);
+      }
+    });
+  });
 })();
