@@ -280,12 +280,52 @@ setTimeout(() => {
         button.classList.add('loading');
         const originalText = button.textContent;
         button.innerHTML = '<span class="loading-spinner"></span> Ładowanie...';
-        
+
         setTimeout(() => {
           button.classList.remove('loading');
           button.innerHTML = originalText;
         }, 2000);
       }
     });
+  });
+
+  // Mobile Navigation Toggle
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+  }
+
+  // Add scrolled class to navigation on scroll
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.main-nav');
+    if (nav) {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }
   });
 })();
