@@ -232,7 +232,7 @@ setTimeout(() => {
   }, observerOptions);
 
   // Apply fade-in animations to elements
-  document.querySelectorAll('.service-card, .benefit-item, .testimonial-card, .faq-item, .package-card, .pricing-card').forEach(el => {
+  document.querySelectorAll('.service-card, .benefit-item, .testimonial-card, .faq-item, .package-card, .pricing-card, .credential-item, .about-text').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
