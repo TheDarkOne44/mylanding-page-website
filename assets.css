@@ -341,6 +341,67 @@ body {
     z-index: 1;
 }
 
+/* Profile Photo Section */
+.profile-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.profile-photo-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border-radius: 25px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(0, 245, 255, 0.2), rgba(255, 0, 255, 0.2));
+    padding: 3px;
+    transition: all 0.5s ease;
+}
+
+.profile-photo-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 25px;
+    padding: 3px;
+    background: linear-gradient(135deg, #00f5ff, #ff00ff, #00ff88);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: gradientRotate 8s linear infinite;
+}
+
+@keyframes gradientRotate {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.profile-photo-container:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 245, 255, 0.4);
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 22px;
+    transition: all 0.5s ease;
+}
+
+.profile-photo-container:hover .profile-photo {
+    transform: scale(1.05);
+}
+
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -555,6 +616,11 @@ body {
         padding: 4rem 1rem;
     }
 
+    .profile-photo-container {
+        width: 250px;
+        height: 330px;
+    }
+
     .about-text {
         padding: 2rem 1.5rem;
     }
@@ -584,6 +650,11 @@ body {
 }
 
 @media (max-width: 480px) {
+    .profile-photo-container {
+        width: 200px;
+        height: 270px;
+    }
+
     .about-text {
         padding: 1.5rem 1rem;
     }
