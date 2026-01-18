@@ -1,0 +1,14 @@
+UWAGA: Brak obrazu medgemma-demo.png
+
+Aby sekcja "AI w Praktyce" wyświetlała się poprawnie, należy:
+
+1. Dodać plik obrazu o nazwie: medgemma-demo.png
+2. Umieścić go w głównym katalogu witryny (obok index.html)
+3. Obraz powinien być zrzutem ekranu interfejsu MedGemma pokazującym analizę skanów MRI
+
+Alternatywnie, możesz zmienić ścieżkę do obrazu w pliku index.html (linia zawierająca src="medgemma-demo.png") na dowolną inną ścieżkę lub URL.
+
+Rekomendowane wymiary obrazu:
+- Szerokość: minimum 800px
+- Format: PNG lub JPG
+- Rozmiar pliku: optymalizuj do < 500KB dla lepszej wydajności
