@@ -298,14 +298,104 @@
         </div>
     </section>
 
-    <!-- AI Showcase Section - MRI Analysis -->
+    <!-- AI Showcase Section - Case Studies -->
     <section class="ai-showcase" id="ai-showcase">
         <div class="ai-showcase-container">
             <h2 class="section-title">AI w Praktyce - Zobacz Jak To Działa</h2>
             <p class="showcase-subtitle">Poznaj praktyczne zastosowania sztucznej inteligencji w codziennym życiu</p>
 
-            <div class="showcase-content">
-                <div class="showcase-image">
+            <!-- Showcase Navigation Tabs -->
+            <div class="showcase-tabs">
+                <button class="showcase-tab active" data-tab="excel-claude">
+                    <span class="tab-icon">📊</span>
+                    <span class="tab-text">Claude AI w Excel</span>
+                    <span class="tab-badge">Nowość 2025</span>
+                </button>
+                <button class="showcase-tab" data-tab="medgemma">
+                    <span class="tab-icon">🏥</span>
+                    <span class="tab-text">MedGemma MRI</span>
+                </button>
+            </div>
+
+            <!-- Case Study 1: Claude AI w Excel -->
+            <div class="showcase-content showcase-item active" id="excel-claude">
+                <div class="showcase-media">
+                    <div class="showcase-video-wrapper">
+                        <video controls poster="" preload="metadata">
+                            <source src="EXCEL_Claude.mp4" type="video/mp4">
+                            Twoja przeglądarka nie obsługuje odtwarzania wideo.
+                        </video>
+                        <div class="image-badge">
+                            <span class="badge-icon">🚀</span>
+                            <span class="badge-text">Nowość 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="showcase-text">
+                    <div class="showcase-tag">
+                        <span class="tag-icon">📊</span>
+                        <span>Automatyzacja Biznesowa</span>
+                    </div>
+
+                    <h3>Claude AI w Microsoft Excel - Analiza Danych w Naturalnym Języku</h3>
+
+                    <p class="showcase-description">
+                        Integracja <strong>Claude AI</strong> z Microsoft Excel eliminuje potrzebę skomplikowanych formuł i makr. Analitycy i specjaliści biznesowi mogą teraz przetwarzać dane, tworzyć raporty i generować insights używając prostych poleceń w naturalnym języku.
+                    </p>
+
+                    <div class="showcase-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">⏱️</div>
+                            <div class="feature-content">
+                                <h4>Oszczędność 60-80% Czasu</h4>
+                                <p>Redukcja czasu analizy z <strong>45 minut do 2 minut</strong>. Automatyczna segmentacja i raportowanie w sekundach.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">🎯</div>
+                            <div class="feature-content">
+                                <h4>Bez Znajomości Formuł</h4>
+                                <p>Analiza danych bez zaawansowanych formuł Excel. <strong>Każdy może być analitykiem</strong> - wystarczy opisać co chcesz osiągnąć.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">🔄</div>
+                            <div class="feature-content">
+                                <h4>Wszechstronne Zastosowania</h4>
+                                <p>Segmentacja klientów, personalizacja treści marketingowych, czyszczenie danych, wykrywanie anomalii - <strong>jednym poleceniem</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="showcase-results">
+                        <h4>Przykładowe zastosowania:</h4>
+                        <ul class="results-list">
+                            <li>Segmentacja klientów według przychodów i regionów</li>
+                            <li>Generowanie spersonalizowanych szablonów komunikacji</li>
+                            <li>Walidacja i standaryzacja danych kontaktowych</li>
+                            <li>Tworzenie raportów biznesowych bez pivot tables</li>
+                            <li>Wykrywanie duplikatów i anomalii w bazach danych</li>
+                        </ul>
+                    </div>
+
+                    <div class="showcase-cta">
+                        <p class="cta-text">
+                            <strong>Chcesz wdrożyć AI w swoich procesach analitycznych?</strong> Skontaktuj się z nami, aby dowiedzieć się więcej o integracji Claude AI z Twoimi narzędziami biznesowymi.
+                        </p>
+                        <a href="#contact" class="showcase-button">
+                            Umów bezpłatną konsultację
+                            <span class="button-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 2: MedGemma MRI Analysis -->
+            <div class="showcase-content showcase-item" id="medgemma">
+                <div class="showcase-media">
                     <div class="showcase-image-wrapper">
                         <img src="medgemma-demo.png" alt="Analiza obrazów MRI przy pomocy MedGemma - lokalne przetwarzanie danych medycznych" loading="lazy">
                         <div class="image-badge">
