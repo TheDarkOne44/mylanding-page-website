@@ -1529,29 +1529,35 @@ body {
 /* Video Wrapper Styles */
 .showcase-media {
     position: relative;
+    width: 100%;
+    min-height: 400px;
 }
 
 .showcase-video-wrapper {
     position: relative;
     border-radius: 25px;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.05);
+    background: #000;
     border: 2px solid rgba(0, 245, 255, 0.3);
     transition: all 0.5s ease;
     box-shadow: 0 20px 60px rgba(0, 245, 255, 0.2);
+    width: 100%;
+    aspect-ratio: 16 / 9;
 }
 
 .showcase-video-wrapper:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-5px);
     box-shadow: 0 30px 80px rgba(0, 245, 255, 0.4);
     border-color: rgba(0, 245, 255, 0.6);
 }
 
 .showcase-video-wrapper video {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     border-radius: 23px;
+    object-fit: contain;
+    background: #000;
 }
 
 .showcase-video-wrapper .image-badge {
