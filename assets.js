@@ -328,4 +328,44 @@ setTimeout(() => {
       }
     }
   });
+
+  // Showcase Tabs Functionality
+  const showcaseTabs = document.querySelectorAll('.showcase-tab');
+  const showcaseItems = document.querySelectorAll('.showcase-item');
+
+  if (showcaseTabs.length > 0 && showcaseItems.length > 0) {
+    showcaseTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetId = tab.getAttribute('data-tab');
+
+        // Remove active class from all tabs and items
+        showcaseTabs.forEach(t => t.classList.remove('active'));
+        showcaseItems.forEach(item => {
+          item.classList.remove('active');
+          item.style.display = 'none';
+        });
+
+        // Add active class to clicked tab and corresponding item
+        tab.classList.add('active');
+        const targetItem = document.getElementById(targetId);
+        if (targetItem) {
+          targetItem.style.display = 'grid';
+          // Trigger animation
+          setTimeout(() => {
+            targetItem.classList.add('active');
+          }, 10);
+        }
+      });
+    });
+  }
+
+  // Auto-pause video when switching tabs
+  showcaseTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Pause all videos when switching tabs
+      document.querySelectorAll('.showcase-video-wrapper video').forEach(video => {
+        video.pause();
+      });
+    });
+  });
 })();
