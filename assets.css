@@ -1684,6 +1684,106 @@ body {
     }
 }
 
+/* OCR Showcase Visual */
+.ocr-illustration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, rgba(0, 245, 255, 0.05), rgba(255, 0, 255, 0.05));
+}
+
+.ocr-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.ocr-visual-icon {
+    font-size: 4rem;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 245, 255, 0.1);
+    border: 2px solid rgba(0, 245, 255, 0.3);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.ocr-illustration:hover .ocr-visual-icon {
+    background: rgba(0, 245, 255, 0.15);
+    border-color: rgba(0, 245, 255, 0.5);
+    transform: scale(1.05);
+}
+
+.ocr-visual-arrow {
+    font-size: 2rem;
+    color: #00f5ff;
+    font-weight: 700;
+    animation: arrowPulse 2s ease-in-out infinite;
+}
+
+@keyframes arrowPulse {
+    0%, 100% { opacity: 0.5; transform: translateX(0); }
+    50% { opacity: 1; transform: translateX(5px); }
+}
+
+.ocr-visual-label {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .ocr-illustration {
+        min-height: 250px;
+        padding: 2rem 1rem;
+    }
+
+    .ocr-visual {
+        gap: 1rem;
+    }
+
+    .ocr-visual-icon {
+        font-size: 2.5rem;
+        width: 70px;
+        height: 70px;
+        border-radius: 15px;
+    }
+
+    .ocr-visual-arrow {
+        font-size: 1.5rem;
+    }
+
+    .ocr-visual-label {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ocr-visual-icon {
+        font-size: 2rem;
+        width: 55px;
+        height: 55px;
+    }
+
+    .ocr-visual-arrow {
+        font-size: 1.2rem;
+    }
+
+    .ocr-visual-label {
+        font-size: 0.85rem;
+    }
+}
+
 /* Testimonials Section */
 .testimonials {
     padding: 8rem 2rem;
