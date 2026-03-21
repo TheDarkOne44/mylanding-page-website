@@ -3136,6 +3136,26 @@ body {
     transform: translateY(-2px);
 }
 
+.special-service__video-wrapper {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.special-service__video-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #e0e0e0;
+    margin-bottom: 1.5rem;
+}
+
+.special-service__video {
+    width: 100%;
+    max-width: 860px;
+    border-radius: 12px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
 .special-service__cta .cta-arrow {
     transition: transform 0.3s ease;
     font-size: 1.1rem;
