@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://brightmind-ai.netlify.app/</loc>
+    <loc>https://brightmindsolutions.pl/</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://brightmind-ai.netlify.app/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://brightmindsolutions.pl/"/>
   </url>
   <url>
-    <loc>https://brightmind-ai.netlify.app/success.html</loc>
+    <loc>https://brightmindsolutions.pl/success.html</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
