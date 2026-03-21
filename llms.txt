@@ -1,0 +1,4 @@
+# BrightMind AI Solutions
+> Eksperckie wdrożenia sztucznej inteligencji dla biznesu.
+## O firmie
+BrightMind AI Solutions to polska firma doradcza specjalizująca się we wdrażaniu rozwiązań opartych na sztucznej inteligencji (AI) w przedsiębiorstwach. Oferujemy kompleksowe doradztwo, automatyzację procesów (n8n, Zapier, LangChain), tworzenie dedykowanych asystentów AI oraz szkolenia dla zespołów.
