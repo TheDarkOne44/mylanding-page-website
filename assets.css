@@ -1102,6 +1102,97 @@ body {
 }
 
 /* AI Showcase Section */
+/* Subpage hero */
+.subpage-hero {
+    background: linear-gradient(135deg, #0f0f23 0%, #16213e 50%, #1a1a2e 100%);
+    padding: 7rem 2rem 4rem;
+    text-align: center;
+}
+
+.subpage-hero__content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.subpage-hero__content p {
+    font-size: 1.15rem;
+    color: #a0a0b8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* AI Showcase Teaser (on index.html) */
+.ai-showcase-teaser {
+    padding: 7rem 2rem;
+    background: linear-gradient(135deg, #0f0f23 0%, #16213e 50%, #1a1a2e 100%);
+    text-align: center;
+}
+
+.ai-showcase-teaser__container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.ai-showcase-teaser__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.ai-showcase-teaser__card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(0, 245, 255, 0.12);
+    border-radius: 12px;
+    padding: 1.8rem 1.2rem;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.ai-showcase-teaser__card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 245, 255, 0.4);
+}
+
+.ai-showcase-teaser__icon {
+    font-size: 2.2rem;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.ai-showcase-teaser__card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #e0e0e0;
+    margin-bottom: 0.5rem;
+}
+
+.ai-showcase-teaser__card p {
+    font-size: 0.875rem;
+    color: #8a8aa0;
+    line-height: 1.5;
+}
+
+.ai-showcase-teaser__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #00f5ff, #0080ff);
+    color: #0a0a1a;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.9rem 2.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.ai-showcase-teaser__cta:hover {
+    box-shadow: 0 8px 30px rgba(0, 245, 255, 0.35);
+    transform: translateY(-2px);
+}
+
 .ai-showcase {
     padding: 8rem 2rem;
     background: linear-gradient(135deg, #0f0f23 0%, #16213e 50%, #1a1a2e 100%);
