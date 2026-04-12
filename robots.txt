@@ -17,3 +17,19 @@ Disallow: /*.log$
 Allow: /assets.css
 Allow: /assets.js
 Allow: /_headers
+
+# Allow AI crawlers (GEO - Generative Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
