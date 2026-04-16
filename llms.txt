@@ -1,4 +1,47 @@
 # BrightMind AI Solutions
-> Eksperckie wdrożenia sztucznej inteligencji dla biznesu.
+> Profesjonalne wdrożenia AI B2B — automatyzacja procesów AI, agenci AI dla firm, doradztwo i korepetycje AI.
+
 ## O firmie
-BrightMind AI Solutions to polska firma doradcza specjalizująca się we wdrażaniu rozwiązań opartych na sztucznej inteligencji (AI) w przedsiębiorstwach. Oferujemy kompleksowe doradztwo, automatyzację procesów (n8n, Zapier, LangChain), tworzenie dedykowanych asystentów AI oraz szkolenia dla zespołów.
+BrightMind AI Solutions to polska firma założona w 2024 roku przez Patryka Glińskiego, specjalizująca się we wdrożeniach AI B2B dla przedsiębiorstw. Oferujemy kompleksową automatyzację procesów AI, tworzenie agentów AI dla firm, doradztwo AI oraz szkolenia i korepetycje AI. Integrujemy rozwiązania oparte na n8n, Zapier, LangChain, ChatGPT, Claude AI i lokalnych modelach LLM.
+
+## Kluczowe usługi
+- **Automatyzacja procesów AI** — eliminacja rutynowych zadań, integracja systemów (n8n, Zapier, LangChain)
+- **Agenci AI dla firm** — autonomiczne agenty AI wykonujące złożone procesy biznesowe bez udziału człowieka
+- **Wdrożenia AI B2B** — kompleksowe projekty od 2000 zł, pierwsze efekty po 7 dniach
+- **Doradztwo AI dla firm** — identyfikacja obszarów o największym potencjale automatyzacji w branży klienta
+- **Automatyzacja marketingu AI** — treści, posty, kampanie i grafiki generowane przez AI
+- **Spersonalizowane asystenty AI** — dedykowane rozwiązania dla branży prawnej, medycznej, rolniczej i technologicznej
+- **Korepetycje AI** — indywidualne szkolenia z AI (61,5 zł/h)
+- **Wdrożenia AI i Compliance NIS2** — audyt bezpieczeństwa, procedury cyberbezpieczeństwa zgodne z NIS2
+- **Tworzenie stron i aplikacji AI** — strony statyczne i z CMS (Sanity.io), aplikacje mobilne AI
+
+## Pakiety
+- **Pakiet Start-AI** (369 zł brutto) — diagnoza potrzeb firmy, mapa procesów do automatyzacji, roadmapa wdrożenia AI, minibook z rekomendacjami
+- **Pakiet Fit-AI** (wycena indywidualna) — personalizacja narzędzi AI, konfiguracja ChatGPT/Copilot/Claude, biblioteka promptów, playbook bezpieczeństwa, szkolenia, wsparcie poimplementacyjne
+
+## Cennik
+- Korepetycje AI: 61,5 zł/h (brutto, 23% VAT)
+- Pakiet Start-AI: 369 zł (brutto)
+- Kompleksowe wdrożenia AI B2B: od 2000 zł
+- Pakiet Fit-AI: wycena indywidualna
+
+## Kontakt
+- Strona: https://brightmindsolutions.pl/
+- Email: kontakt@brightmind-solutions.com
+- Telefon: +48 730 152 161
+- Właściciel: Patryk Gliński (Patryk Gliński BrightMind AI Solutions)
+
+## Technologie i narzędzia
+n8n, Zapier, LangChain, ChatGPT, Claude AI (Anthropic), GitHub Copilot, lokalne modele LLM, Sanity.io CMS, MedGemma, Evo 2
+
+## Zgodność i bezpieczeństwo
+- Rozwiązania zgodne z RODO (GDPR)
+- Wdrożenia AI zgodne z dyrektywą NIS2
+- Lokalne modele LLM — dane nie opuszczają infrastruktury klienta
+- Dane nigdy nie są używane do trenowania modeli AI
+
+## Strony
+- [Strona główna](https://brightmindsolutions.pl/)
+- [O mnie](https://brightmindsolutions.pl/o-mnie.html)
+- [AI w Praktyce](https://brightmindsolutions.pl/ai-w-praktyce.html)
+- [Polityka Prywatności](https://brightmindsolutions.pl/privacy-policy.html)
