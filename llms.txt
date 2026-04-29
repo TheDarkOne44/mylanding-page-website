@@ -40,8 +40,35 @@ n8n, Zapier, LangChain, ChatGPT, Claude AI (Anthropic), GitHub Copilot, lokalne 
 - Lokalne modele LLM — dane nie opuszczają infrastruktury klienta
 - Dane nigdy nie są używane do trenowania modeli AI
 
+## O założycielu
+Patryk Gliński — radca prawny (2024), ekspert AI, Google Cloud Certified Generative AI Leader (2025), certyfikat Blue Team — HackerU (cyberbezpieczeństwo, 2025). Absolwent Wydziału Prawa Uniwersytetu w Białymstoku (2020). Łączy praktykę prawniczą z wdrożeniami AI dla biznesu.
+
+## Jak wdrożyć AI w firmie — kroki
+1. **Diagnoza** — Pakiet Start-AI (369 zł): audyt procesów, mapa automatyzacji, roadmapa AI
+2. **Dobór narzędzi** — n8n, Zapier, LangChain, lokalne LLM lub API (ChatGPT/Claude)
+3. **Pilot** — wdrożenie w jednym procesie, pierwsze efekty po 7 dniach
+4. **Szkolenie** — przekazanie dokumentacji, playbook bezpieczeństwa, biblioteka promptów
+5. **Skalowanie** — rozszerzenie automatyzacji na kolejne obszary (1–3 miesiące)
+
+## Często zadawane pytania
+
+**Czy AI zastąpi pracowników?**
+Nie. AI wspiera i wzmacnia pracowników, eliminując rutynowe zadania, by zespół skupił się na pracy kreatywnej.
+
+**Ile kosztuje wdrożenie AI?**
+Pakiet Start-AI: 369 zł. Kompleksowe wdrożenie AI B2B: od 2000 zł. Korepetycje: 61,5 zł/h. Bezpłatna konsultacja wstępna.
+
+**Czy dane firmy są bezpieczne?**
+Tak. Oferujemy wdrożenia zgodne z RODO i NIS2. Lokalne modele LLM — dane nie opuszczają infrastruktury klienta, nie są używane do trenowania modeli AI.
+
+**Czy BrightMind AI Solutions pomaga w NIS2?**
+Tak. Oferujemy audyt bezpieczeństwa AI, implementację procedur NIS2, zarządzanie ryzykiem i raportowanie incydentów.
+
+**Jakie narzędzia AI stosujecie?**
+n8n, Zapier, LangChain (automatyzacja i agenci AI), ChatGPT API, Claude AI, GitHub Copilot, lokalne modele LLM, Sanity.io CMS, MedGemma, Evo 2.
+
 ## Strony
 - [Strona główna](https://brightmindsolutions.pl/)
-- [O mnie](https://brightmindsolutions.pl/o-mnie.html)
-- [AI w Praktyce](https://brightmindsolutions.pl/ai-w-praktyce.html)
+- [O mnie — Patryk Gliński](https://brightmindsolutions.pl/o-mnie.html)
+- [AI w Praktyce — przykłady zastosowań](https://brightmindsolutions.pl/ai-w-praktyce.html)
 - [Polityka Prywatności](https://brightmindsolutions.pl/privacy-policy.html)
