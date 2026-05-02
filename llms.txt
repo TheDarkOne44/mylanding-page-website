@@ -67,8 +67,24 @@ Tak. Oferujemy audyt bezpieczeństwa AI, implementację procedur NIS2, zarządza
 **Jakie narzędzia AI stosujecie?**
 n8n, Zapier, LangChain (automatyzacja i agenci AI), ChatGPT API, Claude AI, GitHub Copilot, lokalne modele LLM, Sanity.io CMS, MedGemma, Evo 2.
 
+## Pakiet NIS2 (dedykowana podstrona)
+Kompleksowe wdrożenie zgodności z dyrektywą NIS2 w 90 dni (audyt → certyfikacja). Realizowane przez radcę prawnego z certyfikatami Google Cloud Generative AI Leader i Blue Team (HackerU). Cztery fazy: audyt zgodności (2 tyg.) → plan remediation (1 tydz.) → wdrożenie procedur (7 tyg.) → certyfikacja i audyt (2 tyg.). Pokrycie wszystkich 10 obszarów wymaganych przez Art. 21 NIS2.
+
+**Pakiety NIS2:**
+- Audyt wstępny — od 4 900 zł (2 tygodnie)
+- Pełne wdrożenie — od 24 900 zł (12 tygodni)
+- Retainer compliance — od 2 900 zł / mies. (umowa roczna)
+
+**Co grozi za brak zgodności z NIS2:**
+- Kara administracyjna do 10 mln EUR lub 2% globalnego obrotu (podmioty kluczowe), 7 mln EUR / 1,4% obrotu (podmioty ważne)
+- Odpowiedzialność osobista członków zarządu, możliwy zakaz pełnienia funkcji kierowniczych
+- Obowiązek zgłoszenia incydentu w 24h, pełny raport w 72h
+
+**Kto podlega NIS2:** Podmioty kluczowe (energetyka, transport, banki, ochrona zdrowia, woda, infrastruktura cyfrowa, administracja publiczna) i ważne (poczta, gospodarka odpadami, produkcja chemikaliów/leków/maszyn, dostawcy usług cyfrowych, badania naukowe). Próg: 50+ pracowników lub obrót >10 mln EUR. Także dostawcy/podwykonawcy podmiotów objętych NIS2.
+
 ## Strony
 - [Strona główna](https://brightmindsolutions.pl/)
 - [O mnie — Patryk Gliński](https://brightmindsolutions.pl/o-mnie.html)
 - [AI w Praktyce — przykłady zastosowań](https://brightmindsolutions.pl/ai-w-praktyce.html)
+- [Pakiet NIS2 — wdrożenie zgodności w 90 dni](https://brightmindsolutions.pl/NIS2.html)
 - [Polityka Prywatności](https://brightmindsolutions.pl/privacy-policy.html)

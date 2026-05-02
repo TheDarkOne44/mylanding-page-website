@@ -7,13 +7,13 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: https://www.facebook.com; connect-src 'self' https://api.netlify.com https://connect.facebook.net https://*.facebook.com https://*.fbcdn.net; media-src 'self'; form-action 'self' https://brightmindsolutions.pl;">    <title>BrightMind AI Solutions - Wdrożenia AI B2B | Automatyzacja Procesów AI i Agenci AI dla Firm</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://connect.facebook.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: https://www.facebook.com; connect-src 'self' https://api.netlify.com https://connect.facebook.net https://*.facebook.com https://*.fbcdn.net; media-src 'self'; form-action 'self' https://brightmindsolutions.pl;">
+    <title>BrightMind AI Solutions - Wdrożenia AI B2B | Automatyzacja Procesów AI i Agenci AI dla Firm</title>
     <meta name="description" content="🚀 Profesjonalne wdrożenia AI B2B dla firm. Automatyzacja procesów AI, agenci AI dla firm, doradztwo i korepetycje AI. Transformuj swój biznes — pierwsze efekty po 7 dniach!">
     <meta name="keywords" content="automatyzacja procesów AI, agenci AI dla firm, wdrożenia AI B2B, automatyzacja marketingu, AI dla firm, sztuczna inteligencja, AI dla biznesu, doradztwo AI, wdrożenia AI, korepetycje AI, automatyzacja procesów, ChatGPT dla firm, Claude AI, materiały marketingowe AI, wdrożenia AI dla przedsiębiorstw">
     <meta name="author" content="BrightMind AI Solutions">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    
-   
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://brightmindsolutions.pl/">
     <meta property="og:title" content="BrightMind AI Solutions - Automatyzacja Marketingu i AI dla Firm">
@@ -21,23 +21,23 @@
     <meta property="og:image" content="https://brightmindsolutions.pl/og-image.jpg">
     <meta property="og:locale" content="pl_PL">
     <meta property="og:site_name" content="BrightMind AI Solutions">
-    
-    
+
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://brightmindsolutions.pl/">
     <meta property="twitter:title" content="BrightMind AI Solutions - Automatyzacja Marketingu i AI dla Firm">
     <meta property="twitter:description" content="🚀 Profesjonalne wdrożenia sztucznej inteligencji dla firm. Doradztwo AI, korepetycje i materiały marketingowe.">
     <meta property="twitter:image" content="https://brightmindsolutions.pl/og-image.jpg">
-    
-    
-    <meta name="theme-color" content="#00f5ff">
-    <meta name="msapplication-TileColor" content="#00f5ff">
-    <link rel="alternate" hreflang="pl" href="https://brightmindsolutions.pl/">
 
+    <meta name="theme-color" content="#0a0d12">
+    <meta name="msapplication-TileColor" content="#0a0d12">
+    <link rel="alternate" hreflang="pl" href="https://brightmindsolutions.pl/">
     <link rel="canonical" href="https://brightmindsolutions.pl/">
-    <link rel="stylesheet" href="assets.css">
-    <script src="assets.js" defer></script>
-    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
     <!-- Structured Data - Organization -->
     <script type="application/ld+json">
     {
@@ -69,7 +69,8 @@
         "Automatyzacja Marketingu AI",
         "Doradztwo AI dla Firm",
         "Korepetycje AI",
-        "Tworzenie Stron i Aplikacji AI"
+        "Tworzenie Stron i Aplikacji AI",
+        "Wdrożenia AI i Compliance NIS2"
       ],
       "contactPoint": {
         "@type": "ContactPoint",
@@ -105,7 +106,7 @@
       "inLanguage": "pl-PL"
     }
     </script>
-    
+
     <!-- Structured Data - Services -->
     <script type="application/ld+json">
     {
@@ -159,6 +160,14 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Tworzenie Stron i Aplikacji AI"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wdrożenia AI i Compliance NIS2",
+              "url": "https://brightmindsolutions.pl/NIS2.html"
             }
           }
         ]
@@ -266,35 +275,35 @@
           "position": 1,
           "name": "Diagnoza potrzeb — Pakiet Start-AI",
           "text": "Przeprowadzamy kompleksową diagnozę procesów biznesowych firmy. Identyfikujemy obszary o największym potencjale automatyzacji AI, tworzymy mapę procesów i roadmapę wdrożenia. Etap kończy się minibook z rekomendacjami (koszt: 369 zł).",
-          "url": "https://brightmindsolutions.pl/#packages"
+          "url": "https://brightmindsolutions.pl/#pakiety"
         },
         {
           "@type": "HowToStep",
           "position": 2,
           "name": "Wybór narzędzi i technologii",
           "text": "Na podstawie diagnozy dobieramy odpowiednie narzędzia AI: n8n/Zapier do integracji, LangChain do agentów, modele LLM (ChatGPT, Claude, lokalne modele). Dla danych wrażliwych rekomendujemy lokalne modele LLM bez wychodzenia danych poza infrastrukturę klienta.",
-          "url": "https://brightmindsolutions.pl/#services"
+          "url": "https://brightmindsolutions.pl/#uslugi"
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Konfiguracja i wdrożenie pilotażowe",
           "text": "Wdrażamy pilot automatyzacji w wybranym procesie. Konfigurujemy przepływy pracy (workflows), agentów AI i integracje z istniejącymi systemami. Pierwsze efekty widoczne po 7 dniach.",
-          "url": "https://brightmindsolutions.pl/#services"
+          "url": "https://brightmindsolutions.pl/#uslugi"
         },
         {
           "@type": "HowToStep",
           "position": 4,
           "name": "Szkolenie zespołu i przekazanie",
           "text": "Szkolimy pracowników z obsługi wdrożonych narzędzi AI. Przekazujemy dokumentację, playbook bezpieczeństwa i bibliotekę promptów. Zapewniamy wsparcie poimplementacyjne.",
-          "url": "https://brightmindsolutions.pl/#contact"
+          "url": "https://brightmindsolutions.pl/#kontakt"
         },
         {
           "@type": "HowToStep",
           "position": 5,
           "name": "Optymalizacja i skalowanie",
           "text": "Monitorujemy efekty wdrożenia, optymalizujemy przepływy i rozszerzamy automatyzację na kolejne obszary. Kompleksowe wdrożenia AI B2B trwają od 1 do 3 miesięcy.",
-          "url": "https://brightmindsolutions.pl/#contact"
+          "url": "https://brightmindsolutions.pl/#kontakt"
         }
       ]
     }
@@ -317,1015 +326,37 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
 </head>
-
 <body itemscope itemtype="https://schema.org/WebPage">
-    <!-- Navigation -->
-    <nav class="main-nav">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">BrightMind AI</a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">Strona Główna</a></li>
-                <li><a href="o-mnie.html" class="nav-link">O mnie</a></li>
-                <li><a href="#services" class="nav-link">Usługi</a></li>
-                <li><a href="ai-w-praktyce.html" class="nav-link">AI w Praktyce</a></li>
-                <li><a href="#contact" class="nav-link">Kontakt</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
+<div id="app"></div>
 
-    <!-- Hero Section -->
-    <header class="hero" role="banner">
-        <div class="hero-content">
-            <h1 itemprop="name">BrightMind AI Solutions <span style="font-size: 0.6em; font-weight: 400; opacity: 0.9;">Automatyzacja Marketingu i AI dla Firm</span></h1>
-            <p itemprop="description">AI w praktyce – rozwiązania, które naprawdę ułatwiają codzienną pracę</p>
-            <a class="cta-button" href="#services">
-                Rozpocznij transformację AI
-            </a>
-        </div>
-    </header>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
 
-    <!-- Services Section -->
-    <main>
-    <section class="services" id="services" itemscope itemtype="https://schema.org/Service">
-        <div class="services-container">
-            <h2 class="section-title" itemprop="name">Nasze Usługi</h2>
-            <div class="services-grid">
-                <article class="service-card" itemscope itemtype="https://schema.org/Service">
-                    <div class="service-icon">🧠</div>
-                    <h3 itemprop="name">Doradztwo AI dla Firm</h3>
-                    <p itemprop="description">Profesjonalne doradztwo w zakresie wdrażania AI w różnych dziedzinach: od narzędzi do programowania i pracy z kodem (GitHub Copilot, Claude Code), przez tworzenie audio, wideo i interaktywnych prezentacji, transkrypcje spotkań, aż po specjalistyczne zastosowania w prawie, medycynie i rolnictwie. Identyfikujemy obszary o największym potencjale automatyzacji w Twojej branży.</p>
-                </article>
-                <article class="service-card" itemscope itemtype="https://schema.org/Service">
-                    <div class="service-icon">🎓</div>
-                    <h3 itemprop="name">Korepetycje AI</h3>
-                    <p itemprop="description">Indywidualne szkolenia z zakresu sztucznej inteligencji dla osób prywatnych. Poznaj narzędzia AI od asystentów programistycznych, przez generatory audio i wideo, aplikacje do transkrypcji, aż po branżowe rozwiązania AI. Niezależnie od Twojej dziedziny - prawo, medycyna, technologia czy rolnictwo - pomożemy Ci wykorzystać potencjał AI.</p>
-                </article>
-                <article class="service-card" itemscope itemtype="https://schema.org/Service">
-                    <div class="service-icon">🎨</div>
-                    <h3 itemprop="name">Automatyzacja Marketingu AI</h3>
-                    <p itemprop="description">Kompleksowa automatyzacja marketingu dla firm z wykorzystaniem sztucznej inteligencji. Treści reklamowe, posty społecznościowe, kampanie e-mailowe i grafiki generowane przez AI — bez ręcznej pracy.</p>
-                </article>
-                <article class="service-card" itemscope itemtype="https://schema.org/Service">
-                    <div class="service-icon">⚙️</div>
-                    <h3 itemprop="name">Automatyzacja i Agenci AI dla Firm</h3>
-                    <p itemprop="description">Tworzenie inteligentnych agentów i zaawansowanych przepływów automatyzacji marketingu dla firm z wykorzystaniem platform takich jak n8n, Zapier i LangChain. Automatyzujemy powtarzalne procesy biznesowe, integrujemy różne systemy i tworzymy autonomicznych agentów AI, którzy wykonują złożone zadania bez Twojego udziału.</p>
-                </article>
-                <article class="service-card" itemscope itemtype="https://schema.org/Service">
-                    <div class="service-icon">🤖</div>
-                    <h3 itemprop="name">Spersonalizowane Asystenty AI</h3>
-                    <p itemprop="description">Projektowanie i wdrażanie dedykowanych asystentów AI dopasowanych do specyfiki Twojej branży. Od automatyzacji obsługi klienta, przez analizę dokumentów prawnych i medycznych, po wsparcie w rolnictwie precyzyjnym. Integracja z istniejącymi systemami i pełne dostosowanie do procesów biznesowych.</p>
-                </article>
-                <article class="service-card" itemscope itemtype="https://schema.org/Service">
-                    <div class="service-icon">🔒</div>
-                    <h3 itemprop="name">Wdrożenia AI i Compliance NIS2</h3>
-                    <p itemprop="description">Kompleksowe wsparcie we wdrażaniu rozwiązań AI zgodnych z dyrektywą NIS2. Audyt bezpieczeństwa systemów AI, implementacja procedur cyberbezpieczeństwa, zarządzanie ryzykiem i raportowanie incydentów. Pomożemy Ci spełnić wymogi regulacyjne przy jednoczesnym wykorzystaniu potencjału sztucznej inteligencji.</p>
-                </article>
-            </div>
-        </div>
-    </section>
+<script type="text/babel" src="shared.jsx"></script>
+<script type="text/babel" src="hero.jsx"></script>
+<script type="text/babel" src="home-sections.jsx"></script>
 
-    <section class="packages" id="packages" itemscope itemtype="https://schema.org/Product">
-        <div class="packages-container">
-            <h2 class="section-title" itemprop="name">Nasze Pakiety</h2>
-            <div class="packages-grid">
-                <article class="package-card" itemscope itemtype="https://schema.org/Product">
-                    <h3 itemprop="name">📋 Pakiet Start-AI</h3>
-                    <ul class="package-features">
-                        <li>Kompleksowa diagnoza potrzeb firmy</li>
-                        <li>Doradztwo w zakresie lokalnych modeli LLM</li>
-                        <li>Mapa procesów do automatyzacji</li>
-                        <li>Minibook z praktycznymi rekomendacjami</li>
-                        <li>Roadmapa wdrożenia AI w organizacji</li>
-                        <li>Identyfikacja kluczowych obszarów optymalizacji</li>
-                    </ul>
-                </article>
-                <article class="package-card" itemscope itemtype="https://schema.org/Product">
-                    <h3 itemprop="name">🎯 Pakiet Fit-AI</h3>
-                    <ul class="package-features">
-                        <li>Personalizacja narzędzi AI dla zespołu</li>
-                        <li>Konfiguracja ChatGPT, Copilot, Claude</li>
-                        <li>Biblioteka gotowych promptów</li>
-                        <li>Playbook bezpieczeństwa AI</li>
-                        <li>Szkolenia dla zespołu dostosowane do potrzeb</li>
-                        <li>Nagranie video do wielokrotnego użytku</li>
-                        <li>Wsparcie poimplementacyjne i bieżąca optymalizacja</li>
-                    </ul>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing" itemscope itemtype="https://schema.org/PriceSpecification">
-        <div class="pricing-container">
-            <h2 class="section-title" itemprop="name">Cennik</h2>
-            <div class="pricing-grid">
-                <article class="pricing-card" itemscope itemtype="https://schema.org/Offer">
-                    <h3 itemprop="name">Korepetycje AI</h3>
-                    <div class="price" itemprop="price" content="61.5">61,5 zł</div>
-                    <div class="price-note">za godzinę (cena brutto z 23% VAT)</div>
-                    <meta itemprop="priceCurrency" content="PLN">
-                </article>
-                <article class="pricing-card" itemscope itemtype="https://schema.org/Offer">
-                    <h3 itemprop="name">Pakiet Start-AI</h3>
-                    <div class="price" itemprop="price" content="369">369 zł</div>
-                    <div class="price-note">kompleksowa diagnoza (cena brutto z 23% VAT)</div>
-                    <meta itemprop="priceCurrency" content="PLN">
-                </article>
-                <article class="pricing-card" itemscope itemtype="https://schema.org/Offer">
-                    <h3 itemprop="name">Pakiet Fit-AI</h3>
-                    <div class="price" style="font-size: 1.5rem;">Wycena indywidualna</div>
-                    <div class="price-note">cena do uzgodnienia</div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Special Service Section -->
-    <section class="special-service" id="offer">
-        <div class="special-service__container">
-            <span class="special-service__label">Usługa Specjalna</span>
-            <h2 class="section-title">Tworzenie Stron Internetowych</h2>
-            <p class="special-service__subtitle">Profesjonalne strony internetowe, które wyróżnią Twój biznes w sieci. Wybierz model współpracy dopasowany do Twoich potrzeb.</p>
-
-            <div class="special-service__grid">
-                <!-- Card 1: Build & Handoff -->
-                <article class="special-service__card">
-                    <span class="special-service__badge special-service__badge--standard">Projekt</span>
-                    <h3 class="special-service__title">Kompleksowe Wdrożenie Projektowe</h3>
-                    <p class="special-service__highlight">Gotowa strona + pełny kod źródłowy w Twoich rękach.</p>
-                    <p class="special-service__desc">Projektujemy i budujemy Twoją stronę od podstaw, wykorzystując nowoczesny stack technologiczny. Po odbiorze projektu otrzymujesz kompletny kod źródłowy &mdash; bez abonamentów, bez ukrytych kosztów, bez zobowiązań.</p>
-                    <ul class="special-service__features">
-                        <li>Indywidualny projekt UI/UX dopasowany do marki</li>
-                        <li>Responsywna implementacja (mobile-first)</li>
-                        <li>Pełna własność kodu &mdash; robisz z nim, co chcesz</li>
-                    </ul>
-                    <a href="#contact" class="special-service__cta special-service__cta--standard">
-                        Zapytaj o wycenę
-                        <span class="cta-arrow">→</span>
-                    </a>
-                </article>
-
-                <!-- Card 2: Subscription (Premium) -->
-                <article class="special-service__card special-service__card--premium">
-                    <span class="special-service__badge special-service__badge--premium">Subskrypcja</span>
-                    <h3 class="special-service__title">Pełna Obsługa &amp; CMS</h3>
-                    <p class="special-service__highlight special-service__highlight--premium">Edytuj treści w kilka sekund &mdash; bez pisania kodu.</p>
-                    <p class="special-service__desc">Skup się na biznesie, a my zajmiemy się technologią. Otrzymujesz intuicyjny panel CMS (Sanity.io), w którym zmiana tekstów czy zdjęć publikuje się natychmiast na stronie. W pakiecie: hosting, utrzymanie i wsparcie techniczne.</p>
-                    <ul class="special-service__features special-service__features--premium">
-                        <li>Panel CMS &mdash; edycja treści bez programisty</li>
-                        <li>Natychmiastowa publikacja zmian na żywo</li>
-                        <li>Hosting i domena w cenie subskrypcji</li>
-                        <li>Bieżące aktualizacje i wsparcie techniczne</li>
-                        <li>Comiesięczny raport wydajności strony</li>
-                    </ul>
-                    <a href="#contact" class="special-service__cta special-service__cta--premium">
-                        Wybierz subskrypcję
-                        <span class="cta-arrow">→</span>
-                    </a>
-                </article>
-            </div>
-
-            <!-- Video Demo -->
-            <div class="special-service__video-wrapper">
-                <h3 class="special-service__video-title">Zobacz, jak to wygląda w praktyce</h3>
-                <video class="special-service__video" controls preload="metadata">
-                    <source src="BellaNeapolitana.mp4" type="video/mp4">
-                    Twoja przeglądarka nie obsługuje odtwarzacza wideo.
-                </video>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="benefits" id="benefits">
-        <div class="benefits-container">
-            <h2 class="section-title">Dlaczego BrightMind AI?</h2>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <div class="benefit-icon">⚡</div>
-                    <h3>Szybka Implementacja</h3>
-                    <p>Wdrażamy rozwiązania AI w rekordowym czasie - pierwsze rezultaty już po 7 dniach</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">🎯</div>
-                    <h3>Dopasowane Rozwiązania</h3>
-                    <p>Każdy projekt dostosowujemy do specyfiki Twojej branży i indywidualnych potrzeb</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">📈</div>
-                    <h3>Mierzalne Efekty</h3>
-                    <p>Średnio 40% wzrost produktywności i 60% redukcja czasu wykonywania zadań</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">🔒</div>
-                    <h3>Bezpieczeństwo Danych</h3>
-                    <p>RODO-compliant rozwiązania z najwyższymi standardami ochrony danych</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI Showcase Teaser -->
-    <section class="ai-showcase-teaser" id="ai-showcase">
-        <div class="ai-showcase-teaser__container">
-            <h2 class="section-title">AI w Praktyce - Zobacz Jak To Działa</h2>
-            <p class="showcase-subtitle">Poznaj praktyczne zastosowania sztucznej inteligencji w codziennym życiu</p>
-
-            <div class="ai-showcase-teaser__grid">
-                <div class="ai-showcase-teaser__card">
-                    <span class="ai-showcase-teaser__icon">📊</span>
-                    <h3>Claude AI w Excel</h3>
-                    <p>Analiza danych w naturalnym języku — bez formuł i makr.</p>
-                </div>
-                <div class="ai-showcase-teaser__card">
-                    <span class="ai-showcase-teaser__icon">🏥</span>
-                    <h3>MedGemma MRI</h3>
-                    <p>Lokalna analiza obrazów medycznych z pełną prywatnością danych.</p>
-                </div>
-                <div class="ai-showcase-teaser__card">
-                    <span class="ai-showcase-teaser__icon">📄</span>
-                    <h3>OCR – Tekst z Obrazu</h3>
-                    <p>Automatyczne odczytywanie tekstu ze zdjęć, skanów i PDF-ów.</p>
-                </div>
-                <div class="ai-showcase-teaser__card">
-                    <span class="ai-showcase-teaser__icon">📱</span>
-                    <h3>Aplikacja Mobilna</h3>
-                    <p>Własna aplikacja mobilna bez pisania kodu — AI robi to za Ciebie.</p>
-                </div>
-                <div class="ai-showcase-teaser__card">
-                    <span class="ai-showcase-teaser__icon">🧬</span>
-                    <h3>Evo 2 – Genetyka</h3>
-                    <p>Przewidywanie mutacji genetycznych na poziomie genomu.</p>
-                </div>
-            </div>
-
-            <a href="ai-w-praktyce.html" class="ai-showcase-teaser__cta">
-                Zobacz wszystkie przykłady
-                <span class="cta-arrow">→</span>
-            </a>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="how-it-works" id="process">
-        <div class="how-it-works-container">
-            <h2 class="section-title">Jak przebiega proces współpracy?</h2>
-            <div class="process-steps">
-                <div class="step-item">
-                    <div class="step-number">01</div>
-                    <div class="step-content">
-                        <h3>🎯 Analiza potrzeb</h3>
-                        <p>Przeprowadzamy szczegółową analizę Twoich procesów biznesowych i identyfikujemy obszary, które najbardziej skorzystają na automatyzacji AI.</p>
-                    </div>
-                </div>
-                <div class="step-connector"></div>
-                <div class="step-item">
-                    <div class="step-number">02</div>
-                    <div class="step-content">
-                        <h3>📋 Strategia wdrożenia</h3>
-                        <p>Opracowujemy spersonalizowaną roadmapę wdrożenia z konkretnymi krokami, harmonogramem i oczekiwanymi rezultatami.</p>
-                    </div>
-                </div>
-                <div class="step-connector"></div>
-                <div class="step-item">
-                    <div class="step-number">03</div>
-                    <div class="step-content">
-                        <h3>⚙️ Implementacja</h3>
-                        <p>Wdrażamy wybrane rozwiązania AI, konfigurujemy narzędzia i integrujemy je z Twoimi istniejącymi systemami.</p>
-                    </div>
-                </div>
-                <div class="step-connector"></div>
-                <div class="step-item">
-                    <div class="step-number">04</div>
-                    <div class="step-content">
-                        <h3>📚 Szkolenie zespołu</h3>
-                        <p>Prowadzimy kompleksowe szkolenia dla Twojego zespołu, aby wszyscy mogli efektywnie wykorzystywać nowe narzędzia AI.</p>
-                    </div>
-                </div>
-                <div class="step-connector"></div>
-                <div class="step-item">
-                    <div class="step-number">05</div>
-                    <div class="step-content">
-                        <h3>🚀 Wsparcie i optymalizacja</h3>
-                        <p>Zapewniamy ciągłe wsparcie, monitorujemy efekty i optymalizujemy rozwiązania, aby maksymalizować korzyści.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq" id="faq">
-        <div class="faq-container">
-            <h2 class="section-title">Najczęściej zadawane pytania</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>🤖 Czy AI zastąpi moich pracowników?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Nie - AI ma za zadanie wspierać i wzmacniać możliwości Twoich pracowników, a nie ich zastępować. Pomagamy zautomatyzować rutynowe zadania, dzięki czemu Twój zespół może skupić się na bardziej kreatywnych i strategicznych działaniach.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>💰 Ile kosztuje wdrożenie AI w mojej firmie?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Koszty zależą od skali i złożoności projektu. Pakiet Start-AI (diagnoza) kosztuje 369 zł, a kompleksowe wdrożenia rozpoczynamy od 2000 zł. Oferujemy bezpłatną konsultację, podczas której omówimy Twoje potrzeby i przygotujemy spersonalizowaną wycenę.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>⏱️ Jak długo trwa wdrożenie?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Podstawowe wdrożenie zajmuje 1-2 tygodnie, a kompleksowe projekty 1-3 miesiące. Pierwsze efekty widoczne są już po kilku dniach. Wszystko zależy od zakresu automatyzacji i złożoności procesów w Twojej organizacji.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>🔐 Czy moje dane są bezpieczne?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Absolutnie! Wszystkie nasze rozwiązania są w pełni zgodne z RODO. Korzystamy z lokalnych modeli LLM lub bezpiecznych API z najwyższymi certyfikatami bezpieczeństwa. Twoje dane nigdy nie są wykorzystywane do trenowania modeli AI.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <h3>📚 Czy otrzymam szkolenie dla zespołu?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Tak! Każde wdrożenie obejmuje kompleksowe wsparcie dla zespołu. W Pakiecie Fit-AI znajdziesz szkolenia dostosowane do potrzeb Twojej firmy, bibliotekę promptów oraz wsparcie poimplementacyjne. Dodatkowo nagrywamy video-instrukcje do wielokrotnego użytku. Możemy zorganizować szkolenia w różnych formatach - zarówno krótkie warsztaty, jak i rozbudowane programy rozwojowe.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact" itemscope itemtype="https://schema.org/ContactPage">
-        <div class="contact-container">
-            <h2 class="section-title" itemprop="name">Skontaktuj się z nami</h2>
-            
-            <!-- Contact Info Section -->
-            <div class="contact-info">
-                <div class="contact-info-grid">
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <h3>Email</h3>
-                        <a href="mailto:kontakt@brightmind-solutions.com">kontakt@brightmind-solutions.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <h3>Telefon</h3>
-                        <a href="tel:+48730152161">+48 730 152 161</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="success-message" id="successMessage">
-                ✅ Dziękujemy! Twoja wiadomość została wysłana. Skontaktujemy się z Tobą wkrótce.
-            </div>
-            
-            <div class="contact-form">
-                <h3>📬 Formularz Kontaktowy</h3>
-                <form id="contactForm" name="contact" method="POST" data-netlify="true" action="/success.html" data-netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" value="contact">
-                    <p style="display: none;">
-                        <label>Don't fill this out if you're human: <input name="bot-field"></label>
-                    </p>
-                    
-                    <div class="form-group">
-                        <label for="name">Imię i nazwisko *</label>
-                        <input type="text" id="name" name="name" required placeholder="Wprowadź swoje imię i nazwisko" maxlength="100" pattern="[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż\s]{2,100}" title="Tylko litery i spacje, 2-100 znaków">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Adres e-mail *</label>
-                        <input type="email" id="email" name="email" required placeholder="twoj@email.com" maxlength="254" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Wprowadź poprawny adres email">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Numer telefonu</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+48 123 456 789" maxlength="20" pattern="[\+]?[0-9\s\-\(\)]{9,20}" title="Wprowadź poprawny numer telefonu">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="company">Nazwa firmy</label>
-                        <input type="text" id="company" name="company" placeholder="Nazwa Twojej firmy (opcjonalne)" maxlength="200" pattern="[A-Za-z0-9ĄąĆćĘęŁłŃńÓóŚśŹźŻż\s\.\-&]{0,200}" title="Tylko litery, cyfry i podstawowe znaki interpunkcyjne">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Opis projektu / Dodatkowe informacje *</label>
-                        <textarea id="message" name="message" required placeholder="Opisz swoje potrzeby, oczekiwania i cele projektu. Im więcej szczegółów, tym lepiej będziemy mogli dopasować nasze usługi do Twoich potrzeb." maxlength="2000" minlength="10"></textarea>
-                    </div>
-                    
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="privacy" name="privacy" required>
-                        <label for="privacy">
-                            Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z
-                            <a href="privacy-policy.html" target="_blank" style="color: #00f5ff; text-decoration: underline;">Polityką Prywatności</a>
-                            w celu kontaktu związanego z zapytaniem. *
-                        </label>
-                    </div>
-                    
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="marketing" name="marketing">
-                        <label for="marketing">
-                            Wyrażam zgodę na otrzymywanie informacji marketingowych o usługach BrightMind AI Solutions 
-                            (newsletter, oferty specjalne, informacje o nowych usługach).
-                        </label>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">
-                        Wyślij wiadomość 🚀
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-    </main>
-
-    <!-- Privacy Policy Modal -->
-    <div id="privacyModal" class="modal">
-        <div class="modal-content modal-content--privacy">
-            <span class="close" data-close-privacy-modal>&times;</span>
-            <h2 class="privacy-h2">Polityka Prywatności</h2>
-            
-            <div class="privacy-content">
-                <h3 class="privacy-h3">1. Administrator Danych</h3>
-                <p>Administratorem Państwa danych osobowych jest <strong>Patryk Gliński BrightMind AI Solutions</strong>.</p>
-                
-                <h3 class="privacy-h3">2. Cele Przetwarzania Danych</h3>
-                <p>Dane osobowe są przetwarzane w następujących celach:</p>
-                <ul class="privacy-ul">
-                    <li>Kontakt w związku z zapytaniem przesłanym przez formularz</li>
-                    <li>Przygotowanie i przedstawienie oferty usług</li>
-                    <li>Realizacja zawartej umowy</li>
-                    <li>Wysyłanie newslettera (za zgodą)</li>
-                    <li>Marketing bezpośredni własnych produktów i usług (za zgodą)</li>
-                </ul>
-                
-                <h3 class="privacy-h3">3. Podstawa Prawna</h3>
-                <p>Podstawą prawną przetwarzania danych jest:</p>
-                <ul class="privacy-ul">
-                    <li><strong>Art. 6 ust. 1 lit. a RODO</strong> - zgoda (newsletter, marketing)</li>
-                    <li><strong>Art. 6 ust. 1 lit. b RODO</strong> - wykonanie umowy</li>
-                    <li><strong>Art. 6 ust. 1 lit. f RODO</strong> - prawnie uzasadniony interes (kontakt biznesowy)</li>
-                </ul>
-                
-                <h3 class="privacy-h3">4. Odbiorcy Danych</h3>
-                <p>Dane osobowe mogą być przekazywane:</p>
-                <ul class="privacy-ul">
-                    <li>Dostawcom usług IT (hosting, e-mail)</li>
-                    <li>Firmom księgowym</li>
-                    <li>Organom państwowym na podstawie przepisów prawa</li>
-                </ul>
-                
-                <h3 class="privacy-h3">5. Okres Przechowywania</h3>
-                <p>Dane będą przechowywane:</p>
-                <ul class="privacy-ul">
-                    <li>Do realizacji umowy i rozliczenia zobowiązań</li>
-                    <li>Do czasu cofnięcia zgody (newsletter, marketing)</li>
-                    <li>Przez okres wymagany przepisami prawa</li>
-                    <li>Maksymalnie przez 6 lat od ostatniego kontaktu</li>
-                </ul>
-                
-                <h3 class="privacy-h3">6. Prawa Osoby, Której Dane Dotyczą</h3>
-                <p>Przysługują Państwu następujące prawa:</p>
-                <ul class="privacy-ul">
-                    <li><strong>Prawo dostępu</strong> do swoich danych osobowych</li>
-                    <li><strong>Prawo do sprostowania</strong> nieprawidłowych danych</li>
-                    <li><strong>Prawo do usunięcia</strong> danych ("prawo do bycia zapomnianym")</li>
-                    <li><strong>Prawo do ograniczenia</strong> przetwarzania</li>
-                    <li><strong>Prawo do przenoszenia</strong> danych</li>
-                    <li><strong>Prawo sprzeciwu</strong> wobec przetwarzania</li>
-                    <li><strong>Prawo do cofnięcia zgody</strong> w dowolnym momencie</li>
-                </ul>
-                
-                <h3 class="privacy-h3">7. Skarga do Organu Nadzorczego</h3>
-                <p>W przypadku naruszenia przepisów o ochronie danych osobowych, przysługuje Państwu prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych.</p>
-                
-                <h3 class="privacy-h3">8. Automatyczne Podejmowanie Decyzji</h3>
-                <p>Państwa dane nie będą podlegać zautomatyzowanemu podejmowaniu decyzji, w tym profilowaniu.</p>
-                
-                <h3 class="privacy-h3">9. Dobrowolność Podania Danych</h3>
-                <p>Podanie danych osobowych jest dobrowolne, jednak niezbędne do realizacji usługi lub kontaktu. Pola oznaczone gwiazdką (*) są obowiązkowe.</p>
-                
-                <h3 class="privacy-h3">10. Kontakt w Sprawach Ochrony Danych</h3>
-                <p>W sprawach dotyczących ochrony danych osobowych można kontaktować się:</p>
-                <ul class="privacy-ul">
-                    <li>Mailowo: <strong style="color: #00f5ff;">kontakt@brightmind-solutions.com</strong></li>
-                </ul>
-                
-                <div class="privacy-note">
-                    <p class="privacy-note-title">⚡ Ważne informacje:</p>
-                    <ul class="privacy-note-ul">
-                        <li>Zgoda może być cofnięta w dowolnym momencie</li>
-                        <li>Cofnięcie zgody nie wpływa na zgodność z prawem przetwarzania przed cofnięciem</li>
-                        <li>Dane są chronione zgodnie z najwyższymi standardami bezpieczeństwa</li>
-                    </ul>
-                    <h3 class="privacy-h3">11. Pliki Cookies i Facebook Pixel</h3>
-<p>Na naszej stronie wykorzystujemy narzędzie Facebook Pixel (Meta Pixel) dostarczane przez Meta Platforms Ireland Limited.</p>
-<p><strong>Facebook Pixel zbiera następujące dane:</strong></p>
-<ul class="privacy-ul">
-    <li>Adres IP użytkownika</li>
-    <li>Identyfikator przeglądarki i urządzenia</li>
-    <li>Akcje podejmowane na stronie</li>
-    <li>Informacje o konwersjach</li>
-</ul>
-<p><strong>Cele wykorzystania:</strong></p>
-<ul class="privacy-ul">
-    <li>Analizowanie skuteczności kampanii reklamowych</li>
-    <li>Remarketing - wyświetlanie spersonalizowanych reklam</li>
-    <li>Optymalizacja wyświetlania reklam</li>
-</ul>
-<p>Możesz zarządzać swoimi preferencjami dotyczącymi cookies klikając "Ustawienia cookies" w stopce strony.</p>
-                </div>
-                
-                <p class="privacy-updated">
-                    Ostatnia aktualizacja: <strong>8 sierpnia 2025</strong>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <footer class="footer" role="contentinfo" itemscope itemtype="https://schema.org/Organization">
-        <div class="social-media">
-            <a href="https://www.youtube.com/@Neural_Update" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                </svg>
-            </a>
-        </div>
-        <p>&copy; 2026 BrightMind AI Solutions. Wszystkie prawa zastrzeżone.</p>
-        <p itemprop="description">Transformujemy przyszłość biznesu z pomocą sztucznej inteligencji.</p>
-        <p><a href="privacy-policy.html" style="color: #00f5ff; text-decoration: none;">Polityka Prywatności</a></p>
-    </footer>
-</body>
-
-<!-- Cookie Banner HTML -->
-<div id="cookieBanner" class="cookie-banner" style="display: none;">
-    <div class="cookie-content">
-        <div class="cookie-icon">🍪</div>
-        <div class="cookie-text">
-            <h3>Ta strona używa plików cookies</h3>
-            <p>Używamy plików cookies oraz Facebook Pixel do analizy ruchu, personalizacji treści i reklam oraz udostępniania funkcji społecznościowych. Twoje dane mogą być przetwarzane przez Meta (Facebook) w celach marketingowych.</p>
-        </div>
-        <div class="cookie-buttons">
-            <button id="cookieAcceptAll" class="cookie-btn cookie-btn-accept">
-                Akceptuję wszystkie
-            </button>
-            <button id="cookieSettings" class="cookie-btn cookie-btn-settings">
-                Ustawienia
-            </button>
-            <button id="cookieRejectAll" class="cookie-btn cookie-btn-reject">
-                Odrzuć opcjonalne
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- Advanced Cookie Settings Modal -->
-<div id="cookieModal" class="cookie-modal" style="display: none;">
-    <div class="cookie-modal-content">
-        <span class="cookie-close">&times;</span>
-        <h2>Ustawienia plików cookies</h2>
-        
-        <div class="cookie-category">
-            <div class="cookie-category-header">
-                <h3>📊 Niezbędne</h3>
-                <label class="cookie-switch">
-                    <input type="checkbox" checked disabled>
-                    <span class="cookie-slider"></span>
-                </label>
-            </div>
-            <p>Cookies niezbędne do prawidłowego funkcjonowania strony. Nie można ich wyłączyć.</p>
-        </div>
-        
-        <div class="cookie-category">
-            <div class="cookie-category-header">
-                <h3>📈 Analityczne i marketingowe (Facebook Pixel)</h3>
-                <label class="cookie-switch">
-                    <input type="checkbox" id="analyticsConsent" checked>
-                    <span class="cookie-slider"></span>
-                </label>
-            </div>
-            <p>Używamy Facebook Pixel do analizy ruchu, mierzenia skuteczności reklam i remarketingu. Dane mogą być udostępniane Meta Platforms.</p>
-        </div>
-        
-        <div class="cookie-modal-footer">
-            <button id="cookieSaveSettings" class="cookie-btn cookie-btn-accept">
-                Zapisz ustawienia
-            </button>
-            <a href="privacy-policy.html" target="_blank" class="cookie-link">Polityka prywatności</a>
-        </div>
-    </div>
-</div>
-
-<!-- Cookie Banner CSS -->
-<style>
-/* Cookie Banner Styles */
-.cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(135deg, rgba(26, 26, 46, 0.98) 0%, rgba(15, 15, 35, 0.98) 100%);
-    backdrop-filter: blur(20px);
-    border-top: 2px solid rgba(0, 245, 255, 0.3);
-    padding: 1.5rem;
-    z-index: 9999;
-    box-shadow: 0 -10px 40px rgba(0, 245, 255, 0.2);
-    animation: slideUp 0.5s ease-out;
+<script type="text/babel">
+function HomeApp() {
+  return (
+    <>
+      <Nav active="home" />
+      <Hero />
+      <Services />
+      <Packages />
+      <Pricing />
+      <WebsitesService />
+      <WhyUs />
+      <Process />
+      <FAQ />
+      <Contact />
+      <Footer />
+    </>
+  );
 }
 
-@keyframes slideUp {
-    from {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.cookie-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.cookie-icon {
-    font-size: 3rem;
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
-.cookie-text {
-    flex: 1;
-    min-width: 300px;
-}
-
-.cookie-text h3 {
-    color: #ffffff;
-    margin-bottom: 0.5rem;
-    font-size: 1.3rem;
-}
-
-.cookie-text p {
-    color: #c0c0c0;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-.cookie-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.cookie-btn {
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 10px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-}
-
-.cookie-btn-accept {
-    background: linear-gradient(45deg, #00f5ff, #ff00ff);
-    color: white;
-}
-
-.cookie-btn-accept:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(0, 245, 255, 0.4);
-}
-
-.cookie-btn-settings {
-    background: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-    border: 1px solid rgba(0, 245, 255, 0.3);
-}
-
-.cookie-btn-settings:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(0, 245, 255, 0.5);
-}
-
-.cookie-btn-reject {
-    background: transparent;
-    color: #c0c0c0;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.cookie-btn-reject:hover {
-    border-color: rgba(255, 255, 255, 0.4);
-    color: #ffffff;
-}
-
-/* Cookie Modal Styles */
-.cookie-modal {
-    display: none;
-    position: fixed;
-    z-index: 10000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(5px);
-}
-
-.cookie-modal-content {
-    background: linear-gradient(135deg, #1a1a2e 0%, #0f0f23 100%);
-    margin: 5% auto;
-    padding: 2.5rem;
-    border: 1px solid rgba(0, 245, 255, 0.3);
-    border-radius: 20px;
-    width: 90%;
-    max-width: 600px;
-    max-height: 80vh;
-    overflow-y: auto;
-    position: relative;
-}
-
-.cookie-close {
-    color: #ffffff;
-    float: right;
-    font-size: 2rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.cookie-close:hover {
-    color: #00f5ff;
-}
-
-.cookie-modal h2 {
-    color: #00f5ff;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    font-weight: 800;
-}
-
-.cookie-category {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1.5rem;
-    border-radius: 15px;
-    margin-bottom: 1.5rem;
-    border: 1px solid rgba(0, 245, 255, 0.2);
-}
-
-.cookie-category-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.cookie-category h3 {
-    color: #ffffff;
-    font-size: 1.2rem;
-    margin: 0;
-}
-
-.cookie-category p {
-    color: #c0c0c0;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin: 0;
-}
-
-/* Cookie Switch */
-.cookie-switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 30px;
-}
-
-.cookie-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.cookie-slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: 0.4s;
-    border-radius: 30px;
-}
-
-.cookie-slider:before {
-    position: absolute;
-    content: "";
-    height: 22px;
-    width: 22px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: 0.4s;
-    border-radius: 50%;
-}
-
-input:checked + .cookie-slider {
-    background: linear-gradient(45deg, #00f5ff, #ff00ff);
-}
-
-input:checked + .cookie-slider:before {
-    transform: translateX(30px);
-}
-
-input:disabled + .cookie-slider {
-    cursor: not-allowed;
-    opacity: 0.6;
-}
-
-.cookie-modal-footer {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.cookie-link {
-    color: #00f5ff;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-}
-
-.cookie-link:hover {
-    text-decoration: underline;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .cookie-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .cookie-buttons {
-        width: 100%;
-        justify-content: center;
-    }
-    
-    .cookie-btn {
-        flex: 1;
-        min-width: 120px;
-    }
-    
-    .cookie-modal-content {
-        margin: 10% auto;
-        padding: 1.5rem;
-        width: 95%;
-    }
-}
-</style>
-
-<!-- Cookie Banner JavaScript -->
-<script>
-// Cookie Banner Management
-(function() {
-    'use strict';
-    
-    // Sprawdź czy użytkownik już wyraził zgodę
-    function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-    }
-    
-    function setCookie(name, value, days) {
-        const date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        const expires = `expires=${date.toUTCString()}`;
-        document.cookie = `${name}=${value};${expires};path=/;SameSite=Strict;Secure`;
-    }
-    
-    // Funkcja do włączania/wyłączania Facebook Pixel
-    function toggleFacebookPixel(enable) {
-        if (enable) {
-            // Włącz Facebook Pixel
-            if (typeof fbq !== 'undefined') {
-                fbq('consent', 'grant');
-                fbq('track', 'PageView');
-                console.log('Facebook Pixel: Enabled');
-            }
-        } else {
-            // Wyłącz Facebook Pixel
-            if (typeof fbq !== 'undefined') {
-                fbq('consent', 'revoke');
-                console.log('Facebook Pixel: Disabled');
-            }
-            // Usuń cookies Facebooka
-            document.cookie = '_fbp=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-            document.cookie = '_fbc=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-            document.cookie = 'fr=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-        }
-    }
-    
-    // Sprawdź zgodę przy ładowaniu strony
-    const cookieConsent = getCookie('cookieConsent');
-    const analyticsConsent = getCookie('analyticsConsent');
-    
-    if (!cookieConsent) {
-        // Pokaż baner jeśli nie ma zgody
-        document.getElementById('cookieBanner').style.display = 'block';
-        // Domyślnie wyłącz pixel do czasu wyrażenia zgody
-        toggleFacebookPixel(false);
-    } else if (analyticsConsent === 'true') {
-        // Włącz pixel jeśli jest zgoda
-        toggleFacebookPixel(true);
-    }
-    
-    // Obsługa przycisków
-    document.getElementById('cookieAcceptAll').addEventListener('click', function() {
-        setCookie('cookieConsent', 'true', 365);
-        setCookie('analyticsConsent', 'true', 365);
-        toggleFacebookPixel(true);
-        document.getElementById('cookieBanner').style.display = 'none';
-    });
-    
-    document.getElementById('cookieRejectAll').addEventListener('click', function() {
-        setCookie('cookieConsent', 'true', 365);
-        setCookie('analyticsConsent', 'false', 365);
-        toggleFacebookPixel(false);
-        document.getElementById('cookieBanner').style.display = 'none';
-    });
-    
-    document.getElementById('cookieSettings').addEventListener('click', function() {
-        document.getElementById('cookieModal').style.display = 'block';
-    });
-    
-    document.getElementById('cookieSaveSettings').addEventListener('click', function() {
-        const analyticsEnabled = document.getElementById('analyticsConsent').checked;
-        setCookie('cookieConsent', 'true', 365);
-        setCookie('analyticsConsent', analyticsEnabled ? 'true' : 'false', 365);
-        toggleFacebookPixel(analyticsEnabled);
-        document.getElementById('cookieModal').style.display = 'none';
-        document.getElementById('cookieBanner').style.display = 'none';
-    });
-    
-    // Zamknij modal
-    document.querySelector('.cookie-close').addEventListener('click', function() {
-        document.getElementById('cookieModal').style.display = 'none';
-    });
-    
-    // Zamknij modal klikając poza nim
-    window.addEventListener('click', function(e) {
-        if (e.target == document.getElementById('cookieModal')) {
-            document.getElementById('cookieModal').style.display = 'none';
-        }
-    });
-    
-    // Dodaj link do zmiany ustawień cookies w stopce (opcjonalne)
-    const footer = document.querySelector('.footer');
-    if (footer && cookieConsent) {
-        const cookieSettingsLink = document.createElement('p');
-        cookieSettingsLink.innerHTML = '<a href="#" id="changeCookieSettings" style="color: #00f5ff; text-decoration: none;">⚙️ Ustawienia cookies</a>';
-        footer.appendChild(cookieSettingsLink);
-        
-        document.getElementById('changeCookieSettings').addEventListener('click', function(e) {
-            e.preventDefault();
-            document.getElementById('cookieModal').style.display = 'block';
-        });
-    }
-})();
+ReactDOM.createRoot(document.getElementById("app")).render(<HomeApp />);
 </script>
+</body>
 </html>
