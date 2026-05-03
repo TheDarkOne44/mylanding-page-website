@@ -69,14 +69,36 @@ const Footer = () => (
             <li>Patryk Gliński</li>
             <li><a href="mailto:kontakt@brightmind-solutions.com">kontakt@brightmind-solutions.com</a></li>
             <li><a href="tel:+48730152161">+48 730 152 161</a></li>
+            <li style={{ marginTop: 12 }}>
+              <a
+                href="https://www.youtube.com/@Neural_Update"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "var(--fg-muted)" }}
+              >
+                <Icon name="youtube" size={18} />
+                Neural_Update
+              </a>
+            </li>
           </ul>
         </div>
       </div>
       <div className="footer-bottom">
         <span>© 2026 BrightMind AI Solutions. Wszystkie prawa zastrzeżone.</span>
-        <span>
+        <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+          <a
+            href="https://www.youtube.com/@Neural_Update"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="YouTube — Neural_Update"
+            style={{ display: "flex", alignItems: "center", color: "var(--fg-muted)", transition: "color 0.2s" }}
+            onMouseEnter={e => e.currentTarget.style.color = "#ff0000"}
+            onMouseLeave={e => e.currentTarget.style.color = "var(--fg-muted)"}
+          >
+            <Icon name="youtube" size={20} />
+          </a>
           <a href="privacy-policy.html" style={{ color: "var(--fg-muted)" }}>Polityka prywatności</a>
-        </span>
+        </div>
       </div>
     </div>
   </footer>
@@ -106,6 +128,7 @@ const Icon = ({ name, size = 20 }) => {
     eye: <><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z" /><circle cx="12" cy="12" r="3" /></>,
     code: <><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></>,
     target: <><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></>,
+    youtube: <><rect x="2" y="6" width="20" height="14" rx="3" /><polygon points="10 9.5 16 13 10 16.5 10 9.5" /></>,
   };
   return <svg {...props}>{paths[name] || paths.check}</svg>;
 };
