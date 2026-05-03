@@ -381,21 +381,31 @@ const Contact = () => (
             Pn–Pt 9:00–17:00 · CET
           </div>
         </div>
-        <form className="card" style={{ padding: 32 }} onSubmit={(e) => { e.preventDefault(); alert("Demo formularz — wiadomość wysłana"); }}>
+        <form
+          className="card"
+          style={{ padding: 32 }}
+          name="contact"
+          method="POST"
+          action="/success.html"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="bot-field" />
           <h3 style={{ marginBottom: 24 }}>📬 Formularz kontaktowy</h3>
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            <FormField label="Imię i nazwisko" required placeholder="Jan Kowalski" />
-            <FormField label="Adres e-mail" required type="email" placeholder="jan@firma.pl" />
-            <FormField label="Numer telefonu" type="tel" placeholder="+48 123 456 789" />
-            <FormField label="Nazwa firmy" placeholder="Firma sp. z o.o." />
-            <FormSelect label="Czego dotyczy zapytanie?" options={["Doradztwo AI dla firm", "Korepetycje AI", "Automatyzacja marketingu", "Agenci AI / automatyzacja", "Spersonalizowane asystenty", "Wdrożenia NIS2", "Strona internetowa", "Inne"]} />
-            <FormTextarea label="Opis projektu / dodatkowe informacje" required placeholder="Opisz swoje potrzeby, oczekiwania i cele projektu. Im więcej szczegółów, tym lepiej dopasuję ofertę." />
+            <FormField label="Imię i nazwisko" name="name" required placeholder="Jan Kowalski" />
+            <FormField label="Adres e-mail" name="email" required type="email" placeholder="jan@firma.pl" />
+            <FormField label="Numer telefonu" name="phone" type="tel" placeholder="+48 123 456 789" />
+            <FormField label="Nazwa firmy" name="company" placeholder="Firma sp. z o.o." />
+            <FormSelect label="Czego dotyczy zapytanie?" name="subject" options={["Doradztwo AI dla firm", "Korepetycje AI", "Automatyzacja marketingu", "Agenci AI / automatyzacja", "Spersonalizowane asystenty", "Wdrożenia NIS2", "Strona internetowa", "Inne"]} />
+            <FormTextarea label="Opis projektu / dodatkowe informacje" name="message" required placeholder="Opisz swoje potrzeby, oczekiwania i cele projektu. Im więcej szczegółów, tym lepiej dopasuję ofertę." />
             <label style={{ display: "flex", gap: 10, fontSize: "0.85rem", color: "var(--fg-muted)", lineHeight: 1.5 }}>
-              <input type="checkbox" required style={{ marginTop: 4 }} />
-              <span>Wyrażam zgodę na przetwarzanie danych zgodnie z <a href="#">Polityką Prywatności</a>. *</span>
+              <input type="checkbox" name="privacy_consent" required style={{ marginTop: 4 }} />
+              <span>Wyrażam zgodę na przetwarzanie danych zgodnie z <a href="privacy-policy.html">Polityką Prywatności</a>. *</span>
             </label>
             <label style={{ display: "flex", gap: 10, fontSize: "0.85rem", color: "var(--fg-muted)", lineHeight: 1.5 }}>
-              <input type="checkbox" style={{ marginTop: 4 }} />
+              <input type="checkbox" name="marketing_consent" style={{ marginTop: 4 }} />
               <span>Wyrażam zgodę na otrzymywanie informacji marketingowych o usługach BrightMind AI Solutions.</span>
             </label>
             <button type="submit" className="btn btn-primary" style={{ justifyContent: "center", marginTop: 8 }}>Wyślij wiadomość 🚀</button>
@@ -406,10 +416,10 @@ const Contact = () => (
   </section>
 );
 
-const FormField = ({ label, required, type = "text", placeholder }) => (
+const FormField = ({ label, required, type = "text", placeholder, name }) => (
   <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
     <span style={{ fontSize: "0.85rem", color: "var(--fg-muted)" }}>{label} {required && <span style={{ color: "var(--accent)" }}>*</span>}</span>
-    <input type={type} placeholder={placeholder} required={required} style={{
+    <input type={type} name={name} placeholder={placeholder} required={required} style={{
       background: "var(--bg)",
       border: "1px solid var(--border)",
       borderRadius: "var(--radius)",
@@ -421,10 +431,10 @@ const FormField = ({ label, required, type = "text", placeholder }) => (
   </label>
 );
 
-const FormSelect = ({ label, options }) => (
+const FormSelect = ({ label, options, name }) => (
   <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
     <span style={{ fontSize: "0.85rem", color: "var(--fg-muted)" }}>{label}</span>
-    <select style={{
+    <select name={name} style={{
       background: "var(--bg)",
       border: "1px solid var(--border)",
       borderRadius: "var(--radius)",
@@ -438,10 +448,10 @@ const FormSelect = ({ label, options }) => (
   </label>
 );
 
-const FormTextarea = ({ label, required, placeholder }) => (
+const FormTextarea = ({ label, required, placeholder, name }) => (
   <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
     <span style={{ fontSize: "0.85rem", color: "var(--fg-muted)" }}>{label} {required && <span style={{ color: "var(--accent)" }}>*</span>}</span>
-    <textarea placeholder={placeholder} required={required} rows={4} style={{
+    <textarea name={name} placeholder={placeholder} required={required} rows={4} style={{
       background: "var(--bg)",
       border: "1px solid var(--border)",
       borderRadius: "var(--radius)",
