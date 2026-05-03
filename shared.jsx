@@ -69,12 +69,23 @@ const Footer = () => (
             <li>Patryk Gliński</li>
             <li><a href="mailto:kontakt@brightmind-solutions.com">kontakt@brightmind-solutions.com</a></li>
             <li><a href="tel:+48730152161">+48 730 152 161</a></li>
-            <li style={{ marginTop: 12 }}>
+            <li style={{ marginTop: 16 }}>
               <a
                 href="https://www.youtube.com/@Neural_Update"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "var(--fg-muted)" }}
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 10,
+                  padding: "8px 14px",
+                  background: "#ff0000",
+                  color: "#fff",
+                  borderRadius: "var(--radius)",
+                  fontWeight: 600,
+                  fontSize: "0.85rem",
+                  textDecoration: "none",
+                }}
               >
                 <Icon name="youtube" size={18} />
                 Neural_Update
@@ -90,12 +101,21 @@ const Footer = () => (
             href="https://www.youtube.com/@Neural_Update"
             target="_blank"
             rel="noopener noreferrer"
-            title="YouTube — Neural_Update"
-            style={{ display: "flex", alignItems: "center", color: "var(--fg-muted)", transition: "color 0.2s" }}
-            onMouseEnter={e => e.currentTarget.style.color = "#ff0000"}
-            onMouseLeave={e => e.currentTarget.style.color = "var(--fg-muted)"}
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
+              padding: "6px 14px",
+              background: "#ff0000",
+              color: "#fff",
+              borderRadius: "var(--radius)",
+              fontWeight: 600,
+              fontSize: "0.8rem",
+              textDecoration: "none",
+            }}
           >
-            <Icon name="youtube" size={20} />
+            <Icon name="youtube" size={16} />
+            YouTube
           </a>
           <a href="privacy-policy.html" style={{ color: "var(--fg-muted)" }}>Polityka prywatności</a>
         </div>
