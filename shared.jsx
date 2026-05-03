@@ -69,28 +69,6 @@ const Footer = () => (
             <li>Patryk Gliński</li>
             <li><a href="mailto:kontakt@brightmind-solutions.com">kontakt@brightmind-solutions.com</a></li>
             <li><a href="tel:+48730152161">+48 730 152 161</a></li>
-            <li style={{ marginTop: 16 }}>
-              <a
-                href="https://www.youtube.com/@Neural_Update"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 10,
-                  padding: "8px 14px",
-                  background: "#ff0000",
-                  color: "#fff",
-                  borderRadius: "var(--radius)",
-                  fontWeight: 600,
-                  fontSize: "0.85rem",
-                  textDecoration: "none",
-                }}
-              >
-                <Icon name="youtube" size={18} />
-                Neural_Update
-              </a>
-            </li>
           </ul>
         </div>
       </div>
