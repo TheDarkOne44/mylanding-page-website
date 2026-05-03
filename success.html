@@ -3,242 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'none';">
     <title>Dziękujemy! - BrightMind AI Solutions</title>
     <meta name="description" content="Dziękujemy za kontakt! Odezwiemy się w ciągu 24 godzin z spersonalizowaną ofertą.">
+    <meta name="robots" content="noindex, nofollow">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Dodajemy główny arkusz stylów -->
-    <link rel="stylesheet" href="assets.css">
-    
-    <!-- Style specyficzne dla strony sukcesu -->
-    <style>
-        .success-icon {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 2rem;
-            background: linear-gradient(45deg, #00f5ff, #ff00ff);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            animation: iconPulse 3s ease-in-out infinite;
-            box-shadow: 0 15px 40px rgba(0, 245, 255, 0.4);
-            position: relative;
-        }
-
-        .success-icon::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            animation: iconGlow 4s ease-in-out infinite;
-        }
-
-        @keyframes iconGlow {
-            0%, 100% { opacity: 0; transform: scale(0.8) rotate(0deg); }
-            50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
-        }
-
-        .highlight-box {
-            background: rgba(255, 255, 255, 0.08);
-            padding: 3rem 2.5rem;
-            border-radius: 25px;
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(0, 245, 255, 0.3);
-            margin: 3rem auto;
-            max-width: 800px;
-            position: relative;
-            overflow: hidden;
-            animation: slideInUp 1s ease-out 0.6s both;
-        }
-
-        .highlight-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #00f5ff, #ff00ff, #00ff88);
-            background-size: 300% 300%;
-            animation: gradientShift 6s ease-in-out infinite;
-        }
-
-        .highlight-box::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(0, 245, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%);
-            animation: backgroundShift 8s ease-in-out infinite alternate;
-        }
-
-        @keyframes backgroundShift {
-            0% { opacity: 0.3; transform: scale(1); }
-            100% { opacity: 0.7; transform: scale(1.02); }
-        }
-
-        .highlight-text {
-            color: #00f5ff;
-            font-weight: 700;
-            font-size: clamp(1.2rem, 3vw, 1.4rem);
-            position: relative;
-            z-index: 1;
-            text-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
-            text-align: center;
-        }
-
-        .features-list {
-            list-style: none;
-            padding: 0;
-            margin: 3rem auto;
-            text-align: left;
-            max-width: 600px;
-            animation: slideInUp 1s ease-out 0.9s both;
-        }
-
-        .features-list li {
-            padding: 1.2rem 0;
-            color: #b0b0b0;
-            position: relative;
-            padding-left: 3rem;
-            line-height: 1.7;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .features-list li:last-child {
-            border-bottom: none;
-        }
-
-        .features-list li::before {
-            content: '✨';
-            position: absolute;
-            left: 0;
-            color: #00f5ff;
-            font-size: 1.4rem;
-            animation: sparkle 2s ease-in-out infinite;
-            text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
-        }
-
-        .features-list li:nth-child(2)::before { animation-delay: 0.5s; }
-        .features-list li:nth-child(3)::before { animation-delay: 1s; }
-        .features-list li:nth-child(4)::before { animation-delay: 1.5s; }
-
-        @keyframes sparkle {
-            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
-            50% { transform: scale(1.3) rotate(180deg); opacity: 1; }
-        }
-
-        .features-list li:hover {
-            color: #ffffff;
-            transform: translateX(15px);
-            background: rgba(0, 245, 255, 0.05);
-            border-radius: 10px;
-            padding-left: 3.5rem;
-        }
-
-        /* Responsywność dla specyficznych elementów strony sukcesu */
-        @media (max-width: 768px) {
-            .success-icon {
-                width: 100px;
-                height: 100px;
-                font-size: 3rem;
-            }
-            
-            .highlight-box {
-                padding: 2rem 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .success-icon {
-                width: 80px;
-                height: 80px;
-                font-size: 2.5rem;
-            }
-            
-            .highlight-box {
-                padding: 1.5rem 1rem;
-            }
-            
-            .features-list li {
-                padding: 1rem 0;
-                padding-left: 2.5rem;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- Hero Section -->
-    <header class="hero" role="banner">
-        <div class="hero-content">
-            <div class="success-icon">✅</div>
-            <h1>Dziękujemy za wiadomość!</h1>
-            <p>Twoje zapytanie zostało przesłane pomyślnie.</p>
-            
-            <div class="highlight-box">
-                <p class="highlight-text">📞 Odezwiemy się w ciągu 24 godzin z spersonalizowaną ofertą dopasowaną do Twoich potrzeb.</p>
-            </div>
-            
-            <ul class="features-list">
-                <li>Otrzymasz szczegółową analizę Twoich wymagań</li>
-                <li>Przygotujemy dedykowaną propozycję rozwiązań AI</li>
-                <li>Zaproponujemy optymalny plan wdrożenia</li>
-                <li>Przedstawimy transparentny kosztorys</li>
-            </ul>
-            
-            <a href="/" class="cta-button">
-                Wróć na stronę główną
-            </a>
-        </div>
-    </header>
+<div id="app"></div>
 
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="contact-container">
-            <h2 class="section-title">🚀 Potrzebujesz pilnego kontaktu?</h2>
-            
-            <div class="contact-info-grid">
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <h3>Email</h3>
-                    <a href="mailto:kontakt@brightmind-solutions.com">kontakt@brightmind-solutions.com</a>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📱</div>
-                    <h3>Telefon</h3>
-                    <a href="tel:+48730152161">+48 730 152 161</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
 
-    <footer class="footer" role="contentinfo">
-        <div class="social-media">
-            <a href="https://www.youtube.com/@Neural_Update" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                </svg>
+<script type="text/babel" src="shared.jsx"></script>
+
+<script type="text/babel">
+function SuccessApp() {
+  return (
+    <>
+      <Nav />
+      <section style={{ padding: "120px 0 80px", minHeight: "70vh", display: "flex", alignItems: "center" }}>
+        <div className="container-narrow" style={{ textAlign: "center" }}>
+          <div style={{ width: 64, height: 64, borderRadius: "50%", background: "var(--accent-soft)", border: "1px solid var(--accent)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 32px", color: "var(--accent)" }}>
+            <Icon name="check" size={28} />
+          </div>
+          <span className="eyebrow">/ Wiadomość odebrana</span>
+          <h1 style={{ margin: "16px 0 20px" }}>Dziękujemy za kontakt!</h1>
+          <p className="text-muted" style={{ fontSize: "1.15rem", maxWidth: 520, margin: "0 auto 48px" }}>
+            Twoje zapytanie zostało przesłane pomyślnie. Odezwiemy się w ciągu <strong style={{ color: "var(--fg)" }}>24 godzin</strong> z ofertą dopasowaną do Twoich potrzeb.
+          </p>
+
+          <div className="card" style={{ textAlign: "left", marginBottom: 48 }}>
+            <div style={{ fontWeight: 600, marginBottom: 20 }}>Co się wydarzy dalej:</div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+              {[
+                { n: "01", t: "Analiza wymagań", d: "Przeczytamy dokładnie Twoje zapytanie i przeanalizujemy potrzeby." },
+                { n: "02", t: "Propozycja rozwiązań", d: "Przygotujemy dedykowaną propozycję wdrożeń AI dopasowaną do Twojego biznesu." },
+                { n: "03", t: "Transparentny kosztorys", d: "Otrzymasz stałą wycenę przed startem prac — bez niespodzianek." },
+              ].map((s, i) => (
+                <div key={i} style={{ display: "flex", gap: 16, paddingTop: i > 0 ? 16 : 0, borderTop: i > 0 ? "1px solid var(--border)" : "none" }}>
+                  <span className="mono accent" style={{ fontSize: "0.8rem", paddingTop: 2, minWidth: 24 }}>{s.n}</span>
+                  <div>
+                    <div style={{ fontWeight: 500, marginBottom: 4 }}>{s.t}</div>
+                    <p className="text-muted" style={{ margin: 0, fontSize: "0.9rem" }}>{s.d}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginBottom: 48 }}>
+            <a href="mailto:kontakt@brightmind-solutions.com" className="btn btn-secondary">
+              <Icon name="arrow" size={16} />
+              kontakt@brightmind-solutions.com
             </a>
+            <a href="tel:+48730152161" className="btn btn-secondary">+48 730 152 161</a>
+          </div>
+
+          <a href="index.html" className="btn btn-primary">← Wróć do strony głównej<Icon name="arrow" size={16} /></a>
         </div>
-        <p>&copy; 2025 BrightMind AI Solutions. Wszystkie prawa zastrzeżone.</p>
-        <p>Transformujemy przyszłość biznesu z pomocą sztucznej inteligencji.</p>
-        <p><a href="privacy-policy.html" style="color: #00f5ff; text-decoration: none;">Polityka Prywatności</a></p>
-    </footer>
+      </section>
+      <Footer />
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("app")).render(<SuccessApp />);
+</script>
 </body>
 </html>

@@ -5,6 +5,7 @@ const Nav = ({ active = "home" }) => {
     { id: "home", label: "Strona Główna", href: "index.html" },
     { id: "about", label: "O mnie", href: "o-mnie.html" },
     { id: "services", label: "Usługi", href: "index.html#uslugi" },
+    { id: "nis2", label: "NIS2", href: "NIS2.html" },
     { id: "practice", label: "AI w Praktyce", href: "ai-w-praktyce.html" },
     { id: "contact", label: "Kontakt", href: "index.html#kontakt" },
   ];

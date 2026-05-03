@@ -3,14 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: https://www.facebook.com; connect-src 'self' https://api.netlify.com https://connect.facebook.net https://*.facebook.com https://*.fbcdn.net; media-src 'self'; form-action 'self' https://brightmindsolutions.pl;">
     <title>AI w Praktyce - Przykłady Zastosowań | BrightMind AI Solutions</title>
     <meta name="description" content="Poznaj praktyczne zastosowania sztucznej inteligencji: Claude AI w Excel, analiza MRI z MedGemma, OCR, aplikacje mobilne i genomika z Evo 2.">
-    <meta name="keywords" content="AI w praktyce, Claude AI Excel, MedGemma analiza MRI, OCR rozpoznawanie tekstu, aplikacje mobilne AI, Evo 2 genetyka, automatyzacja procesów AI przykłady, sztuczna inteligencja zastosowania, agenci AI demo">
+    <meta name="keywords" content="AI w praktyce, Claude AI Excel, MedGemma analiza MRI, OCR rozpoznawanie tekstu, aplikacje mobilne AI, Evo 2 genetyka, automatyzacja procesów AI przykłady">
     <meta name="author" content="BrightMind AI Solutions">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 
@@ -21,77 +17,41 @@
     <meta property="og:image" content="https://brightmindsolutions.pl/og-image.jpg">
     <meta property="og:locale" content="pl_PL">
     <meta property="og:site_name" content="BrightMind AI Solutions">
-
-    <meta name="theme-color" content="#00f5ff">
+    <meta name="theme-color" content="#0a0d12">
     <link rel="canonical" href="https://brightmindsolutions.pl/ai-w-praktyce.html">
-    <link rel="stylesheet" href="assets.css">
-    <script src="assets.js" defer></script>
 
-    <!-- Structured Data - BreadcrumbList -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Strona Główna",
-          "item": "https://brightmindsolutions.pl/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "AI w Praktyce",
-          "item": "https://brightmindsolutions.pl/ai-w-praktyce.html"
-        }
+        { "@type": "ListItem", "position": 1, "name": "Strona Główna", "item": "https://brightmindsolutions.pl/" },
+        { "@type": "ListItem", "position": 2, "name": "AI w Praktyce", "item": "https://brightmindsolutions.pl/ai-w-praktyce.html" }
       ]
     }
     </script>
-    <!-- Structured Data - ItemList of AI use cases (GEO: enables LLM citation of examples) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ItemList",
       "name": "Praktyczne zastosowania AI — BrightMind AI Solutions",
-      "description": "Przykłady wdrożeń sztucznej inteligencji w biznesie i medycynie prezentowane przez BrightMind AI Solutions.",
       "url": "https://brightmindsolutions.pl/ai-w-praktyce.html",
       "numberOfItems": 5,
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Claude AI w automatyzacji pracy z Excelem",
-          "description": "Demonstracja wykorzystania Claude AI do analizy danych, generowania formuł i automatyzacji arkuszy kalkulacyjnych Excel dla firm."
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "MedGemma — analiza zdjęć MRI przez AI",
-          "description": "Przykład zastosowania modelu MedGemma (Google DeepMind) do automatycznej analizy obrazów MRI, wspomagającej diagnostykę medyczną."
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "OCR — rozpoznawanie tekstu przez AI",
-          "description": "Automatyczne rozpoznawanie i ekstrakcja tekstu z dokumentów, faktur i skanów z wykorzystaniem modeli AI. Zastosowanie w automatyzacji procesów biurowych."
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Aplikacje mobilne tworzone przez AI",
-          "description": "Demonstracja tworzenia aplikacji mobilnych z pomocą sztucznej inteligencji — przyspieszenie procesu developmentu i prototypowania."
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Evo 2 — genomika i analiza DNA z AI",
-          "description": "Zastosowanie modelu Evo 2 do analizy sekwencji genomicznych — przykład AI w naukach przyrodniczych i biotechnologii."
-        }
+        { "@type": "ListItem", "position": 1, "name": "Claude AI w automatyzacji pracy z Excelem" },
+        { "@type": "ListItem", "position": 2, "name": "MedGemma — analiza zdjęć MRI przez AI" },
+        { "@type": "ListItem", "position": 3, "name": "OCR — rozpoznawanie tekstu przez AI" },
+        { "@type": "ListItem", "position": 4, "name": "Aplikacje mobilne tworzone przez AI" },
+        { "@type": "ListItem", "position": 5, "name": "Evo 2 — genomika i analiza DNA z AI" }
       ]
     }
     </script>
-    <!-- Meta Pixel Code -->
+
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -105,459 +65,233 @@
     fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=753198334117239&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=857800850017857&ev=PageView&noscript=1"
     /></noscript>
-    <!-- End Meta Pixel Code -->
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="main-nav">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">BrightMind AI</a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Strona Główna</a></li>
-                <li><a href="o-mnie.html" class="nav-link">O mnie</a></li>
-                <li><a href="index.html#services" class="nav-link">Usługi</a></li>
-                <li><a href="ai-w-praktyce.html" class="nav-link active">AI w Praktyce</a></li>
-                <li><a href="index.html#contact" class="nav-link">Kontakt</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+<div id="app"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="shared.jsx"></script>
+
+<script type="text/babel">
+const CASES = [
+  {
+    id: "excel",
+    tab: "Claude AI w Excel",
+    icon: "chart",
+    tag: "Automatyzacja Biznesowa",
+    title: "Claude AI w Microsoft Excel — Analiza Danych w Naturalnym Języku",
+    desc: "Integracja Claude AI z Microsoft Excel eliminuje potrzebę skomplikowanych formuł i makr. Analitycy i specjaliści biznesowi mogą teraz przetwarzać dane, tworzyć raporty i generować insights używając prostych poleceń w naturalnym języku.",
+    features: [
+      { icon: "clock", h: "Oszczędność 60–80% czasu", p: "Redukcja czasu analizy z 45 minut do 2 minut. Automatyczna segmentacja i raportowanie w sekundach." },
+      { icon: "target", h: "Bez znajomości formuł", p: "Analiza danych bez zaawansowanych formuł Excel. Każdy może być analitykiem — wystarczy opisać co chcesz osiągnąć." },
+      { icon: "zap", h: "Wszechstronne zastosowania", p: "Segmentacja klientów, personalizacja treści marketingowych, czyszczenie danych, wykrywanie anomalii — jednym poleceniem." },
+    ],
+    results: ["Segmentacja klientów według przychodów i regionów", "Generowanie spersonalizowanych szablonów komunikacji", "Walidacja i standaryzacja danych kontaktowych", "Tworzenie raportów biznesowych bez pivot tables", "Wykrywanie duplikatów i anomalii w bazach danych"],
+    media: () => (
+      <div style={{ borderRadius: "var(--radius-lg)", overflow: "hidden", border: "1px solid var(--border-strong)", background: "var(--bg-elev-2)" }}>
+        <video controls preload="metadata" playsinline muted style={{ width: "100%", display: "block" }}>
+          <source src="EXCEL_Claude.mp4" type="video/mp4" />
+        </video>
+      </div>
+    ),
+  },
+  {
+    id: "medgemma",
+    tab: "MedGemma MRI",
+    icon: "eye",
+    tag: "Medycyna & AI",
+    title: "Analiza Skanów MRI z MedGemma 1.5",
+    desc: "Zaawansowany system analizy obrazów medycznych wykorzystujący model MedGemma — specjalistyczny model AI przeszkolony w dziedzinie medycyny przez Google DeepMind.",
+    features: [
+      { icon: "lock", h: "Pełna prywatność", p: "Model działa w pełni lokalnie — żadne dane nie są wysyłane na zewnętrzne serwery. Twoje dane medyczne pozostają bezpieczne." },
+      { icon: "zap", h: "Natychmiastowa analiza", p: "Szybka interpretacja obrazów MRI z wykorzystaniem najnowszych osiągnięć w dziedzinie AI medycznego." },
+      { icon: "target", h: "Specjalistyczna wiedza", p: "Model trenowany na danych medycznych zapewnia profesjonalne wsparcie diagnostyczne." },
+    ],
+    results: null,
+    media: () => (
+      <div style={{ borderRadius: "var(--radius-lg)", overflow: "hidden", border: "1px solid var(--border-strong)", position: "relative" }}>
+        <img src="medgemma-demo.png" alt="Analiza obrazów MRI przy pomocy MedGemma" style={{ width: "100%", display: "block" }} loading="lazy" />
+        <span className="chip" style={{ position: "absolute", top: 16, right: 16, color: "var(--accent)", borderColor: "var(--accent)" }}>100% lokalnie</span>
+      </div>
+    ),
+  },
+  {
+    id: "ocr",
+    tab: "OCR — Tekst z Obrazu",
+    icon: "file",
+    tag: "Rozpoznawanie Tekstu",
+    title: "OCR — Jak zamienić obraz w edytowalny tekst?",
+    desc: 'OCR (Optical Character Recognition) "czyta" tekst ze zdjęć, skanów lub dokumentów PDF i zamienia go na format, który można kopiować i edytować. Jak cyfrowy asystent przepisujący notatki ze zdjęcia tablicy — błyskawicznie i bez literówek.',
+    features: [
+      { icon: "cpu", h: "DeepSeek-VL2 / DeepSeek OCR", p: "Nowoczesny model multimodalny ze świetnym stosunkiem wydajności do zasobów. Łączy rozumienie obrazu z rozpoznawaniem tekstu." },
+      { icon: "book", h: "Tesseract OCR", p: "Klasyka OCR rozwijana przez Google — najbardziej popularny silnik open-source. Obsługuje ponad 100 języków." },
+      { icon: "users", h: "PaddleOCR", p: "Wszechstronny framework od Baidu — świetny do wielu języków, w tym azjatyckich." },
+    ],
+    results: ["Automatyzacja księgowości — odczytywanie faktur i paragonów", "Digitalizacja archiwów papierowych dokumentów", "Ekstrakcja danych z formularzy i umów", "Skanowanie wizytówek i automatyczne dodawanie kontaktów", "Przetwarzanie korespondencji i dokumentacji urzędowej"],
+    media: () => (
+      <div className="card" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16, padding: 40 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 20, fontSize: "3rem" }}>
+          <span>📄</span>
+          <span style={{ color: "var(--accent)", fontSize: "1.5rem" }}>→</span>
+          <span>🔍</span>
+          <span style={{ color: "var(--accent)", fontSize: "1.5rem" }}>→</span>
+          <span>📝</span>
         </div>
-    </nav>
-
-    <!-- Page Hero -->
-    <header class="subpage-hero">
-        <div class="subpage-hero__content">
-            <h1>AI w Praktyce</h1>
-            <p>Poznaj praktyczne zastosowania sztucznej inteligencji w codziennym życiu i biznesie</p>
+        <p className="text-muted" style={{ textAlign: "center", margin: 0, fontSize: "0.9rem" }}>Obraz → Rozpoznanie → Edytowalny Tekst</p>
+        <span className="chip" style={{ color: "var(--success)", borderColor: "var(--success)" }}>Open Source</span>
+      </div>
+    ),
+  },
+  {
+    id: "mobile",
+    tab: "Aplikacja Mobilna",
+    icon: "code",
+    tag: "Aplikacje Mobilne",
+    title: "Twoja Własna Aplikacja Mobilna — Bez Kodowania!",
+    desc: "Marzysz o własnej aplikacji mobilnej, ale nie umiesz programować? Dzięki AI to już nie problem! Sztuczna inteligencja pisze kod za Ciebie — wystarczy opisać, czego potrzebujesz.",
+    features: [
+      { icon: "zap", h: "Od pomysłu do aplikacji w kilka godzin", p: "Zamiast tygodni nauki programowania — opisujesz swój pomysł, a AI generuje kompletny kod aplikacji." },
+      { icon: "bot", h: "Zero doświadczenia? Żaden problem", p: "Nie musisz znać React Native, Swift ani Kotlina. AI rozumie naturalny język — powiedz co chcesz, a dostaniesz gotowy kod." },
+      { icon: "eye", h: "Profesjonalny design w pakiecie", p: "AI nie tylko pisze kod — tworzy też nowoczesny, elegancki interfejs z animacjami i intuicyjną nawigacją." },
+    ],
+    results: ["Aplikacje do zarządzania zadaniami i produktywnością", "Kalkulatory, konwertery i narzędzia codzienne", "Aplikacje fitness, zdrowotne i do śledzenia nawyków", "Proste gry mobilne i quizy edukacyjne", "Aplikacje dla małego biznesu — rezerwacje, katalogi, CRM"],
+    media: () => (
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+        <div style={{ borderRadius: "var(--radius-lg)", overflow: "hidden", border: "1px solid var(--border-strong)", position: "relative" }}>
+          <img src="to-do_app.png" alt="TaskFlow — aplikacja mobilna stworzona z pomocą AI" style={{ width: "100%", display: "block" }} loading="lazy" />
+          <span className="chip" style={{ position: "absolute", top: 12, right: 12 }}>Gotowa apka</span>
         </div>
-    </header>
-
-    <!-- AI Showcase Section - Case Studies -->
-    <section class="ai-showcase" id="ai-showcase">
-        <div class="ai-showcase-container">
-            <h2 class="section-title">AI w Praktyce - Zobacz Jak To Działa</h2>
-            <p class="showcase-subtitle">Poznaj praktyczne zastosowania sztucznej inteligencji w codziennym życiu</p>
-
-            <!-- Showcase Navigation Tabs -->
-            <div class="showcase-tabs">
-                <button class="showcase-tab active" data-tab="excel-claude">
-                    <span class="tab-icon">📊</span>
-                    <span class="tab-text">Claude AI w Excel</span>
-                </button>
-                <button class="showcase-tab" data-tab="medgemma">
-                    <span class="tab-icon">🏥</span>
-                    <span class="tab-text">MedGemma MRI</span>
-                </button>
-                <button class="showcase-tab" data-tab="ocr">
-                    <span class="tab-icon">📄</span>
-                    <span class="tab-text">OCR – Tekst z Obrazu</span>
-                </button>
-                <button class="showcase-tab" data-tab="mobile-app">
-                    <span class="tab-icon">📱</span>
-                    <span class="tab-text">Aplikacja Mobilna</span>
-                </button>
-                <button class="showcase-tab" data-tab="evo2-genetyka">
-                    <span class="tab-icon">🧬</span>
-                    <span class="tab-text">Evo 2 - Genetyka</span>
-                </button>
-            </div>
-
-            <!-- Case Study 1: Claude AI w Excel -->
-            <div class="showcase-content showcase-item active" id="excel-claude">
-                <div class="showcase-media">
-                    <div class="showcase-video-wrapper">
-                        <video controls preload="metadata" playsinline muted>
-                            <source src="EXCEL_Claude.mp4" type="video/mp4">
-                            Twoja przeglądarka nie obsługuje odtwarzania wideo.
-                        </video>
-                    </div>
-                </div>
-
-                <div class="showcase-text">
-                    <div class="showcase-tag">
-                        <span class="tag-icon">📊</span>
-                        <span>Automatyzacja Biznesowa</span>
-                    </div>
-
-                    <h3>Claude AI w Microsoft Excel - Analiza Danych w Naturalnym Języku</h3>
-
-                    <p class="showcase-description">
-                        Integracja <strong>Claude AI</strong> z Microsoft Excel eliminuje potrzebę skomplikowanych formuł i makr. Analitycy i specjaliści biznesowi mogą teraz przetwarzać dane, tworzyć raporty i generować insights używając prostych poleceń w naturalnym języku.
-                    </p>
-
-                    <div class="showcase-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">⏱️</div>
-                            <div class="feature-content">
-                                <h4>Oszczędność 60-80% Czasu</h4>
-                                <p>Redukcja czasu analizy z <strong>45 minut do 2 minut</strong>. Automatyczna segmentacja i raportowanie w sekundach.</p>
-                            </div>
-                        </div>
-
-                        <div class="feature-item">
-                            <div class="feature-icon">🎯</div>
-                            <div class="feature-content">
-                                <h4>Bez Znajomości Formuł</h4>
-                                <p>Analiza danych bez zaawansowanych formuł Excel. <strong>Każdy może być analitykiem</strong> - wystarczy opisać co chcesz osiągnąć.</p>
-                            </div>
-                        </div>
-
-                        <div class="feature-item">
-                            <div class="feature-icon">🔄</div>
-                            <div class="feature-content">
-                                <h4>Wszechstronne Zastosowania</h4>
-                                <p>Segmentacja klientów, personalizacja treści marketingowych, czyszczenie danych, wykrywanie anomalii - <strong>jednym poleceniem</strong>.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="showcase-results">
-                        <h4>Przykładowe zastosowania:</h4>
-                        <ul class="results-list">
-                            <li>Segmentacja klientów według przychodów i regionów</li>
-                            <li>Generowanie spersonalizowanych szablonów komunikacji</li>
-                            <li>Walidacja i standaryzacja danych kontaktowych</li>
-                            <li>Tworzenie raportów biznesowych bez pivot tables</li>
-                            <li>Wykrywanie duplikatów i anomalii w bazach danych</li>
-                        </ul>
-                    </div>
-
-                    <div class="showcase-cta">
-                        <p class="cta-text">
-                            <strong>Chcesz wdrożyć AI w swoich procesach analitycznych?</strong> Skontaktuj się z nami, aby dowiedzieć się więcej o integracji Claude AI z Twoimi narzędziami biznesowymi.
-                        </p>
-                        <a href="index.html#contact" class="showcase-button">
-                            Umów bezpłatną konsultację
-                            <span class="button-arrow">→</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Case Study 2: MedGemma MRI Analysis -->
-            <div class="showcase-content showcase-item" id="medgemma">
-                <div class="showcase-media">
-                    <div class="showcase-image-wrapper">
-                        <img src="medgemma-demo.png" alt="Analiza obrazów MRI przy pomocy MedGemma - lokalne przetwarzanie danych medycznych" loading="lazy">
-                        <div class="image-badge">
-                            <span class="badge-icon">🔒</span>
-                            <span class="badge-text">100% Lokalnie</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="showcase-text">
-                    <div class="showcase-tag">
-                        <span class="tag-icon">🏥</span>
-                        <span>Medycyna & AI</span>
-                    </div>
-
-                    <h3>Analiza Skanów MRI z MedGemma 1.5</h3>
-
-                    <p class="showcase-description">
-                        Przedstawiamy zaawansowany system analizy obrazów medycznych wykorzystujący model <strong>MedGemma</strong> - specjalistyczny model AI przeszkolony w dziedzinie medycyny.
-                    </p>
-
-                    <div class="showcase-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">🔐</div>
-                            <div class="feature-content">
-                                <h4>Pełna Prywatność</h4>
-                                <p>Model działa <strong>w pełni lokalnie</strong> - żadne dane nie są wysyłane na zewnętrzne serwery. Twoje dane medyczne pozostają bezpieczne.</p>
-                            </div>
-                        </div>
-
-                        <div class="feature-item">
-                            <div class="feature-icon">⚡</div>
-                            <div class="feature-content">
-                                <h4>Natychmiastowa Analiza</h4>
-                                <p>Szybka interpretacja obrazów MRI z wykorzystaniem najnowszych osiągnięć w dziedzinie AI medycznego.</p>
-                            </div>
-                        </div>
-
-                        <div class="feature-item">
-                            <div class="feature-icon">🎯</div>
-                            <div class="feature-content">
-                                <h4>Specjalistyczna Wiedza</h4>
-                                <p>Model trenowany na danych medycznych zapewnia profesjonalne wsparcie diagnostyczne.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="showcase-cta">
-                        <p class="cta-text">
-                            <strong>To tylko jeden z wielu przykładów</strong> praktycznego wykorzystania AI w codziennym życiu.
-                            Od automatyzacji procesów biznesowych, przez analizę danych, aż po specjalistyczne zastosowania branżowe.
-                        </p>
-                        <a href="index.html#contact" class="showcase-button">
-                            Dowiedz się więcej
-                            <span class="button-arrow">→</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Case Study 3: OCR – Optical Character Recognition -->
-            <div class="showcase-content showcase-item" id="ocr">
-                <div class="showcase-media">
-                    <div class="showcase-image-wrapper ocr-illustration">
-                        <div class="ocr-visual">
-                            <div class="ocr-visual-icon">📄</div>
-                            <div class="ocr-visual-arrow">→</div>
-                            <div class="ocr-visual-icon">🔍</div>
-                            <div class="ocr-visual-arrow">→</div>
-                            <div class="ocr-visual-icon">📝</div>
-                        </div>
-                        <div class="ocr-visual-label">Obraz → Rozpoznanie → Edytowalny Tekst</div>
-                        <div class="image-badge">
-                            <span class="badge-icon">⚡</span>
-                            <span class="badge-text">Open Source</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="showcase-text">
-                    <div class="showcase-tag">
-                        <span class="tag-icon">📄</span>
-                        <span>Rozpoznawanie Tekstu</span>
-                    </div>
-
-                    <h3>OCR – Jak zamienić obraz w edytowalny tekst?</h3>
-
-                    <p class="showcase-description">
-                        OCR (Optical Character Recognition) to technologia, która <strong>"czyta" tekst ze zdjęć, skanów lub dokumentów PDF</strong> i zamienia go na format, który można kopiować i edytować — np. w Wordzie. Wyobraź sobie, że masz cyfrowego asystenta, który przepisuje za Ciebie notatki ze zdjęcia tablicy czy wydrukowanego dokumentu — <strong>błyskawicznie i bez literówek</strong>.
-                    </p>
-
-                    <div class="showcase-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">🔬</div>
-                            <div class="feature-content">
-                                <h4>DeepSeek-VL2 / DeepSeek OCR</h4>
-                                <p>Nowoczesny model multimodalny ze <strong>świetnym stosunkiem wydajności do zasobów</strong>. Łączy rozumienie obrazu z rozpoznawaniem tekstu, idealny do złożonych dokumentów.</p>
-                            </div>
-                        </div>
-
-                        <div class="feature-item">
-                            <div class="feature-icon">📖</div>
-                            <div class="feature-content">
-                                <h4>Tesseract OCR</h4>
-                                <p><strong>Klasyka OCR</strong>, rozwijana przez Google — najbardziej popularny silnik open-source. Obsługuje ponad 100 języków i sprawdza się świetnie w standardowych dokumentach.</p>
-                            </div>
-                        </div>
-
-                        <div class="feature-item">
-                            <div class="feature-icon">🌍</div>
-                            <div class="feature-content">
-                                <h4>PaddleOCR</h4>
-                                <p>Wszechstronny framework od Baidu — <strong>świetny do wielu języków</strong>, w tym azjatyckich. Oferuje wykrywanie tekstu, rozpoznawanie i klasyfikację w jednym narzędziu.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="showcase-results">
-                        <h4>Praktyczne zastosowania OCR:</h4>
-                        <ul class="results-list">
-                            <li>Automatyzacja księgowości — odczytywanie faktur i paragonów</li>
-                            <li>Digitalizacja archiwów papierowych dokumentów</li>
-                            <li>Ekstrakcja danych z formularzy i umów</li>
-                            <li>Skanowanie wizytówek i automatyczne dodawanie kontaktów</li>
-                            <li>Przetwarzanie korespondencji i dokumentacji urzędowej</li>
-                        </ul>
-                    </div>
-
-                    <div class="showcase-cta">
-                        <p class="cta-text">
-                            <strong>Chcesz zautomatyzować przetwarzanie dokumentów w swojej firmie?</strong> Technologia OCR idealnie sprawdza się w automatyzacji księgowości (czytanie faktur) oraz digitalizacji archiwów. Skontaktuj się, aby poznać możliwości wdrożenia.
-                        </p>
-                        <a href="index.html#contact" class="showcase-button">
-                            Umów bezpłatną konsultację
-                            <span class="button-arrow">→</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Case Study 4: Aplikacja Mobilna z AI -->
-            <div class="showcase-content showcase-item" id="mobile-app">
-                <div class="showcase-media">
-                    <div class="showcase-dual-images">
-                        <div class="showcase-image-wrapper mobile-app-screenshot">
-                            <img src="to-do_app.png" alt="TaskFlow - aplikacja mobilna do zarządzania zadaniami stworzona z pomocą AI" loading="lazy">
-                            <div class="image-badge">
-                                <span class="badge-icon">📱</span>
-                                <span class="badge-text">Gotowa Apka</span>
-                            </div>
-                        </div>
-                        <div class="showcase-image-wrapper mobile-app-code">
-                            <img src="kod_mobileapp.png" alt="Kod źródłowy aplikacji mobilnej wygenerowany przez AI" loading="lazy">
-                            <div class="image-badge">
-                                <span class="badge-icon">💻</span>
-                                <span class="badge-text">Kod AI</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="showcase-text">
-                    <div class="showcase-tag">
-                        <span class="tag-icon">📱</span>
-                        <span>Aplikacje Mobilne</span>
-                    </div>
-
-                    <h3>Twoja Własna Aplikacja Mobilna - Bez Kodowania!</h3>
-
-                    <p class="showcase-description">
-                        Marzysz o własnej aplikacji mobilnej, ale nie umiesz programować? <strong>Dzięki AI to już nie problem!</strong> Sztuczna inteligencja pisze kod za Ciebie — wystarczy opisać, czego potrzebujesz, a AI stworzy gotową, działającą aplikację. To jak mieć osobistego programistę, który pracuje na zawołanie.
-                    </p>
-
-                    <div class="showcase-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">🚀</div>
-                            <div class="feature-content">
-                                <h4>Od Pomysłu do Aplikacji w Kilka Godzin</h4>
-                                <p>Zamiast tygodni nauki programowania — <strong>opisujesz swój pomysł</strong>, a AI generuje kompletny kod aplikacji. Prototyp gotowy tego samego dnia!</p>
-                            </div>
-                        </div>
-
-                        <div class="feature-item">
-                            <div class="feature-icon">💡</div>
-                            <div class="feature-content">
-                                <h4>Zero Doświadczenia? Żaden Problem</h4>
-                                <p>Nie musisz znać React Native, Swift ani Kotlina. <strong>AI rozumie naturalny język</strong> — powiedz co chcesz, a dostaniesz gotowy kod.</p>
-                            </div>
-                        </div>
-
-                        <div class="feature-item">
-                            <div class="feature-icon">🎨</div>
-                            <div class="feature-content">
-                                <h4>Profesjonalny Design w Pakiecie</h4>
-                                <p>AI nie tylko pisze kod — tworzy też <strong>nowoczesny, elegancki interfejs</strong> z animacjami, trybem ciemnym i intuicyjną nawigacją.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="showcase-results">
-                        <h4>Co możesz stworzyć z AI:</h4>
-                        <ul class="results-list">
-                            <li>Aplikacje do zarządzania zadaniami i produktywnością</li>
-                            <li>Kalkulatory, konwertery i narzędzia codzienne</li>
-                            <li>Aplikacje fitness, zdrowotne i do śledzenia nawyków</li>
-                            <li>Proste gry mobilne i quizy edukacyjne</li>
-                            <li>Aplikacje dla małego biznesu — rezerwacje, katalogi, CRM</li>
-                        </ul>
-                    </div>
-
-                    <div class="showcase-cta">
-                        <p class="cta-text">
-                            <strong>Masz pomysł na aplikację?</strong> Nie musisz już szukać programisty ani uczyć się kodowania. AI sprawia, że tworzenie aplikacji mobilnych jest dostępne dla każdego. Porozmawiaj z nami o swoim projekcie!
-                        </p>
-                        <a href="index.html#contact" class="showcase-button">
-                            Umów bezpłatną konsultację
-                            <span class="button-arrow">→</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Case Study 5: Evo 2 - Genetyka -->
-            <div class="showcase-content showcase-item" id="evo2-genetyka">
-                <div class="showcase-media">
-                    <div class="showcase-image-wrapper ocr-illustration">
-                        <div class="ocr-visual">
-                            <div class="ocr-visual-icon">🧬</div>
-                            <div class="ocr-visual-arrow">→</div>
-                            <div class="ocr-visual-icon">🤖</div>
-                            <div class="ocr-visual-arrow">→</div>
-                            <div class="ocr-visual-icon">🔬</div>
-                        </div>
-                        <div class="ocr-visual-label">Sekwencja DNA → Evo 2 AI → Analiza Mutacji</div>
-                        <div class="image-badge">
-                            <span class="badge-icon">🧬</span>
-                            <span class="badge-text">Open Source</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="showcase-text">
-                    <div class="showcase-tag">
-                        <span class="tag-icon">🧬</span>
-                        <span>Genomika &amp; AI</span>
-                    </div>
-
-                    <h3>Przewidywanie Mutacji Genetycznych z Modelem Evo 2</h3>
-
-                    <p class="showcase-description">
-                        Evo 2 to przełomowy, w pełni otwartoźródłowy model AI (foundation model) wytrenowany na <strong>9 bilionach par zasad DNA</strong> ze wszystkich domen życia — bakterii, archeonów, eukariontów i bakteriofagów. Dzięki oknu kontekstowemu wynoszącemu 1 milion par zasad i rozdzielczości jednego nukleotydu, Evo 2 potrafi przewidywać skutki mutacji genetycznych bez dodatkowego trenowania — od wariantów klinicznych w genie BRCA1 po mutacje w niekodujących regionach genomu.
-                    </p>
-
-                    <div class="showcase-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">🎯</div>
-                            <div class="feature-content">
-                                <h4>Precyzyjna Analiza Wariantów</h4>
-                                <p>Ocena patogenności mutacji genetycznych (m.in. BRCA1, warianty kliniczne z bazy ClinVar) w trybie <strong>zero-shot</strong> — bez konieczności dodatkowego trenowania modelu dla każdego nowego zadania.</p>
-                            </div>
-                        </div>
-
-                        <div class="feature-item">
-                            <div class="feature-icon">⚡</div>
-                            <div class="feature-content">
-                                <h4>Analiza w Skali Genomu</h4>
-                                <p>Przetwarzanie sekwencji DNA o długości do <strong>1 miliona par zasad</strong>, co umożliwia badanie całych genów wraz z ich otoczeniem regulacyjnym — niedostępne dla wcześniejszych modeli.</p>
-                            </div>
-                        </div>
-
-                        <div class="feature-item">
-                            <div class="feature-icon">🔬</div>
-                            <div class="feature-content">
-                                <h4>Projektowanie Nowych Sekwencji</h4>
-                                <p>Poza predykcją, Evo 2 generuje nowe sekwencje DNA — od genomów mitochondrialnych po chromosomy eukariotyczne — otwierając drogę do <strong>projektowania nowych terapii</strong> i systemów biologicznych.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="showcase-results">
-                        <h4>Przykładowe zastosowania:</h4>
-                        <ul class="results-list">
-                            <li>Przewidywanie patogenności wariantów klinicznych w onkologii i genetyce medycznej</li>
-                            <li>Analiza wpływu mutacji w niekodujących regionach DNA (UTR, introny, enhancery)</li>
-                            <li>Wsparcie w projektowaniu terapii genowych i nowych cząsteczek biologicznych</li>
-                            <li>Automatyczna adnotacja elementów funkcjonalnych genomu (egzony, miejsca splicingu, tRNA)</li>
-                            <li>Identyfikacja potencjalnie szkodliwych mutacji w badaniach przesiewowych</li>
-                        </ul>
-                    </div>
-
-                    <div class="showcase-cta">
-                        <p class="cta-text">
-                            <strong>Chcesz wykorzystać zaawansowane modele genomiczne AI w badaniach medycznych lub farmaceutycznych?</strong> Skontaktuj się z nami, aby omówić wdrożenie rozwiązań opartych na Evo 2 w Twojej organizacji.
-                        </p>
-                        <a href="index.html#contact" class="showcase-button">
-                            Umów bezpłatną konsultację
-                            <span class="button-arrow">→</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div style={{ borderRadius: "var(--radius-lg)", overflow: "hidden", border: "1px solid var(--border-strong)", position: "relative" }}>
+          <img src="kod_mobileapp.png" alt="Kod źródłowy aplikacji mobilnej wygenerowany przez AI" style={{ width: "100%", display: "block" }} loading="lazy" />
+          <span className="chip" style={{ position: "absolute", top: 12, right: 12 }}>Kod AI</span>
         </div>
-    </section>
-
-    <footer class="footer" role="contentinfo" itemscope itemtype="https://schema.org/Organization">
-        <div class="social-media">
-            <a href="https://www.youtube.com/@Neural_Update" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                </svg>
-            </a>
+      </div>
+    ),
+  },
+  {
+    id: "evo2",
+    tab: "Evo 2 — Genetyka",
+    icon: "target",
+    tag: "Genomika & AI",
+    title: "Przewidywanie Mutacji Genetycznych z Modelem Evo 2",
+    desc: "Evo 2 to przełomowy, w pełni otwartoźródłowy model AI wytrenowany na 9 bilionach par zasad DNA ze wszystkich domen życia. Potrafi przewidywać skutki mutacji genetycznych bez dodatkowego trenowania.",
+    features: [
+      { icon: "target", h: "Precyzyjna analiza wariantów", p: "Ocena patogenności mutacji genetycznych (m.in. BRCA1, warianty kliniczne z bazy ClinVar) w trybie zero-shot." },
+      { icon: "zap", h: "Analiza w skali genomu", p: "Przetwarzanie sekwencji DNA o długości do 1 miliona par zasad, co umożliwia badanie całych genów wraz z ich otoczeniem regulacyjnym." },
+      { icon: "cpu", h: "Projektowanie nowych sekwencji", p: "Poza predykcją, Evo 2 generuje nowe sekwencje DNA — od genomów mitochondrialnych po chromosomy eukariotyczne." },
+    ],
+    results: ["Przewidywanie patogenności wariantów klinicznych w onkologii", "Analiza wpływu mutacji w niekodujących regionach DNA", "Wsparcie w projektowaniu terapii genowych", "Automatyczna adnotacja elementów funkcjonalnych genomu", "Identyfikacja potencjalnie szkodliwych mutacji w badaniach przesiewowych"],
+    media: () => (
+      <div className="card" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16, padding: 40 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 20, fontSize: "3rem" }}>
+          <span>🧬</span>
+          <span style={{ color: "var(--accent)", fontSize: "1.5rem" }}>→</span>
+          <span>🤖</span>
+          <span style={{ color: "var(--accent)", fontSize: "1.5rem" }}>→</span>
+          <span>🔬</span>
         </div>
-        <p>&copy; 2025 BrightMind AI Solutions. Wszystkie prawa zastrzeżone.</p>
-        <p itemprop="description">Transformujemy przyszłość biznesu z pomocą sztucznej inteligencji.</p>
-        <p><a href="privacy-policy.html" style="color: #00f5ff; text-decoration: none;">Polityka Prywatności</a></p>
-    </footer>
+        <p className="text-muted" style={{ textAlign: "center", margin: 0, fontSize: "0.9rem" }}>Sekwencja DNA → Evo 2 AI → Analiza Mutacji</p>
+        <span className="chip" style={{ color: "var(--success)", borderColor: "var(--success)" }}>Open Source · 9B par zasad</span>
+      </div>
+    ),
+  },
+];
+
+function PracticeApp() {
+  const [active, setActive] = React.useState(0);
+  const c = CASES[active];
+
+  return (
+    <>
+      <Nav active="practice" />
+
+      <section style={{ padding: "80px 0 48px", borderBottom: "1px solid var(--border)" }}>
+        <div className="container">
+          <span className="eyebrow">/ Demonstracje</span>
+          <h1 style={{ marginTop: 16, marginBottom: 12 }}>AI w Praktyce</h1>
+          <p className="text-muted" style={{ fontSize: "1.1rem", maxWidth: 600 }}>
+            Poznaj konkretne zastosowania sztucznej inteligencji w biznesie i nauce. Każdy przykład to realny use case, który możemy wdrożyć w Twojej firmie.
+          </p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          {/* Tab navigation */}
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 48, borderBottom: "1px solid var(--border)", paddingBottom: 0 }}>
+            {CASES.map((c, i) => (
+              <button key={i} onClick={() => setActive(i)} style={{
+                background: "transparent", border: "none", cursor: "pointer",
+                padding: "12px 20px", fontFamily: "inherit", fontSize: "0.9rem",
+                fontWeight: active === i ? 600 : 400,
+                color: active === i ? "var(--fg)" : "var(--fg-muted)",
+                borderBottom: active === i ? "2px solid var(--accent)" : "2px solid transparent",
+                marginBottom: -1, transition: "color 0.15s",
+                display: "flex", alignItems: "center", gap: 8,
+              }}>
+                <Icon name={c.icon} size={15} />
+                {c.tab}
+              </button>
+            ))}
+          </div>
+
+          {/* Content */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 56, alignItems: "start" }}>
+            {/* Media */}
+            <div>
+              {c.media()}
+            </div>
+
+            {/* Text */}
+            <div>
+              <span className="chip" style={{ marginBottom: 16 }}>{c.tag}</span>
+              <h2 style={{ marginBottom: 16, fontSize: "1.5rem" }}>{c.title}</h2>
+              <p className="text-muted" style={{ marginBottom: 32, lineHeight: 1.8 }}>{c.desc}</p>
+
+              <div style={{ display: "flex", flexDirection: "column", gap: 20, marginBottom: 32 }}>
+                {c.features.map((f, i) => (
+                  <div key={i} style={{ display: "flex", gap: 16 }}>
+                    <div style={{ color: "var(--accent)", marginTop: 2, flexShrink: 0 }}><Icon name={f.icon} size={18} /></div>
+                    <div>
+                      <div style={{ fontWeight: 500, marginBottom: 4 }}>{f.h}</div>
+                      <p className="text-muted" style={{ margin: 0, fontSize: "0.9rem" }}>{f.p}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {c.results && (
+                <div style={{ marginBottom: 32 }}>
+                  <div style={{ fontSize: "0.85rem", fontWeight: 600, marginBottom: 12, color: "var(--fg-muted)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Zastosowania</div>
+                  <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
+                    {c.results.map((r, i) => (
+                      <li key={i} style={{ display: "flex", gap: 10, fontSize: "0.9rem", alignItems: "flex-start" }}>
+                        <span style={{ color: "var(--accent)", marginTop: 3, flexShrink: 0 }}><Icon name="check" size={14} /></span>
+                        <span className="text-muted">{r}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              <a href="index.html#kontakt" className="btn btn-primary">Umów bezpłatną konsultację<Icon name="arrow" size={16} /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("app")).render(<PracticeApp />);
+</script>
 </body>
 </html>
