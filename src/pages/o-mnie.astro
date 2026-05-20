@@ -1,0 +1,206 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CookieBanner from '../components/CookieBanner.jsx';
+
+const ldJson = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Patryk Gliński",
+    "jobTitle": "Ekspert AI i Radca Prawny",
+    "description": "Patryk Gliński to radca prawny i ekspert AI, założyciel BrightMind AI Solutions. Specjalizuje się we wdrożeniach AI B2B, automatyzacji procesów AI i compliance NIS2.",
+    "url": "https://brightmindsolutions.pl/o-mnie/",
+    "image": "https://brightmindsolutions.pl/IMG_0406.jpg",
+    "worksFor": { "@type": "Organization", "name": "BrightMind AI Solutions", "url": "https://brightmindsolutions.pl/" },
+    "telephone": "+48-730-152-161",
+    "email": "kontakt@brightmind-solutions.com",
+    "knowsAbout": ["automatyzacja procesów AI", "agenci AI dla firm", "wdrożenia AI B2B", "compliance NIS2", "cyberbezpieczeństwo", "prawo gospodarcze", "LangChain", "n8n", "Google Cloud Generative AI"],
+    "hasCredential": [
+      { "@type": "EducationalOccupationalCredential", "name": "Radca Prawny", "credentialCategory": "license", "recognizedBy": { "@type": "Organization", "name": "Okręgowa Izba Radców Prawnych (OIRP)" } },
+      { "@type": "EducationalOccupationalCredential", "name": "Google Cloud Certified — Generative AI Leader", "credentialCategory": "certification", "recognizedBy": { "@type": "Organization", "name": "Google" }, "dateCreated": "2025" },
+      { "@type": "EducationalOccupationalCredential", "name": "Blue Team — Cyberbezpieczeństwo Defensywne", "credentialCategory": "certification", "recognizedBy": { "@type": "Organization", "name": "HackerU" }, "dateCreated": "2025" }
+    ],
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Uniwersytet w Białymstoku", "department": "Wydział Prawa" },
+    "sameAs": [
+      "https://www.youtube.com/@Neural_Update",
+      "https://www.linkedin.com/in/patryk-gli%C5%84ski-172370215"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Strona Główna", "item": "https://brightmindsolutions.pl/" },
+      { "@type": "ListItem", "position": 2, "name": "O mnie", "item": "https://brightmindsolutions.pl/o-mnie/" }
+    ]
+  }
+];
+
+const credentials = [
+  { icon: "scale", title: "Radca prawny", desc: "Uprawnienia uzyskane w 2024 · OIRP · Uniwersytet w Białymstoku (2020)" },
+  { icon: "cpu", title: "Google Cloud Certified", desc: "Generative AI Leader · certyfikat 2025" },
+  { icon: "shield", title: "Blue Team — HackerU", desc: "Cyberbezpieczeństwo defensywne · certyfikat 2025" },
+  { icon: "bot", title: "AI w biznesie", desc: "LangChain, n8n, Zapier, lokalne LLM, agenci AI" },
+];
+---
+
+<Layout
+  title="O mnie - Patryk Gliński | BrightMind AI Solutions"
+  description="Patryk Gliński - Radca prawny i ekspert AI. Łączę doświadczenie prawnicze z certyfikatami z zakresu sztucznej inteligencji i cyberbezpieczeństwa."
+  canonical="https://brightmindsolutions.pl/o-mnie/"
+  ogType="profile"
+  ogImage="https://brightmindsolutions.pl/IMG_0406.jpg"
+  keywords="Patryk Gliński, radca prawny AI, ekspert AI dla firm, Google Cloud Certified Generative AI Leader, cyberbezpieczeństwo AI, wdrożenia AI B2B"
+  ldJson={ldJson}
+  fbPixelId="1597309774579617"
+>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand">
+        <span class="nav-brand-mark">B</span>
+        <span>BrightMind <span style="color:var(--fg-muted)">/ AI</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Strona Główna</a>
+        <a href="/o-mnie/" class="active">O mnie</a>
+        <a href="/#uslugi">Usługi</a>
+        <a href="/NIS2/">NIS2</a>
+        <a href="/ai-w-praktyce/">AI w Praktyce</a>
+        <a href="/#kontakt">Kontakt</a>
+        <a href="/#kontakt" class="nav-cta">Bezpłatna konsultacja →</a>
+      </div>
+    </div>
+  </nav>
+
+  <section style="padding:80px 0 64px;border-bottom:1px solid var(--border)">
+    <div class="container">
+      <span class="eyebrow">/ O mnie</span>
+      <h1 style="margin-top:16px;margin-bottom:12px">
+        Patryk Gliński<br />
+        <span class="text-muted" style="font-weight:400;font-size:0.65em">Radca prawny · Ekspert AI · Założyciel BrightMind</span>
+      </h1>
+      <p style="color:var(--fg-muted);font-size:1.1rem;max-width:600px">
+        Łączę wieloletnią praktykę prawniczą z pasją do sztucznej inteligencji. Pomagam polskim firmom bezpiecznie i skutecznie wdrażać AI.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1.8fr;gap:64px;align-items:start">
+        <div>
+          <div style="border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-strong);margin-bottom:24px">
+            <img src="/IMG_0406.jpg" alt="Patryk Gliński - Radca prawny i ekspert AI" style="width:100%;display:block;object-fit:cover;aspect-ratio:4/5" loading="eager" />
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;gap:14px;align-items:center;padding:14px 16px;border:1px solid var(--border);border-radius:var(--radius)">
+              <div style="color:var(--accent)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7l-3 7a4 4 0 008 0L7 7"/><path d="M19 7l-3 7a4 4 0 008 0L21 7"/></svg></div>
+              <div><div style="font-weight:500;font-size:0.9rem">Radca prawny</div><div class="text-muted" style="font-size:0.8rem">Uprawnienia uzyskane w 2024 · OIRP · Uniwersytet w Białymstoku (2020)</div></div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:center;padding:14px 16px;border:1px solid var(--border);border-radius:var(--radius)">
+              <div style="color:var(--accent)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/></svg></div>
+              <div><div style="font-weight:500;font-size:0.9rem">Google Cloud Certified</div><div class="text-muted" style="font-size:0.8rem">Generative AI Leader · certyfikat 2025</div></div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:center;padding:14px 16px;border:1px solid var(--border);border-radius:var(--radius)">
+              <div style="color:var(--accent)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+              <div><div style="font-weight:500;font-size:0.9rem">Blue Team — HackerU</div><div class="text-muted" style="font-size:0.8rem">Cyberbezpieczeństwo defensywne · certyfikat 2025</div></div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:center;padding:14px 16px;border:1px solid var(--border);border-radius:var(--radius)">
+              <div style="color:var(--accent)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M12 8V4M8 4h8"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/></svg></div>
+              <div><div style="font-weight:500;font-size:0.9rem">AI w biznesie</div><div class="text-muted" style="font-size:0.8rem">LangChain, n8n, Zapier, lokalne LLM, agenci AI</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p style="font-size:1.1rem;line-height:1.8;margin-bottom:24px">
+            Jestem <strong>Patryk Gliński</strong> – łączę wieloletnią praktykę prawniczą z pasją do sztucznej inteligencji i nowych technologii. W 2020 roku ukończyłem studia prawnicze na Uniwersytecie w Białymstoku, a w 2024 roku uzyskałem tytuł radcy prawnego. To doświadczenie nauczyło mnie analitycznego myślenia i precyzji – umiejętności, które dziś wykorzystuję w pracy z AI.
+          </p>
+          <p style="font-size:1.05rem;line-height:1.8;margin-bottom:24px;color:var(--fg-muted)">
+            Moja droga w świat technologii to konsekwentne poszerzanie kompetencji. W 2025 roku ukończyłem kurs Blue Team od HackerU, zdobywając wiedzę z zakresu cyberbezpieczeństwa, a także uzyskałem certyfikat Google Cloud Certified — Generative AI Leader. Dzięki temu mogę oferować kompleksowe podejście do wdrażania rozwiązań AI – łącząc znajomość różnorodnych narzędzi i platform z perspektywą bezpieczeństwa oraz zgodności z prawem.
+          </p>
+          <p style="font-size:1.05rem;line-height:1.8;margin-bottom:24px;color:var(--fg-muted)">
+            Moją pasją jest eksplorowanie możliwości, jakie dają nowoczesne rozwiązania AI. Na bieżąco testuję i poznaję nowe narzędzia, platformy i modele generatywne, aby móc polecać najbardziej efektywne rozwiązania dostosowane do konkretnych potrzeb biznesowych.
+          </p>
+          <div class="card" style="border-left:2px solid var(--accent)">
+            <p style="margin:0;font-style:italic;color:var(--fg-muted)">
+              Poza pracą zawodową uwielbiam wyzwania intelektualne – czasami testuję swoją wiedzę występując w teleturniejach. Mój największy sukces? <strong style="color:var(--fg)">Wygrana w odcinku teleturnieju "1 z 10"!</strong>
+            </p>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;padding-top:40px;border-top:1px solid var(--border)">
+            <div><div class="stat-num">2020</div><div class="stat-label">rok ukończenia prawa</div></div>
+            <div><div class="stat-num">2024</div><div class="stat-label">uprawnienia radcy prawnego</div></div>
+            <div><div class="stat-num">3</div><div class="stat-label">certyfikaty branżowe</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--bg-elev)">
+    <div class="container-narrow" style="text-align:center">
+      <span class="eyebrow">/ Współpraca</span>
+      <h2 style="margin:16px 0 20px">Gotowy na transformację AI?</h2>
+      <p class="text-muted" style="font-size:1.05rem;max-width:520px;margin:0 auto 32px">
+        Skontaktuj się i zacznijmy rozmowę o tym, jak AI może usprawnić procesy w Twojej firmie.
+      </p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="mailto:kontakt@brightmind-solutions.com" class="btn btn-primary">
+          Napisz do mnie
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="tel:+48730152161" class="btn btn-secondary">+48 730 152 161</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="nav-brand" style="margin-bottom:16px">
+            <span class="nav-brand-mark">B</span>
+            <span>BrightMind <span style="color:var(--fg-muted)">/ AI</span></span>
+          </div>
+          <p class="text-muted" style="font-size:0.9rem;max-width:320px">Profesjonalne wdrożenia AI B2B dla polskich firm. Automatyzacja procesów, agenci AI, doradztwo. Zgodne z RODO i NIS2.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Usługi</h4>
+          <ul>
+            <li><a href="/#uslugi">Doradztwo AI dla Firm</a></li>
+            <li><a href="/#uslugi">Korepetycje AI</a></li>
+            <li><a href="/NIS2/">Wdrożenia NIS2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Firma</h4>
+          <ul>
+            <li><a href="/o-mnie/">O mnie</a></li>
+            <li><a href="/ai-w-praktyce/">AI w Praktyce</a></li>
+            <li><a href="/#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul style="font-size:0.85rem;color:var(--fg-muted)">
+            <li>Patryk Gliński</li>
+            <li><a href="mailto:kontakt@brightmind-solutions.com">kontakt@brightmind-solutions.com</a></li>
+            <li><a href="tel:+48730152161">+48 730 152 161</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 BrightMind AI Solutions. Wszystkie prawa zastrzeżone.</span>
+        <div style="display:flex;align-items:center;gap:20px">
+          <a href="https://www.youtube.com/@Neural_Update" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:#ff0000;color:#fff;border-radius:var(--radius);font-weight:600;font-size:0.8rem;text-decoration:none">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="3"/><polygon points="10 9.5 16 13 10 16.5 10 9.5"/></svg>
+            YouTube
+          </a>
+          <a href="/privacy-policy/" style="color:var(--fg-muted)">Polityka prywatności</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <CookieBanner client:load />
+</Layout>

@@ -1,0 +1,28 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/o-mnie.html"
+  to = "/o-mnie/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-w-praktyce.html"
+  to = "/ai-w-praktyce/"
+  status = 301
+
+[[redirects]]
+  from = "/NIS2.html"
+  to = "/NIS2/"
+  status = 301
+
+[[redirects]]
+  from = "/privacy-policy.html"
+  to = "/privacy-policy/"
+  status = 301
+
+[[redirects]]
+  from = "/success.html"
+  to = "/success/"
+  status = 301

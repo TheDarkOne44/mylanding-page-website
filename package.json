@@ -4,11 +4,26 @@
   "description": "BrightMind AI Solutions - Professional AI implementation website",
   "main": "index.html",
   "scripts": {
-    "start": "npx serve -s . -l 8000",
-    "serve": "python -m http.server 8000"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "start": "astro dev",
+    "serve": "astro preview"
   },
-  "keywords": ["ai", "artificial-intelligence", "business", "consulting"],
+  "keywords": [
+    "ai",
+    "artificial-intelligence",
+    "business",
+    "consulting"
+  ],
   "author": "BrightMind AI Solutions",
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@astrojs/react": "^5.0.5",
+    "@astrojs/sitemap": "^3.7.2",
+    "astro": "^6.3.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  }
 }

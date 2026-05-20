@@ -1,0 +1,410 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Checker, Nis2FAQ } from '../components/Nis2Interactive.jsx';
+import CookieBanner from '../components/CookieBanner.jsx';
+
+const ldJson = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Pakiet NIS2 — Wdrożenie zgodności",
+    "serviceType": "Compliance NIS2 i cyberbezpieczeństwo",
+    "description": "Kompleksowe wdrożenie zgodności z dyrektywą NIS2: audyt, mapa luk, remediation, procedury reagowania na incydenty (24h/72h), szkolenia kadry zarządzającej i certyfikacja. Realizowane przez radcę prawnego z certyfikatami Google Cloud Generative AI Leader i Blue Team (HackerU).",
+    "provider": { "@type": "Organization", "name": "BrightMind AI Solutions", "url": "https://brightmindsolutions.pl/" },
+    "areaServed": "Poland",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Pakiety NIS2",
+      "itemListElement": [
+        { "@type": "Offer", "name": "Audyt wstępny NIS2", "price": "4900", "priceCurrency": "PLN", "priceSpecification": { "@type": "PriceSpecification", "price": "4900", "priceCurrency": "PLN", "valueAddedTaxIncluded": false } },
+        { "@type": "Offer", "name": "Pełne wdrożenie NIS2", "price": "24900", "priceCurrency": "PLN" },
+        { "@type": "Offer", "name": "Retainer compliance NIS2", "price": "2900", "priceCurrency": "PLN" }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Strona Główna", "item": "https://brightmindsolutions.pl/" },
+      { "@type": "ListItem", "position": 2, "name": "Pakiet NIS2", "item": "https://brightmindsolutions.pl/NIS2/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Od kiedy obowiązuje NIS2?", "acceptedAnswer": { "@type": "Answer", "text": "Dyrektywa NIS2 weszła w życie 16 października 2024 w UE. Polska implementuje ją przez nowelizację ustawy o krajowym systemie cyberbezpieczeństwa (KSC). Niezależnie od tempa polskiej legislacji, wymogi obowiązują polskie firmy działające w UE." } },
+      { "@type": "Question", "name": "Kto dokładnie podlega NIS2?", "acceptedAnswer": { "@type": "Answer", "text": "Podmioty kluczowe: energetyka, transport, banki, infrastruktura rynku finansowego, ochrona zdrowia, woda pitna, ścieki, infrastruktura cyfrowa, administracja publiczna, kosmos. Podmioty ważne: poczta, gospodarka odpadami, produkcja chemikaliów/leków/maszyn/elektroniki/żywności, dostawcy usług cyfrowych, badania naukowe. Próg: 50+ pracowników lub obrót >10 mln EUR." } },
+      { "@type": "Question", "name": "Jakie są kary za brak zgodności z NIS2?", "acceptedAnswer": { "@type": "Answer", "text": "Dla podmiotów kluczowych — do 10 mln EUR lub 2% globalnego obrotu (wyższy próg). Dla podmiotów ważnych — do 7 mln EUR lub 1,4% obrotu. Dodatkowo: odpowiedzialność osobista członków zarządu, możliwy zakaz pełnienia funkcji kierowniczych." } },
+      { "@type": "Question", "name": "Ile trwa pełne wdrożenie NIS2?", "acceptedAnswer": { "@type": "Answer", "text": "Standardowo 12 tygodni od podpisania umowy do certyfikacji. Audyt wstępny (2 tyg.) + remediation (8 tyg.) + audyt końcowy i dokumentacja (2 tyg.). Dla większych organizacji 16–20 tygodni." } },
+      { "@type": "Question", "name": "Co odróżnia BrightMind AI od kancelarii prawnej / firmy IT?", "acceptedAnswer": { "@type": "Answer", "text": "Kancelarie prawne nie wdrożą procedur technicznych. Firmy IT nie napiszą polityk zgodnych z prawem polskim. Konsultanci compliance nie wdrożą rozwiązań AI bezpiecznych dla NIS2. Patryk Gliński łączy wszystkie trzy kompetencje — radca prawny, Google Cloud Generative AI Leader, Blue Team HackerU. Jeden kontrakt, jedna odpowiedzialność." } }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Jak wdrożyć zgodność z NIS2 w firmie — 4 fazy",
+    "description": "Krok po kroku: od audytu luk do certyfikacji NIS2. Realizowane przez radcę prawnego z certyfikatami Google Cloud AI Leader i Blue Team HackerU w 90 dni.",
+    "totalTime": "P90D",
+    "estimatedCost": { "@type": "MonetaryAmount", "currency": "PLN", "value": "24900" },
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "Faza 1 — Audyt zgodności (2 tygodnie)", "text": "Przeprowadzamy audyt luk NIS2 obejmujący wszystkie 10 obszarów wymaganych przez Art. 21 NIS2: zarządzanie ryzykiem, bezpieczeństwo łańcucha dostaw, reakcja na incydenty, zarządzanie aktywami i inne. Wynik: raport luk z mapą remediacji.", "url": "https://brightmindsolutions.pl/NIS2/#audyt" },
+      { "@type": "HowToStep", "position": 2, "name": "Faza 2 — Plan remediacji (1 tydzień)", "text": "Tworzymy szczegółowy plan usunięcia zidentyfikowanych luk: priorytety, harmonogram, odpowiedzialności i szacowane koszty. Dokument zatwierdzany przez zarząd.", "url": "https://brightmindsolutions.pl/NIS2/#pakiety" },
+      { "@type": "HowToStep", "position": 3, "name": "Faza 3 — Wdrożenie procedur i technologii (7 tygodni)", "text": "Implementujemy polityki bezpieczeństwa, procedury reagowania na incydenty (obowiązek zgłoszenia w 24h/72h), szkolenia zarządu, zabezpieczenia techniczne i konfigurację systemów monitoringu.", "url": "https://brightmindsolutions.pl/NIS2/#pakiety" },
+      { "@type": "HowToStep", "position": 4, "name": "Faza 4 — Certyfikacja i audyt końcowy (2 tygodnie)", "text": "Przeprowadzamy audyt końcowy, przygotowujemy dokumentację zgodności i certyfikat. Firma uzyskuje pełną zgodność z NIS2 gotową do weryfikacji przez organy nadzoru.", "url": "https://brightmindsolutions.pl/NIS2/#pakiety" }
+    ]
+  }
+];
+---
+
+<Layout
+  title="Pakiet NIS2 — Wdrożenie zgodności w 90 dni | BrightMind AI Solutions"
+  description="Kompleksowe wdrożenie zgodności z dyrektywą NIS2 w 90 dni. Audyt, mapa luk, remediation, procedury, szkolenia zarządu i certyfikacja. Radca prawny + Google Cloud Generative AI Leader + Blue Team HackerU. Jeden ekspert, jeden kontrakt."
+  canonical="https://brightmindsolutions.pl/NIS2/"
+  keywords="NIS2, dyrektywa NIS2, compliance NIS2, audyt NIS2, wdrożenie NIS2, cyberbezpieczeństwo, Art. 21 NIS2, KSC, audyt cyberbezpieczeństwa, Patryk Gliński"
+  ogTitle="Pakiet NIS2 — Wdrożenie zgodności w 90 dni | BrightMind AI"
+  ogDescription="Audyt + remediation + procedury + szkolenia + certyfikat. Kompleksowa ścieżka do zgodności z NIS2 dla polskich firm."
+  ldJson={ldJson}
+>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand">
+        <span class="nav-brand-mark">B</span>
+        <span>BrightMind <span style="color:var(--fg-muted)">/ AI</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Strona Główna</a>
+        <a href="/o-mnie/">O mnie</a>
+        <a href="/#uslugi">Usługi</a>
+        <a href="/NIS2/" class="active">NIS2</a>
+        <a href="/ai-w-praktyce/">AI w Praktyce</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#kontakt" class="nav-cta">Bezpłatna konsultacja →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section style="padding:72px 0 80px;position:relative;overflow:hidden;">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:center">
+        <div>
+          <div style="display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap">
+            <span class="chip" style="color:var(--accent);border-color:var(--accent)">★ Flagship</span>
+            <span class="chip"><span class="chip-dot"></span>Termin: pełna zgodność wymagana</span>
+          </div>
+          <h1 style="margin-bottom:24px">
+            Pakiet NIS2 <span class="text-muted">—</span><br />
+            wdrożenie zgodności <span class="accent">w 90 dni</span>.
+          </h1>
+          <p style="font-size:1.15rem;color:var(--fg-muted);max-width:580px;margin-bottom:32px">
+            Audyt, mapa luk, remediation, procedury i szkolenia kadry zarządzającej. Wszystko prowadzone przez radcę prawnego z certyfikatami Generative AI Leader (Google Cloud) i Blue Team (HackerU). <strong style="color:var(--fg)">Jeden ekspert, jeden kontrakt, jedna odpowiedzialność.</strong>
+          </p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px">
+            <a href="#audyt" class="btn btn-primary">Bezpłatny audyt wstępny
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#sprawdz" class="btn btn-secondary">Czy podlegasz NIS2?</a>
+          </div>
+          <div style="display:flex;gap:32px;flex-wrap:wrap">
+            <div><div class="stat-num">90<span style="font-size:0.5em;color:var(--fg-muted)"> dni</span></div><div class="stat-label">audyt → certyfikacja</div></div>
+            <div><div class="stat-num accent">10<span style="font-size:0.5em"> mln €</span></div><div class="stat-label">max. kara za brak NIS2</div></div>
+            <div><div class="stat-num">6 000+</div><div class="stat-label">polskich firm objętych</div></div>
+          </div>
+        </div>
+        <div class="card" style="padding:0;overflow:hidden;border-color:var(--border-strong)">
+          <div style="background:var(--bg-elev-2);padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px">
+            <span style="width:10px;height:10px;border-radius:50%;background:#f87171"></span>
+            <span style="width:10px;height:10px;border-radius:50%;background:#fbbf24"></span>
+            <span style="width:10px;height:10px;border-radius:50%;background:#34d399"></span>
+            <span class="mono" style="font-size:0.75rem;color:var(--fg-muted);margin-left:8px">nis2-status.report</span>
+          </div>
+          <div style="padding:24px;font-family:var(--font-mono);font-size:0.875rem;line-height:1.9">
+            <div class="text-muted"># 16 października 2024</div>
+            <div>NIS2 wchodzi w życie w UE</div>
+            <div style="margin-top:12px" class="text-muted"># Polska — ustawa o KSC</div>
+            <div>implementacja w toku</div>
+            <div style="margin-top:12px" class="text-muted"># Twoja firma?</div>
+            <div class="accent">→ sprawdźmy w 15 minut</div>
+            <div style="margin-top:20px;padding:14px 16px;background:var(--accent-soft);border-left:2px solid var(--accent);border-radius:4px">
+              <div style="font-size:0.75rem;color:var(--fg-muted)">STATUS</div>
+              <div><span style="color:#fb923c">●</span> oczekuje na audyt</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RISKS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">/ Co grozi za brak zgodności</span>
+        <h2>NIS2 to nie sugestia.<br /><span class="text-muted">To prawo. Z karami.</span></h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <div style="color:var(--danger);margin-bottom:16px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg></div>
+          <div class="stat-num" style="color:var(--danger)">10 mln €</div>
+          <div class="stat-label" style="margin-bottom:12px">lub 2% globalnego obrotu</div>
+          <p class="text-muted" style="font-size:0.9rem">Maksymalna kara administracyjna dla podmiotów kluczowych. Liczony jest wyższy próg.</p>
+        </div>
+        <div class="card">
+          <div style="color:var(--warn);margin-bottom:16px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div class="stat-num" style="color:var(--warn)">Zarząd</div>
+          <div class="stat-label" style="margin-bottom:12px">odpowiedzialność osobista</div>
+          <p class="text-muted" style="font-size:0.9rem">Członkowie zarządu odpowiadają osobiście za nadzór nad cyberbezpieczeństwem. Możliwy zakaz pełnienia funkcji.</p>
+        </div>
+        <div class="card">
+          <div style="color:var(--accent);margin-bottom:16px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div class="stat-num">24h</div>
+          <div class="stat-label" style="margin-bottom:12px">na zgłoszenie incydentu</div>
+          <p class="text-muted" style="font-size:0.9rem">Wstępne zgłoszenie incydentu w 24h, pełny raport w 72h, raport końcowy w miesiąc. Brak procedur = automatyczne naruszenie.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKER (interactive) -->
+  <Checker client:visible />
+
+  <!-- SCOPE -->
+  <section class="section" id="audyt">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">/ Zakres pakietu</span>
+        <h2>Cztery fazy. 90 dni.<br /><span class="text-muted">Od pierwszej rozmowy do certyfikatu.</span></h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:0">
+        {[
+          { n: "01", title: "Audyt zgodności", time: "Tygodnie 1–2", items: ["Inwentaryzacja systemów IT i procesów", "Mapowanie istniejących polityk bezpieczeństwa", "Identyfikacja luk względem 10 obszarów NIS2", "Ocena dojrzałości cyberbezpieczeństwa", "Raport z mapą luk i priorytetami"] },
+          { n: "02", title: "Plan remediation", time: "Tydzień 3", items: ["Roadmapa wdrożenia z konkretnymi krokami", "Harmonogram i budżet", "Wybór narzędzi i dostawców", "Plan szkoleń kadry zarządzającej", "Kontraktowe zabezpieczenie łańcucha dostaw"] },
+          { n: "03", title: "Wdrożenie procedur", time: "Tygodnie 4–10", items: ["Polityki bezpieczeństwa systemów (ISO/IEC 27001)", "Procedury reagowania na incydenty (24h/72h)", "Plan ciągłości działania i backup", "Szkolenia zarządu i pracowników", "Wdrożenie narzędzi monitorowania (SIEM, EDR)"] },
+          { n: "04", title: "Certyfikacja i audyt", time: "Tygodnie 11–12", items: ["Audyt wewnętrzny zgodności", "Dokumentacja gotowa do kontroli organu nadzoru", "Certyfikat zgodności BrightMind AI", "Plan corocznego audytu powtórnego", "Wsparcie post-wdrożeniowe (3 miesiące)"] },
+        ].map(p => (
+          <div style="display:grid;grid-template-columns:100px 1fr 2fr;gap:32px;padding:32px 0;border-top:1px solid var(--border);align-items:start">
+            <div>
+              <div class="mono accent" style="font-size:0.85rem;letter-spacing:0.1em;margin-bottom:4px">{p.n}</div>
+              <div class="mono text-dim" style="font-size:0.75rem">{p.time}</div>
+            </div>
+            <div><h3>{p.title}</h3></div>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px">
+              {p.items.map(it => (
+                <li style="display:flex;gap:10px;font-size:0.95rem;align-items:flex-start">
+                  <span style="color:var(--accent);margin-top:3px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
+                  <span class="text-muted">{it}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 AREAS -->
+  <section class="section" style="background:var(--bg-elev)">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">/ Art. 21 NIS2</span>
+        <h2>10 obszarów wymaganych przez dyrektywę.<br /><span class="text-muted">Wszystkie pokrywam w jednym pakiecie.</span></h2>
+      </div>
+      <div class="grid grid-2">
+        {[
+          { n: "01", t: "Polityka analizy ryzyka" },
+          { n: "02", t: "Obsługa incydentów" },
+          { n: "03", t: "Ciągłość działania" },
+          { n: "04", t: "Bezpieczeństwo łańcucha dostaw" },
+          { n: "05", t: "Bezpieczeństwo nabywania systemów" },
+          { n: "06", t: "Pomiar skuteczności" },
+          { n: "07", t: "Praktyki cyber-higieny i szkolenia" },
+          { n: "08", t: "Polityki kryptografii i szyfrowania" },
+          { n: "09", t: "Bezpieczeństwo zasobów ludzkich i kontrola dostępu" },
+          { n: "10", t: "Multi-factor auth i bezpieczna komunikacja" },
+        ].map(a => (
+          <div style="display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--border);align-items:center">
+            <div class="mono text-dim" style="font-size:0.8rem;min-width:28px">{a.n}</div>
+            <div style="font-size:1rem;font-weight:500">{a.t}</div>
+            <div style="margin-left:auto;color:var(--success)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ME -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">/ Kto stoi za pakietem</span>
+        <h2>Trzy certyfikaty.<br /><span class="text-muted">Jedna osoba. Jeden kontrakt.</span></h2>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:56px;align-items:start">
+        <div>
+          <div style="border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-strong);margin-bottom:16px">
+            <img src="/IMG_0406.jpg" alt="Patryk Gliński — założyciel BrightMind AI Solutions" style="width:100%;display:block;object-fit:cover;aspect-ratio:4/5" loading="lazy" />
+          </div>
+          <div style="font-size:1.05rem;font-weight:500">Patryk Gliński</div>
+          <div class="text-muted" style="font-size:0.9rem">Założyciel, BrightMind AI Solutions</div>
+        </div>
+        <div>
+          <p style="font-size:1.1rem;line-height:1.7;margin-bottom:32px">
+            Większość firm przy NIS2 musi koordynować trzech zewnętrznych dostawców: kancelarię prawną, firmę cyberbezpieczeństwa i konsultanta AI. <strong>Każdy mówi innym językiem, każdy rozlicza się osobno, nikt nie odpowiada za całość.</strong>
+          </p>
+          <p style="font-size:1.1rem;line-height:1.7;margin-bottom:40px;color:var(--fg-muted)">
+            Dlatego założyłem BrightMind AI — żeby polskie firmy mogły rozmawiać z jedną osobą, która rozumie wszystkie trzy obszary i bierze za nie pełną odpowiedzialność.
+          </p>
+          <div style="display:flex;flex-direction:column;gap:16px">
+            {[
+              { t: "Radca prawny", d: "Uniwersytet w Białymstoku (2020) · uprawnienia 2024 · OIRP" },
+              { t: "Google Cloud Certified Generative AI Leader", d: "Certyfikat 2025 · architektura wdrożeń AI" },
+              { t: "Blue Team — HackerU", d: "Certyfikat 2025 · cyberbezpieczeństwo defensywne" },
+            ].map(c => (
+              <div style="display:flex;gap:16px;align-items:center;padding:16px;border:1px solid var(--border);border-radius:var(--radius)">
+                <div>
+                  <div style="font-weight:500">{c.t}</div>
+                  <div class="text-muted" style="font-size:0.85rem">{c.d}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pakiety" style="background:var(--bg-elev)">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">/ Cennik pakietu</span>
+        <h2>Trzy poziomy zaangażowania.<br /><span class="text-muted">Każda wycena stała przed startem prac.</span></h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card" style="display:flex;flex-direction:column">
+          <h3 style="margin-bottom:16px">Audyt wstępny</h3>
+          <div style="font-size:1.75rem;font-weight:500;letter-spacing:-0.02em;margin-bottom:4px">od 4 900 zł</div>
+          <div class="text-muted mono" style="font-size:0.8rem;margin-bottom:16px">2 tygodnie</div>
+          <p class="text-muted" style="font-size:0.9rem;margin-bottom:20px">Audyt zgodności + raport z mapą luk. Idealny start, jeśli nie wiesz na czym stoisz.</p>
+          <ul style="list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:10px;flex:1">
+            {["Inwentaryzacja systemów","Ocena 10 obszarów NIS2","Raport z priorytetami","Wstępny harmonogram remediation","1 spotkanie z zarządem"].map(f => (
+              <li style="display:flex;gap:10px;font-size:0.875rem;align-items:flex-start">
+                <span style="color:var(--accent);margin-top:2px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+          <a href="#kontakt" class="btn btn-secondary" style="justify-content:center">Zapytaj o wycenę
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="card card-accent" style="display:flex;flex-direction:column">
+          <span class="chip" style="margin-bottom:12px;color:var(--accent);border-color:var(--accent)">★ Najczęściej wybierany</span>
+          <h3 style="margin-bottom:16px">Pełne wdrożenie</h3>
+          <div style="font-size:1.75rem;font-weight:500;letter-spacing:-0.02em;margin-bottom:4px">od 24 900 zł</div>
+          <div class="text-muted mono" style="font-size:0.8rem;margin-bottom:16px">12 tygodni</div>
+          <p class="text-muted" style="font-size:0.9rem;margin-bottom:20px">Audyt + remediation + procedury + szkolenia + certyfikat. Kompletna ścieżka do zgodności.</p>
+          <ul style="list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:10px;flex:1">
+            {["Wszystko z Audytu wstępnego","Pełna roadmapa remediation","Wdrożenie polityk i procedur","Szkolenie zarządu (4h)","Szkolenie zespołu (8h)","Certyfikat BrightMind AI","3 mies. wsparcia"].map(f => (
+              <li style="display:flex;gap:10px;font-size:0.875rem;align-items:flex-start">
+                <span style="color:var(--accent);margin-top:2px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+          <a href="#kontakt" class="btn btn-accent" style="justify-content:center">Zapytaj o wycenę
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="card" style="display:flex;flex-direction:column">
+          <h3 style="margin-bottom:16px">Retainer compliance</h3>
+          <div style="font-size:1.75rem;font-weight:500;letter-spacing:-0.02em;margin-bottom:4px">od 2 900 zł / mies.</div>
+          <div class="text-muted mono" style="font-size:0.8rem;margin-bottom:16px">umowa roczna</div>
+          <p class="text-muted" style="font-size:0.9rem;margin-bottom:20px">Stałe wsparcie po wdrożeniu. Coroczny audyt powtórny + reagowanie na zmiany prawne.</p>
+          <ul style="list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:10px;flex:1">
+            {["Coroczny audyt powtórny","Aktualizacje procedur (zmiany prawne)","Wsparcie incydentowe (24h SLA)","Konsultacje 4h / mies.","Aktualizacje szkoleń"].map(f => (
+              <li style="display:flex;gap:10px;font-size:0.875rem;align-items:flex-start">
+                <span style="color:var(--accent);margin-top:2px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+          <a href="#kontakt" class="btn btn-secondary" style="justify-content:center">Zapytaj o wycenę
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (interactive) -->
+  <Nis2FAQ client:visible />
+
+  <!-- CTA -->
+  <section class="section" id="kontakt" style="background:var(--bg-elev)">
+    <div class="container-narrow" style="text-align:center">
+      <span class="eyebrow">/ Następny krok</span>
+      <h2 style="margin:16px 0 20px;font-size:clamp(2rem,4vw,3rem)">
+        Zacznij od bezpłatnej konsultacji.<br />
+        <span class="text-muted">30 minut. Bez zobowiązań.</span>
+      </h2>
+      <p class="text-muted" style="font-size:1.05rem;max-width:580px;margin:0 auto 32px">
+        W ciągu 30 minut sprawdzimy, czy Twoja firma podlega NIS2, oszacujemy zakres prac i dostaniesz wstępną wycenę. Bez sales-pitchu, bez follow-upów spamowych.
+      </p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="mailto:kontakt@brightmind-solutions.com" class="btn btn-primary">
+          Napisz do mnie
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="tel:+48730152161" class="btn btn-secondary">+48 730 152 161</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="nav-brand" style="margin-bottom:16px">
+            <span class="nav-brand-mark">B</span>
+            <span>BrightMind <span style="color:var(--fg-muted)">/ AI</span></span>
+          </div>
+          <p class="text-muted" style="font-size:0.9rem;max-width:320px">Profesjonalne wdrożenia AI B2B dla polskich firm. Zgodne z RODO i NIS2.</p>
+        </div>
+        <div class="footer-col">
+          <h4>NIS2</h4>
+          <ul>
+            <li><a href="#audyt">Audyt wstępny</a></li>
+            <li><a href="#pakiety">Pełne wdrożenie</a></li>
+            <li><a href="#sprawdz">Czy podlegasz?</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Firma</h4>
+          <ul>
+            <li><a href="/o-mnie/">O mnie</a></li>
+            <li><a href="/">Strona główna</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul style="font-size:0.85rem;color:var(--fg-muted)">
+            <li><a href="mailto:kontakt@brightmind-solutions.com">kontakt@brightmind-solutions.com</a></li>
+            <li><a href="tel:+48730152161">+48 730 152 161</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 BrightMind AI Solutions. Wszystkie prawa zastrzeżone.</span>
+        <div style="display:flex;align-items:center;gap:20px">
+          <a href="https://www.youtube.com/@Neural_Update" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:#ff0000;color:#fff;border-radius:var(--radius);font-weight:600;font-size:0.8rem;text-decoration:none">YouTube</a>
+          <a href="/privacy-policy/" style="color:var(--fg-muted)">Polityka prywatności</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <CookieBanner client:load />
+</Layout>

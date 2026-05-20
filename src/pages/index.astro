@@ -1,0 +1,611 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FAQAccordion from '../components/FAQAccordion.jsx';
+import CookieBanner from '../components/CookieBanner.jsx';
+
+const ldJson = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "BrightMind AI Solutions",
+    "legalName": "BrightMind AI Solutions",
+    "alternateName": "BrightMind AI",
+    "url": "https://brightmindsolutions.pl/",
+    "logo": "https://brightmindsolutions.pl/logo.png",
+    "image": "https://brightmindsolutions.pl/og-image.jpg",
+    "description": "BrightMind AI Solutions to polska firma specjalizująca się we wdrożeniach AI B2B — automatyzacja procesów AI, agenci AI dla firm i wdrożenia AI dla przedsiębiorstw. Doradztwo AI, korepetycje i materiały marketingowe AI.",
+    "foundingDate": "2024",
+    "areaServed": "PL",
+    "knowsAbout": ["automatyzacja procesów AI", "agenci AI dla firm", "wdrożenia AI B2B", "automatyzacja marketingu AI", "LangChain", "n8n", "Zapier", "ChatGPT dla firm", "Claude AI", "lokalne modele LLM"],
+    "serviceType": ["Automatyzacja Procesów AI", "Agenci AI dla Firm", "Wdrożenia AI B2B", "Automatyzacja Marketingu AI", "Doradztwo AI dla Firm", "Korepetycje AI", "Tworzenie Stron i Aplikacji AI", "Wdrożenia AI i Compliance NIS2"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "telephone": "+48-730-152-161",
+      "email": "kontakt@brightmind-solutions.com",
+      "availableLanguage": ["Polish", "English"],
+      "areaServed": "PL"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "PL",
+      "addressRegion": "Polska"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Patryk Gliński",
+      "url": "https://brightmindsolutions.pl/o-mnie/",
+      "sameAs": ["https://www.linkedin.com/in/patryk-gli%C5%84ski-172370215"]
+    },
+    "sameAs": [
+      "https://www.youtube.com/@Neural_Update",
+      "https://www.linkedin.com/company/brightmind-ai-solutions"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "BrightMind AI Solutions",
+    "url": "https://brightmindsolutions.pl/",
+    "description": "Profesjonalne wdrożenia AI B2B — automatyzacja procesów AI, agenci AI dla firm, doradztwo AI i korepetycje.",
+    "inLanguage": "pl-PL",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": { "@type": "EntryPoint", "urlTemplate": "https://brightmindsolutions.pl/?q={search_term_string}" },
+      "query-input": "required name=search_term_string"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Wdrożenia AI dla Biznesu",
+    "description": "Kompleksowe usługi wdrażania sztucznej inteligencji w przedsiębiorstwach",
+    "provider": { "@type": "Organization", "name": "BrightMind AI Solutions" },
+    "areaServed": "Poland",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Usługi AI",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Doradztwo AI dla Firm" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Korepetycje AI" }, "price": "61.5", "priceCurrency": "PLN" },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pakiet Start-AI" }, "price": "369", "priceCurrency": "PLN" },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatyzacja i Agenci AI" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tworzenie Stron i Aplikacji AI" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wdrożenia AI i Compliance NIS2", "url": "https://brightmindsolutions.pl/NIS2/" } }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Czy AI zastąpi moich pracowników?", "acceptedAnswer": { "@type": "Answer", "text": "Nie - AI ma za zadanie wspierać i wzmacniać możliwości pracowników, a nie ich zastępować. Automatyzacja procesów AI eliminuje rutynowe zadania, dzięki czemu zespół skupia się na kreatywnych i strategicznych działaniach. BrightMind AI Solutions wdraża agentów AI dla firm w modelu B2B, który uzupełnia - nie zastępuje - istniejące zasoby ludzkie." } },
+      { "@type": "Question", "name": "Ile kosztuje wdrożenie AI w firmie?", "acceptedAnswer": { "@type": "Answer", "text": "Koszty wdrożenia AI B2B zależą od skali i złożoności projektu. Pakiet Start-AI (diagnoza potrzeb) kosztuje 369 zł, a kompleksowe wdrożenia AI dla firm rozpoczynamy od 2000 zł. Korepetycje AI to 61,5 zł/h. Oferujemy bezpłatną konsultację." } },
+      { "@type": "Question", "name": "Jak długo trwa wdrożenie AI dla firmy?", "acceptedAnswer": { "@type": "Answer", "text": "Podstawowe wdrożenie automatyzacji procesów AI zajmuje 1-2 tygodnie, a kompleksowe projekty wdrożeń AI B2B 1-3 miesiące. Pierwsze efekty widoczne są już po 7 dniach." } },
+      { "@type": "Question", "name": "Czy dane firmy są bezpieczne podczas wdrożeń AI?", "acceptedAnswer": { "@type": "Answer", "text": "Tak. BrightMind AI Solutions oferuje wdrożenia AI zgodne z RODO. Korzystamy z lokalnych modeli LLM lub bezpiecznych API. Dane nigdy nie są używane do trenowania modeli AI." } },
+      { "@type": "Question", "name": "Jakie usługi AI B2B oferuje BrightMind AI Solutions?", "acceptedAnswer": { "@type": "Answer", "text": "BrightMind AI Solutions oferuje: automatyzację procesów AI (n8n, Zapier, LangChain), agentów AI dla firm, wdrożenia AI B2B, doradztwo AI dla firm, korepetycje AI, automatyzację marketingu AI, spersonalizowane asystenty AI oraz tworzenie stron i aplikacji AI." } },
+      { "@type": "Question", "name": "Czy BrightMind AI Solutions pomaga w spełnieniu wymogów NIS2?", "acceptedAnswer": { "@type": "Answer", "text": "Tak. BrightMind AI Solutions oferuje kompleksowe wsparcie we wdrażaniu rozwiązań AI zgodnych z dyrektywą NIS2. Obejmuje to audyt bezpieczeństwa systemów AI, implementację procedur cyberbezpieczeństwa, zarządzanie ryzykiem i raportowanie incydentów. Patryk Gliński łączy wiedzę prawniczą z certyfikatem Blue Team z HackerU, co pozwala na kompleksowe podejście do compliance AI." } },
+      { "@type": "Question", "name": "Jakie narzędzia AI używa BrightMind AI Solutions do automatyzacji?", "acceptedAnswer": { "@type": "Answer", "text": "BrightMind AI Solutions specjalizuje się w automatyzacji z wykorzystaniem: n8n (platformy no-code/low-code), Zapier (integracje SaaS), LangChain (agenci AI), ChatGPT API, Claude AI (Anthropic), GitHub Copilot, lokalnych modeli LLM oraz Sanity.io CMS. Dobór narzędzi zależy od potrzeb konkretnego klienta." } },
+      { "@type": "Question", "name": "Czy BrightMind AI Solutions oferuje bezpłatną konsultację?", "acceptedAnswer": { "@type": "Answer", "text": "Tak. BrightMind AI Solutions oferuje bezpłatną konsultację wstępną, podczas której omawiamy potrzeby firmy i potencjał automatyzacji AI. Skontaktuj się pod adresem kontakt@brightmind-solutions.com lub telefonicznie +48 730 152 161." } }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Jak wdrożyć AI w firmie krok po kroku",
+    "description": "Praktyczny przewodnik po procesie wdrożenia sztucznej inteligencji w przedsiębiorstwie — od diagnozy potrzeb po uruchomienie produkcyjne.",
+    "totalTime": "P14D",
+    "estimatedCost": { "@type": "MonetaryAmount", "currency": "PLN", "value": "369" },
+    "supply": [{ "@type": "HowToSupply", "name": "Dostęp do procesów biznesowych firmy" }, { "@type": "HowToSupply", "name": "Dane lub dokumenty do automatyzacji" }],
+    "tool": [{ "@type": "HowToTool", "name": "n8n lub Zapier" }, { "@type": "HowToTool", "name": "ChatGPT API lub Claude AI" }, { "@type": "HowToTool", "name": "LangChain (dla agentów AI)" }],
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "Diagnoza potrzeb — Pakiet Start-AI", "text": "Przeprowadzamy kompleksową diagnozę procesów biznesowych firmy. Identyfikujemy obszary o największym potencjale automatyzacji AI, tworzymy mapę procesów i roadmapę wdrożenia. Etap kończy się minibook z rekomendacjami (koszt: 369 zł).", "url": "https://brightmindsolutions.pl/#pakiety" },
+      { "@type": "HowToStep", "position": 2, "name": "Wybór narzędzi i technologii", "text": "Na podstawie diagnozy dobieramy odpowiednie narzędzia AI: n8n/Zapier do integracji, LangChain do agentów, modele LLM (ChatGPT, Claude, lokalne modele). Dla danych wrażliwych rekomendujemy lokalne modele LLM bez wychodzenia danych poza infrastrukturę klienta.", "url": "https://brightmindsolutions.pl/#uslugi" },
+      { "@type": "HowToStep", "position": 3, "name": "Konfiguracja i wdrożenie pilotażowe", "text": "Wdrażamy pilot automatyzacji w wybranym procesie. Konfigurujemy przepływy pracy (workflows), agentów AI i integracje z istniejącymi systemami. Pierwsze efekty widoczne po 7 dniach.", "url": "https://brightmindsolutions.pl/#uslugi" },
+      { "@type": "HowToStep", "position": 4, "name": "Szkolenie zespołu i przekazanie", "text": "Szkolimy pracowników z obsługi wdrożonych narzędzi AI. Przekazujemy dokumentację, playbook bezpieczeństwa i bibliotekę promptów. Zapewniamy wsparcie poimplementacyjne.", "url": "https://brightmindsolutions.pl/#kontakt" },
+      { "@type": "HowToStep", "position": 5, "name": "Optymalizacja i skalowanie", "text": "Monitorujemy efekty wdrożenia, optymalizujemy przepływy i rozszerzamy automatyzację na kolejne obszary. Kompleksowe wdrożenia AI B2B trwają od 1 do 3 miesięcy.", "url": "https://brightmindsolutions.pl/#kontakt" }
+    ]
+  }
+];
+---
+
+<Layout
+  title="BrightMind AI Solutions — Wdrożenia AI B2B | Automatyzacja Procesów AI i Agenci AI dla Firm"
+  description="Profesjonalne wdrożenia AI B2B dla firm. Automatyzacja procesów AI, agenci AI dla firm, doradztwo i korepetycje AI. Transformuj swój biznes — pierwsze efekty po 7 dniach!"
+  canonical="https://brightmindsolutions.pl/"
+  keywords="wdrożenia AI B2B, automatyzacja procesów AI, agenci AI dla firm, doradztwo AI Polska, compliance NIS2, korepetycje AI"
+  ogTitle="BrightMind AI Solutions — Wdrożenia AI B2B i Agenci AI dla Firm"
+  ogDescription="Profesjonalne wdrożenia AI B2B, automatyzacja procesów, agenci AI i compliance NIS2. Pierwsze efekty po 7 dniach. Bezpłatna konsultacja."
+  ldJson={ldJson}
+  fbPixelId="857800850017857"
+>
+  <!-- Netlify Forms detection -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input name="bot-field" />
+    <input name="name" />
+    <input name="email" type="email" />
+    <input name="phone" type="tel" />
+    <input name="company" />
+    <select name="subject"></select>
+    <textarea name="message"></textarea>
+    <input type="checkbox" name="privacy_consent" />
+    <input type="checkbox" name="marketing_consent" />
+  </form>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand">
+        <span class="nav-brand-mark">B</span>
+        <span>BrightMind <span style="color:var(--fg-muted)">/ AI</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="/" class="active">Strona Główna</a>
+        <a href="/o-mnie/">O mnie</a>
+        <a href="#uslugi">Usługi</a>
+        <a href="/NIS2/">NIS2</a>
+        <a href="/ai-w-praktyce/">AI w Praktyce</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#kontakt" class="nav-cta">Bezpłatna konsultacja →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section style="padding:100px 0 80px;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;opacity:0.45;pointer-events:none;background-image:radial-gradient(ellipse 80% 60% at 70% 20%,var(--accent-soft),transparent 60%)"></div>
+    <div class="container" style="position:relative">
+      <div style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:72px;align-items:center">
+        <div>
+          <div class="eyebrow" style="margin-bottom:24px">● BrightMind AI Solutions</div>
+          <h1 style="margin-bottom:16px;font-size:clamp(2.5rem,4.6vw,4rem);line-height:1.05">
+            Doradztwo AI i Wdrożenia AI B2B
+          </h1>
+          <p style="font-size:1.4rem;color:var(--fg);margin-bottom:24px;font-weight:400;opacity:0.9">
+            Automatyzacja procesów i <span class="accent">Agenci AI dla Firm</span>
+          </p>
+          <p style="font-size:1.15rem;color:var(--fg-muted);margin-bottom:36px;max-width:540px">
+            AI w praktyce — rozwiązania, które naprawdę ułatwiają codzienną pracę. Patryk Gliński — radca prawny, Google Cloud Generative AI Leader, Blue Team HackerU.
+          </p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a href="#uslugi" class="btn btn-primary">Rozpocznij transformację AI
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#kontakt" class="btn btn-secondary">Bezpłatna konsultacja</a>
+          </div>
+        </div>
+        <div class="card" style="padding:0;overflow:hidden;border-color:var(--border-strong);box-shadow:0 30px 80px -30px rgba(0,0,0,0.45)">
+          <div style="background:var(--bg-elev-2);padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px">
+            <span style="width:10px;height:10px;border-radius:50%;background:#f87171"></span>
+            <span style="width:10px;height:10px;border-radius:50%;background:#fbbf24"></span>
+            <span style="width:10px;height:10px;border-radius:50%;background:#34d399"></span>
+            <span class="mono" style="font-size:0.75rem;color:var(--fg-muted);margin-left:8px">brightmind ~ uslugi</span>
+            <span class="mono" style="font-size:0.7rem;color:var(--success);margin-left:auto">● online</span>
+          </div>
+          <div style="padding:24px;font-family:var(--font-mono);font-size:0.875rem;line-height:1.85">
+            <div class="text-muted"># Usługi</div>
+            <div style="margin-top:10px;display:flex;flex-direction:column;gap:4px">
+              <div><span class="accent">→</span> Doradztwo AI dla Firm</div>
+              <div><span class="accent">→</span> Korepetycje AI</div>
+              <div><span class="accent">→</span> Automatyzacja Marketingu AI</div>
+              <div><span class="accent">→</span> Automatyzacja i Agenci AI dla Firm</div>
+              <div><span class="accent">→</span> Spersonalizowane Asystenty AI</div>
+              <div><span class="accent">→</span> Wdrożenia AI i Compliance NIS2</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="uslugi">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">/ Usługi</span>
+        <h2>Nasze Usługi</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <div style="color:var(--accent);margin-bottom:16px">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7l-3 7a4 4 0 008 0L7 7"/><path d="M19 7l-3 7a4 4 0 008 0L21 7"/></svg>
+          </div>
+          <h3 style="margin-bottom:12px">Doradztwo AI dla Firm</h3>
+          <p class="text-muted" style="font-size:0.95rem">Profesjonalne doradztwo w zakresie wdrażania AI: od narzędzi do programowania (GitHub Copilot, Claude Code), przez tworzenie audio, wideo i prezentacji, transkrypcje spotkań, aż po zastosowania w prawie, medycynie i rolnictwie. Identyfikuję obszary o największym potencjale automatyzacji w Twojej branży.</p>
+        </div>
+        <div class="card">
+          <div style="color:var(--accent);margin-bottom:16px">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+          </div>
+          <h3 style="margin-bottom:12px">Korepetycje AI</h3>
+          <p class="text-muted" style="font-size:0.95rem">Indywidualne szkolenia z zakresu sztucznej inteligencji dla osób prywatnych. Asystenci programistyczni, generatory audio i wideo, aplikacje do transkrypcji, branżowe rozwiązania AI. Niezależnie od dziedziny — pomogę wykorzystać potencjał AI.</p>
+        </div>
+        <div class="card">
+          <div style="color:var(--accent);margin-bottom:16px">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>
+          </div>
+          <h3 style="margin-bottom:12px">Automatyzacja Marketingu AI</h3>
+          <p class="text-muted" style="font-size:0.95rem">Kompleksowa automatyzacja marketingu z wykorzystaniem AI. Treści reklamowe, posty społecznościowe, kampanie e-mailowe i grafiki generowane przez AI — bez ręcznej pracy.</p>
+        </div>
+        <div class="card">
+          <div style="color:var(--accent);margin-bottom:16px">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/></svg>
+          </div>
+          <h3 style="margin-bottom:12px">Automatyzacja i Agenci AI dla Firm</h3>
+          <p class="text-muted" style="font-size:0.95rem">Inteligentni agenci i zaawansowane przepływy automatyzacji z wykorzystaniem n8n, Zapier i LangChain. Automatyzuję powtarzalne procesy, integruję systemy i tworzę autonomicznych agentów AI wykonujących złożone zadania bez Twojego udziału.</p>
+        </div>
+        <div class="card">
+          <div style="color:var(--accent);margin-bottom:16px">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M12 8V4M8 4h8"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/></svg>
+          </div>
+          <h3 style="margin-bottom:12px">Spersonalizowane Asystenty AI</h3>
+          <p class="text-muted" style="font-size:0.95rem">Projektowanie i wdrażanie dedykowanych asystentów AI dopasowanych do specyfiki branży. Od automatyzacji obsługi klienta, przez analizę dokumentów prawnych i medycznych, po wsparcie w rolnictwie precyzyjnym. Pełna integracja z istniejącymi systemami.</p>
+        </div>
+        <div class="card card-accent">
+          <span class="chip" style="margin-bottom:16px;color:var(--accent);border-color:var(--accent)">★ Flagship</span>
+          <div style="color:var(--accent);margin-bottom:16px">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3 style="margin-bottom:12px">Wdrożenia AI i Compliance NIS2</h3>
+          <p class="text-muted" style="font-size:0.95rem">Kompleksowe wsparcie we wdrażaniu rozwiązań AI zgodnych z dyrektywą NIS2. Audyt bezpieczeństwa, procedury cyberbezpieczeństwa, zarządzanie ryzykiem i raportowanie incydentów. Spełnij wymogi regulacyjne wykorzystując potencjał AI.</p>
+          <a href="/NIS2/" style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:0.875rem;font-weight:500">
+            Zobacz dedykowaną stronę
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="section" id="pakiety" style="background:var(--bg-elev)">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">/ Pakiety</span>
+        <h2>Nasze Pakiety</h2>
+      </div>
+      <div class="grid grid-2">
+        <div class="card">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+            <span style="font-size:1.75rem">📋</span>
+            <h3>Pakiet Start-AI</h3>
+          </div>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px">
+            {["Kompleksowa diagnoza potrzeb firmy","Doradztwo w zakresie lokalnych modeli LLM","Mapa procesów do automatyzacji","Minibook z praktycznymi rekomendacjami","Roadmapa wdrożenia AI w organizacji","Identyfikacja kluczowych obszarów optymalizacji"].map(f => (
+              <li style="display:flex;gap:12px;font-size:0.95rem;align-items:flex-start">
+                <span style="color:var(--accent);margin-top:3px">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+                </span>
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="card card-accent">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+            <span style="font-size:1.75rem">🎯</span>
+            <h3>Pakiet Fit-AI</h3>
+          </div>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px">
+            {["Personalizacja narzędzi AI dla zespołu","Konfiguracja ChatGPT, Copilot, Claude","Biblioteka gotowych promptów","Playbook bezpieczeństwa AI","Szkolenia dla zespołu dostosowane do potrzeb","Nagranie video do wielokrotnego użytku","Wsparcie poimplementacyjne i bieżąca optymalizacja"].map(f => (
+              <li style="display:flex;gap:12px;font-size:0.95rem;align-items:flex-start">
+                <span style="color:var(--accent);margin-top:3px">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+                </span>
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="cennik">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">/ Cennik</span>
+        <h2>Cennik</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card" style="display:flex;flex-direction:column;text-align:center;align-items:center">
+          <h3 style="margin-bottom:20px">Korepetycje AI</h3>
+          <div style="font-size:2.5rem;font-weight:600;letter-spacing:-0.02em;color:var(--accent);margin-bottom:12px;line-height:1.1">61,5 zł</div>
+          <div class="text-muted" style="font-size:0.9rem;margin-bottom:28px;max-width:240px">za godzinę (cena brutto z 23% VAT)</div>
+          <a href="#kontakt" class="btn btn-secondary" style="justify-content:center;margin-top:auto">Zapytaj
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="card card-accent" style="display:flex;flex-direction:column;text-align:center;align-items:center">
+          <h3 style="margin-bottom:20px">Pakiet Start-AI</h3>
+          <div style="font-size:2.5rem;font-weight:600;letter-spacing:-0.02em;color:var(--accent);margin-bottom:12px;line-height:1.1">369 zł</div>
+          <div class="text-muted" style="font-size:0.9rem;margin-bottom:28px;max-width:240px">kompleksowa diagnoza (cena brutto z 23% VAT)</div>
+          <a href="#kontakt" class="btn btn-accent" style="justify-content:center;margin-top:auto">Zapytaj
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="card" style="display:flex;flex-direction:column;text-align:center;align-items:center">
+          <h3 style="margin-bottom:20px">Pakiet Fit-AI</h3>
+          <div style="font-size:1.5rem;font-weight:600;letter-spacing:-0.02em;color:var(--accent);margin-bottom:12px;line-height:1.1">Wycena indywidualna</div>
+          <div class="text-muted" style="font-size:0.9rem;margin-bottom:28px;max-width:240px">cena do uzgodnienia</div>
+          <a href="#kontakt" class="btn btn-secondary" style="justify-content:center;margin-top:auto">Zapytaj
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEBSITES SERVICE -->
+  <section class="section" id="strony" style="background:var(--bg-elev)">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">/ Usługa Specjalna</span>
+        <h2>Tworzenie Stron Internetowych</h2>
+        <p class="text-muted" style="font-size:1.05rem;max-width:720px;margin:16px auto 0">Profesjonalne strony internetowe, które wyróżnią Twój biznes w sieci. Wybierz model współpracy dopasowany do Twoich potrzeb.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="card">
+          <span class="chip" style="margin-bottom:16px">Projekt</span>
+          <h3 style="margin-bottom:8px">Kompleksowe wdrożenie projektowe</h3>
+          <p class="accent" style="font-size:0.95rem;margin-bottom:16px;font-weight:500">Gotowa strona + pełny kod źródłowy w Twoich rękach.</p>
+          <p class="text-muted" style="margin-bottom:20px">Projektujemy i budujemy Twoją stronę od podstaw, wykorzystując nowoczesny stack technologiczny. Po odbiorze projektu otrzymujesz kompletny kod źródłowy — bez abonamentów, bez ukrytych kosztów, bez zobowiązań.</p>
+          <ul style="list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:10px">
+            {["Indywidualny projekt UI/UX dopasowany do marki","Responsywna implementacja (mobile-first)","Pełna własność kodu — robisz z nim, co chcesz"].map(f => (
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.9rem">
+                <span class="accent" style="margin-top:2px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+          <a href="#kontakt" class="btn btn-secondary" style="justify-content:center">Zapytaj o wycenę
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="card card-accent">
+          <span class="chip" style="margin-bottom:16px;color:var(--accent);border-color:var(--accent)">★ Subskrypcja</span>
+          <h3 style="margin-bottom:8px">Pełna obsługa &amp; CMS</h3>
+          <p class="accent" style="font-size:0.95rem;margin-bottom:16px;font-weight:500">Edytuj treści w kilka sekund — bez pisania kodu.</p>
+          <p class="text-muted" style="margin-bottom:20px">Skup się na biznesie, a my zajmiemy się technologią. Otrzymujesz intuicyjny panel CMS (Sanity.io), w którym zmiana tekstów czy zdjęć publikuje się natychmiast na stronie.</p>
+          <ul style="list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:10px">
+            {["Panel CMS — edycja treści bez programisty","Natychmiastowa publikacja zmian na żywo","Hosting i domena w cenie subskrypcji","Bieżące aktualizacje i wsparcie techniczne","Comiesięczny raport wydajności strony"].map(f => (
+              <li style="display:flex;gap:10px;align-items:flex-start;font-size:0.9rem">
+                <span class="accent" style="margin-top:2px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+          <a href="#kontakt" class="btn btn-accent" style="justify-content:center">Wybierz subskrypcję
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">/ Dlaczego BrightMind AI</span>
+        <h2>Dlaczego BrightMind AI?</h2>
+      </div>
+      <div class="grid grid-2">
+        <div style="display:flex;gap:24px;padding:28px 0;border-top:none">
+          <div class="mono accent" style="font-size:0.85rem;letter-spacing:0.1em;padding-top:4px;min-width:32px">01</div>
+          <div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+              <span class="accent"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
+              <h3>Szybka Implementacja</h3>
+            </div>
+            <p class="text-muted">Wdrażamy rozwiązania AI w rekordowym czasie — pierwsze rezultaty już po 7 dniach.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:24px;padding:28px 0;border-top:none">
+          <div class="mono accent" style="font-size:0.85rem;letter-spacing:0.1em;padding-top:4px;min-width:32px">02</div>
+          <div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+              <span class="accent"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+              <h3>Dopasowane Rozwiązania</h3>
+            </div>
+            <p class="text-muted">Każdy projekt dostosowujemy do specyfiki Twojej branży i indywidualnych potrzeb.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:24px;padding:28px 0;border-top:1px solid var(--border)">
+          <div class="mono accent" style="font-size:0.85rem;letter-spacing:0.1em;padding-top:4px;min-width:32px">03</div>
+          <div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+              <span class="accent"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg></span>
+              <h3>Mierzalne Efekty</h3>
+            </div>
+            <p class="text-muted">Średnio 40% wzrost produktywności i 60% redukcja czasu wykonywania zadań.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:24px;padding:28px 0;border-top:1px solid var(--border)">
+          <div class="mono accent" style="font-size:0.85rem;letter-spacing:0.1em;padding-top:4px;min-width:32px">04</div>
+          <div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+              <span class="accent"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg></span>
+              <h3>Bezpieczeństwo Danych</h3>
+            </div>
+            <p class="text-muted">RODO-compliant rozwiązania z najwyższymi standardami ochrony danych.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">/ Proces współpracy</span>
+        <h2>Jak przebiega proces współpracy?</h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:0">
+        {[
+          { n: "01", t: "🎯 Analiza potrzeb", d: "Przeprowadzam szczegółową analizę Twoich procesów biznesowych i identyfikuję obszary, które najbardziej skorzystają na automatyzacji AI.", time: "1–2 tyg." },
+          { n: "02", t: "📋 Strategia wdrożenia", d: "Opracowuję spersonalizowaną roadmapę z konkretnymi krokami, harmonogramem i oczekiwanymi rezultatami.", time: "1 tydzień" },
+          { n: "03", t: "⚙️ Implementacja", d: "Wdrażam wybrane rozwiązania AI, konfiguruję narzędzia i integruję je z Twoimi istniejącymi systemami.", time: "2–6 tyg." },
+          { n: "04", t: "📚 Szkolenie zespołu", d: "Prowadzę kompleksowe szkolenia dla Twojego zespołu, aby wszyscy mogli efektywnie wykorzystywać nowe narzędzia AI.", time: "1 tydzień" },
+          { n: "05", t: "🚀 Wsparcie i optymalizacja", d: "Zapewniam ciągłe wsparcie, monitoruję efekty i optymalizuję rozwiązania, aby maksymalizować korzyści.", time: "ciągłe" },
+        ].map(s => (
+          <div style="display:grid;grid-template-columns:80px 1fr 120px;gap:32px;padding:28px 0;border-top:1px solid var(--border);align-items:start">
+            <div class="mono" style="font-size:0.875rem;color:var(--accent);letter-spacing:0.1em">{s.n}</div>
+            <div>
+              <h3 style="margin-bottom:8px">{s.t}</h3>
+              <p class="text-muted" style="max-width:600px">{s.d}</p>
+            </div>
+            <div class="mono text-dim" style="font-size:0.825rem;text-align:right">{s.time}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container-narrow">
+      <div class="section-header">
+        <span class="eyebrow">/ FAQ</span>
+        <h2>Najczęściej zadawane pytania</h2>
+      </div>
+      <FAQAccordion client:visible />
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="kontakt" style="background:var(--bg-elev)">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start">
+        <div>
+          <span class="eyebrow">/ Kontakt</span>
+          <h2 style="margin:12px 0 32px">Skontaktuj się z nami</h2>
+          <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:32px">
+            <a href="mailto:kontakt@brightmind-solutions.com" style="display:flex;gap:16px;align-items:center;padding:16px;border:1px solid var(--border);border-radius:var(--radius);color:var(--fg)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+              <div>
+                <div class="text-dim" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em">Email</div>
+                <div>kontakt@brightmind-solutions.com</div>
+              </div>
+            </a>
+            <a href="tel:+48730152161" style="display:flex;gap:16px;align-items:center;padding:16px;border:1px solid var(--border);border-radius:var(--radius);color:var(--fg)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              <div>
+                <div class="text-dim" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em">Telefon</div>
+                <div>+48 730 152 161</div>
+              </div>
+            </a>
+          </div>
+          <div class="mono text-dim" style="font-size:0.8rem">Pn–Pt 9:00–17:00 · CET</div>
+        </div>
+        <form class="card" style="padding:32px" name="contact" method="POST" action="/success/" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="bot-field" />
+          <h3 style="margin-bottom:24px">📬 Formularz kontaktowy</h3>
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <label style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:0.85rem;color:var(--fg-muted)">Imię i nazwisko <span style="color:var(--accent)">*</span></span>
+              <input type="text" name="name" placeholder="Jan Kowalski" required style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;color:var(--fg);font-family:inherit;font-size:0.95rem" />
+            </label>
+            <label style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:0.85rem;color:var(--fg-muted)">Adres e-mail <span style="color:var(--accent)">*</span></span>
+              <input type="email" name="email" placeholder="jan@firma.pl" required style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;color:var(--fg);font-family:inherit;font-size:0.95rem" />
+            </label>
+            <label style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:0.85rem;color:var(--fg-muted)">Numer telefonu</span>
+              <input type="tel" name="phone" placeholder="+48 123 456 789" style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;color:var(--fg);font-family:inherit;font-size:0.95rem" />
+            </label>
+            <label style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:0.85rem;color:var(--fg-muted)">Nazwa firmy</span>
+              <input type="text" name="company" placeholder="Firma sp. z o.o." style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;color:var(--fg);font-family:inherit;font-size:0.95rem" />
+            </label>
+            <label style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:0.85rem;color:var(--fg-muted)">Czego dotyczy zapytanie?</span>
+              <select name="subject" style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;color:var(--fg);font-family:inherit;font-size:0.95rem">
+                <option>Doradztwo AI dla firm</option>
+                <option>Korepetycje AI</option>
+                <option>Automatyzacja marketingu</option>
+                <option>Agenci AI / automatyzacja</option>
+                <option>Spersonalizowane asystenty</option>
+                <option>Wdrożenia NIS2</option>
+                <option>Strona internetowa</option>
+                <option>Inne</option>
+              </select>
+            </label>
+            <label style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:0.85rem;color:var(--fg-muted)">Opis projektu / dodatkowe informacje <span style="color:var(--accent)">*</span></span>
+              <textarea name="message" placeholder="Opisz swoje potrzeby, oczekiwania i cele projektu." required rows="4" style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;color:var(--fg);font-family:inherit;font-size:0.95rem;resize:vertical"></textarea>
+            </label>
+            <label style="display:flex;gap:10px;font-size:0.85rem;color:var(--fg-muted);line-height:1.5">
+              <input type="checkbox" name="privacy_consent" required style="margin-top:4px" />
+              <span>Wyrażam zgodę na przetwarzanie danych zgodnie z <a href="/privacy-policy/">Polityką Prywatności</a>. *</span>
+            </label>
+            <label style="display:flex;gap:10px;font-size:0.85rem;color:var(--fg-muted);line-height:1.5">
+              <input type="checkbox" name="marketing_consent" style="margin-top:4px" />
+              <span>Wyrażam zgodę na otrzymywanie informacji marketingowych o usługach BrightMind AI Solutions.</span>
+            </label>
+            <button type="submit" class="btn btn-primary" style="justify-content:center;margin-top:8px">Wyślij wiadomość 🚀</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="nav-brand" style="margin-bottom:16px">
+            <span class="nav-brand-mark">B</span>
+            <span>BrightMind <span style="color:var(--fg-muted)">/ AI</span></span>
+          </div>
+          <p class="text-muted" style="font-size:0.9rem;max-width:320px">Profesjonalne wdrożenia AI B2B dla polskich firm. Automatyzacja procesów, agenci AI, doradztwo. Zgodne z RODO i NIS2.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Usługi</h4>
+          <ul>
+            <li><a href="#uslugi">Doradztwo AI dla Firm</a></li>
+            <li><a href="#uslugi">Korepetycje AI</a></li>
+            <li><a href="#uslugi">Automatyzacja marketingu</a></li>
+            <li><a href="#uslugi">Agenci AI dla firm</a></li>
+            <li><a href="/NIS2/">Wdrożenia NIS2</a></li>
+            <li><a href="#strony">Strony internetowe</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Firma</h4>
+          <ul>
+            <li><a href="/o-mnie/">O mnie</a></li>
+            <li><a href="/ai-w-praktyce/">AI w Praktyce</a></li>
+            <li><a href="#cennik">Cennik</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul style="font-size:0.85rem;color:var(--fg-muted)">
+            <li>BrightMind AI Solutions</li>
+            <li>Patryk Gliński</li>
+            <li><a href="mailto:kontakt@brightmind-solutions.com">kontakt@brightmind-solutions.com</a></li>
+            <li><a href="tel:+48730152161">+48 730 152 161</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 BrightMind AI Solutions. Wszystkie prawa zastrzeżone.</span>
+        <div style="display:flex;align-items:center;gap:20px">
+          <a href="https://www.youtube.com/@Neural_Update" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:#ff0000;color:#fff;border-radius:var(--radius);font-weight:600;font-size:0.8rem;text-decoration:none">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="3"/><polygon points="10 9.5 16 13 10 16.5 10 9.5"/></svg>
+            YouTube
+          </a>
+          <a href="/privacy-policy/" style="color:var(--fg-muted)">Polityka prywatności</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <CookieBanner client:load />
+</Layout>

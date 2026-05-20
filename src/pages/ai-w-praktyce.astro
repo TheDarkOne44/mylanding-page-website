@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PracticeApp from '../components/PracticeApp.jsx';
+import CookieBanner from '../components/CookieBanner.jsx';
+
+const ldJson = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Strona Główna", "item": "https://brightmindsolutions.pl/" },
+      { "@type": "ListItem", "position": 2, "name": "AI w Praktyce", "item": "https://brightmindsolutions.pl/ai-w-praktyce/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Praktyczne zastosowania AI — BrightMind AI Solutions",
+    "url": "https://brightmindsolutions.pl/ai-w-praktyce/",
+    "numberOfItems": 5,
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Claude AI w automatyzacji pracy z Excelem" },
+      { "@type": "ListItem", "position": 2, "name": "MedGemma — analiza zdjęć MRI przez AI" },
+      { "@type": "ListItem", "position": 3, "name": "OCR — rozpoznawanie tekstu przez AI" },
+      { "@type": "ListItem", "position": 4, "name": "Aplikacje mobilne tworzone przez AI" },
+      { "@type": "ListItem", "position": 5, "name": "Evo 2 — genomika i analiza DNA z AI" }
+    ]
+  }
+];
+---
+
+<Layout
+  title="AI w Praktyce - Przykłady Zastosowań | BrightMind AI Solutions"
+  description="Poznaj praktyczne zastosowania sztucznej inteligencji: Claude AI w Excel, analiza MRI z MedGemma, OCR, aplikacje mobilne i genomika z Evo 2."
+  canonical="https://brightmindsolutions.pl/ai-w-praktyce/"
+  keywords="AI w praktyce, Claude AI Excel, MedGemma analiza MRI, OCR rozpoznawanie tekstu, aplikacje mobilne AI, Evo 2 genetyka"
+  ldJson={ldJson}
+  fbPixelId="857800850017857"
+>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand">
+        <span class="nav-brand-mark">B</span>
+        <span>BrightMind <span style="color:var(--fg-muted)">/ AI</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Strona Główna</a>
+        <a href="/o-mnie/">O mnie</a>
+        <a href="/#uslugi">Usługi</a>
+        <a href="/NIS2/">NIS2</a>
+        <a href="/ai-w-praktyce/" class="active">AI w Praktyce</a>
+        <a href="/#kontakt">Kontakt</a>
+        <a href="/#kontakt" class="nav-cta">Bezpłatna konsultacja →</a>
+      </div>
+    </div>
+  </nav>
+
+  <section style="padding:80px 0 48px;border-bottom:1px solid var(--border)">
+    <div class="container">
+      <span class="eyebrow">/ Demonstracje</span>
+      <h1 style="margin-top:16px;margin-bottom:12px">AI w Praktyce</h1>
+      <p class="text-muted" style="font-size:1.1rem;max-width:600px">
+        Poznaj konkretne zastosowania sztucznej inteligencji w biznesie i nauce. Każdy przykład to realny use case, który możemy wdrożyć w Twojej firmie.
+      </p>
+    </div>
+  </section>
+
+  <PracticeApp client:visible />
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="nav-brand" style="margin-bottom:16px">
+            <span class="nav-brand-mark">B</span>
+            <span>BrightMind <span style="color:var(--fg-muted)">/ AI</span></span>
+          </div>
+          <p class="text-muted" style="font-size:0.9rem;max-width:320px">Profesjonalne wdrożenia AI B2B dla polskich firm.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Usługi</h4>
+          <ul>
+            <li><a href="/#uslugi">Doradztwo AI dla Firm</a></li>
+            <li><a href="/NIS2/">Wdrożenia NIS2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Firma</h4>
+          <ul>
+            <li><a href="/o-mnie/">O mnie</a></li>
+            <li><a href="/#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul style="font-size:0.85rem;color:var(--fg-muted)">
+            <li><a href="mailto:kontakt@brightmind-solutions.com">kontakt@brightmind-solutions.com</a></li>
+            <li><a href="tel:+48730152161">+48 730 152 161</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 BrightMind AI Solutions. Wszystkie prawa zastrzeżone.</span>
+        <div style="display:flex;align-items:center;gap:20px">
+          <a href="https://www.youtube.com/@Neural_Update" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:#ff0000;color:#fff;border-radius:var(--radius);font-weight:600;font-size:0.8rem;text-decoration:none">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="3"/><polygon points="10 9.5 16 13 10 16.5 10 9.5"/></svg>
+            YouTube
+          </a>
+          <a href="/privacy-policy/" style="color:var(--fg-muted)">Polityka prywatności</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <CookieBanner client:load />
+</Layout>
