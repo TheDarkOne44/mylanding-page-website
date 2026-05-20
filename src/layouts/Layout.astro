@@ -1,0 +1,99 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  ogType?: string;
+  ogImage?: string;
+  robots?: string;
+  keywords?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ldJson?: object[];
+  fbPixelId?: string;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogType = "website",
+  ogImage = "https://brightmindsolutions.pl/og-image.jpg",
+  robots = "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+  keywords,
+  ogTitle,
+  ogDescription,
+  ldJson = [],
+  fbPixelId,
+} = Astro.props;
+
+const resolvedOgTitle = ogTitle ?? title;
+const resolvedOgDesc = ogDescription ?? description;
+---
+
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  {keywords && <meta name="keywords" content={keywords} />}
+  <meta name="author" content="BrightMind AI Solutions" />
+  <meta name="robots" content={robots} />
+
+  <meta property="og:type" content={ogType} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:title" content={resolvedOgTitle} />
+  <meta property="og:description" content={resolvedOgDesc} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:locale" content="pl_PL" />
+  <meta property="og:site_name" content="BrightMind AI Solutions" />
+
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={canonical} />
+  <meta property="twitter:title" content={resolvedOgTitle} />
+  <meta property="twitter:description" content={resolvedOgDesc} />
+  <meta property="twitter:image" content={ogImage} />
+
+  <meta name="theme-color" content="#0a0d12" />
+  <meta name="msapplication-TileColor" content="#0a0d12" />
+  <link rel="alternate" hreflang="pl" href={canonical} />
+  <link rel="canonical" href={canonical} />
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  {ldJson.map(schema => (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  ))}
+
+  {fbPixelId && (
+    <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    </script>
+    <script define:vars={{ fbPixelId }}>
+      fbq('init', fbPixelId);
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src={`https://www.facebook.com/tr?id=${fbPixelId}&ev=PageView&noscript=1`} /></noscript>
+  )}
+</head>
+<body>
+  <slot />
+</body>
+</html>

@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CookieBanner from '../components/CookieBanner.jsx';
+---
+
+<Layout
+  title="Dziękujemy! - BrightMind AI Solutions"
+  description="Dziękujemy za kontakt! Odezwiemy się w ciągu 24 godzin z spersonalizowaną ofertą."
+  canonical="https://brightmindsolutions.pl/success/"
+  robots="noindex, nofollow"
+>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand">
+        <span class="nav-brand-mark">B</span>
+        <span>BrightMind <span style="color:var(--fg-muted)">/ AI</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Strona Główna</a>
+        <a href="/o-mnie/">O mnie</a>
+        <a href="/#uslugi">Usługi</a>
+        <a href="/NIS2/">NIS2</a>
+        <a href="/ai-w-praktyce/">AI w Praktyce</a>
+        <a href="/#kontakt">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+  <section style="padding:120px 0 80px;min-height:70vh;display:flex;align-items:center">
+    <div class="container-narrow" style="text-align:center">
+      <div style="width:64px;height:64px;border-radius:50%;background:var(--accent-soft);border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 32px;color:var(--accent)">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+      </div>
+      <span class="eyebrow">/ Wiadomość odebrana</span>
+      <h1 style="margin:16px 0 20px">Dziękujemy za kontakt!</h1>
+      <p class="text-muted" style="font-size:1.15rem;max-width:520px;margin:0 auto 48px">
+        Twoje zapytanie zostało przesłane pomyślnie. Odezwiemy się w ciągu <strong style="color:var(--fg)">24 godzin</strong> z ofertą dopasowaną do Twoich potrzeb.
+      </p>
+
+      <div class="card" style="text-align:left;margin-bottom:48px">
+        <div style="font-weight:600;margin-bottom:20px">Co się wydarzy dalej:</div>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          {[
+            { n: "01", t: "Analiza wymagań", d: "Przeczytamy dokładnie Twoje zapytanie i przeanalizujemy potrzeby." },
+            { n: "02", t: "Propozycja rozwiązań", d: "Przygotujemy dedykowaną propozycję wdrożeń AI dopasowaną do Twojego biznesu." },
+            { n: "03", t: "Transparentny kosztorys", d: "Otrzymasz stałą wycenę przed startem prac — bez niespodzianek." },
+          ].map((s, i) => (
+            <div style={`display:flex;gap:16px;padding-top:${i > 0 ? '16px' : '0'};border-top:${i > 0 ? '1px solid var(--border)' : 'none'}`}>
+              <span class="mono accent" style="font-size:0.8rem;padding-top:2px;min-width:24px">{s.n}</span>
+              <div>
+                <div style="font-weight:500;margin-bottom:4px">{s.t}</div>
+                <p class="text-muted" style="margin:0;font-size:0.9rem">{s.d}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:48px">
+        <a href="mailto:kontakt@brightmind-solutions.com" class="btn btn-secondary">kontakt@brightmind-solutions.com</a>
+        <a href="tel:+48730152161" class="btn btn-secondary">+48 730 152 161</a>
+      </div>
+
+      <a href="/" class="btn btn-primary">
+        ← Wróć do strony głównej
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 BrightMind AI Solutions. Wszystkie prawa zastrzeżone.</span>
+        <a href="/privacy-policy/" style="color:var(--fg-muted)">Polityka prywatności</a>
+      </div>
+    </div>
+  </footer>
+
+  <CookieBanner client:load />
+</Layout>

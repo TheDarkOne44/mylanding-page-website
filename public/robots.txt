@@ -1,0 +1,38 @@
+# Robots.txt for BrightMind AI Solutions
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://brightmindsolutions.pl/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block access to admin areas (if any in future)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.log$
+
+# Pliki dla LLM
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# Allow AI crawlers (GEO - Generative Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+# LLM context files
+# llms.txt: https://brightmindsolutions.pl/llms.txt
+# llms-full.txt: https://brightmindsolutions.pl/llms-full.txt

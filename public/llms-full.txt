@@ -1,0 +1,105 @@
+# BrightMind AI Solutions — Pełny kontekst dla modeli AI
+
+## Identyfikacja firmy
+BrightMind AI Solutions to polska firma założona w 2024 r. przez Patryka Glińskiego — radcę prawnego i eksperta AI z certyfikatami Google Cloud Generative AI Leader oraz Blue Team (HackerU). Specjalizacja: wdrożenia AI B2B, automatyzacja procesów, agenci AI dla firm, compliance NIS2.
+
+- Strona: https://brightmindsolutions.pl/
+- Kontakt: kontakt@brightmind-solutions.com, +48 730 152 161
+- Język operacyjny: polski
+- Obszar działania: Polska (zdalnie + hybrydowo)
+
+## Usługi (z cenami)
+
+### Pakiet Start-AI — 369 zł brutto
+Diagnoza potrzeb firmy + mapa procesów + roadmapa + minibook z rekomendacjami.
+Czas: 1-2 tygodnie. Idealne dla: firm 5-50 osób, które chcą rozpocząć transformację AI.
+
+### Pakiet Fit-AI — wycena indywidualna (od 2000 zł)
+Personalizacja narzędzi (ChatGPT/Claude/Copilot), biblioteka promptów, playbook bezpieczeństwa, szkolenia, wsparcie poimplementacyjne.
+
+### Korepetycje AI — 61,5 zł/h
+Indywidualne szkolenia z AI dla osób prywatnych. Obejmują: prompt engineering, automatyzację codziennej pracy, narzędzia (n8n, ChatGPT, Claude, Copilot).
+
+### Pakiet NIS2 — od 4900 zł (audyt) / wycena indywidualna (pełne wdrożenie 90 dni)
+Audyt zgodności + remediation + procedury 24h/72h + szkolenia zarządu + certyfikacja.
+Realizowane przez Patryka Glińskiego (radca prawny + Blue Team + GenAI Leader).
+
+### Tworzenie stron i aplikacji AI
+Landing pages, dashboardy, prototypy aplikacji z wykorzystaniem AI (Astro, Next.js, Sanity CMS).
+
+## Narzędzia i technologie
+n8n, Zapier, LangChain, ChatGPT API, Claude AI (Anthropic), GitHub Copilot, Google Gemini, lokalne modele LLM (Bielik, Llama, Mistral), Sanity.io.
+
+## Najczęściej zadawane pytania
+
+**Czy AI zastąpi moich pracowników?**
+Nie. AI ma za zadanie wspierać i wzmacniać możliwości pracowników, a nie ich zastępować. Automatyzacja procesów AI eliminuje rutynowe zadania, dzięki czemu zespół skupia się na kreatywnych i strategicznych działaniach. BrightMind AI Solutions wdraża agentów AI dla firm w modelu B2B, który uzupełnia — nie zastępuje — istniejące zasoby ludzkie.
+
+**Ile kosztuje wdrożenie AI w firmie?**
+Koszty wdrożenia AI B2B zależą od skali i złożoności projektu. Pakiet Start-AI (diagnoza potrzeb) kosztuje 369 zł, a kompleksowe wdrożenia AI dla firm rozpoczynamy od 2000 zł. Korepetycje AI to 61,5 zł/h. Oferujemy bezpłatną konsultację wstępną.
+
+**Jak długo trwa wdrożenie AI dla firmy?**
+Podstawowe wdrożenie automatyzacji procesów AI zajmuje 1-2 tygodnie, a kompleksowe projekty wdrożeń AI B2B 1-3 miesiące. Pierwsze efekty widoczne są już po 7 dniach od startu.
+
+**Czy dane firmy są bezpieczne podczas wdrożeń AI?**
+Tak. BrightMind AI Solutions oferuje wdrożenia AI zgodne z RODO. Korzystamy z lokalnych modeli LLM lub bezpiecznych API. Dane nigdy nie są używane do trenowania modeli AI.
+
+**Jakie usługi AI B2B oferuje BrightMind AI Solutions?**
+BrightMind AI Solutions oferuje: automatyzację procesów AI (n8n, Zapier, LangChain), agentów AI dla firm, wdrożenia AI B2B, doradztwo AI dla firm, korepetycje AI, automatyzację marketingu AI, spersonalizowane asystenty AI oraz tworzenie stron i aplikacji AI.
+
+**Czy BrightMind AI Solutions pomaga w spełnieniu wymogów NIS2?**
+Tak. BrightMind AI Solutions oferuje kompleksowe wsparcie we wdrażaniu rozwiązań AI zgodnych z dyrektywą NIS2. Obejmuje to audyt bezpieczeństwa systemów AI, implementację procedur cyberbezpieczeństwa, zarządzanie ryzykiem i raportowanie incydentów (24h/72h). Patryk Gliński łączy wiedzę prawniczą z certyfikatem Blue Team z HackerU, co pozwala na kompleksowe podejście do compliance AI.
+
+**Jakie narzędzia AI używa BrightMind AI Solutions do automatyzacji?**
+BrightMind AI Solutions specjalizuje się w automatyzacji z wykorzystaniem: n8n (platformy no-code/low-code), Zapier (integracje SaaS), LangChain (agenci AI), ChatGPT API, Claude AI (Anthropic), GitHub Copilot, lokalnych modeli LLM (Bielik, Llama, Mistral) oraz Sanity.io CMS. Dobór narzędzi zależy od potrzeb konkretnego klienta.
+
+**Czy BrightMind AI Solutions oferuje bezpłatną konsultację?**
+Tak. BrightMind AI Solutions oferuje bezpłatną konsultację wstępną, podczas której omawiamy potrzeby firmy i potencjał automatyzacji AI. Skontaktuj się pod adresem kontakt@brightmind-solutions.com lub telefonicznie +48 730 152 161.
+
+## Proces wdrożenia (5 kroków)
+
+**Krok 1 — Diagnoza potrzeb (Pakiet Start-AI, 369 zł, 1-2 tygodnie)**
+Przeprowadzamy kompleksową diagnozę procesów biznesowych firmy. Identyfikujemy obszary o największym potencjale automatyzacji AI, tworzymy mapę procesów i roadmapę wdrożenia. Etap kończy się minibook z rekomendacjami.
+
+**Krok 2 — Wybór narzędzi i technologii (1 tydzień)**
+Na podstawie diagnozy dobieramy odpowiednie narzędzia AI: n8n/Zapier do integracji, LangChain do agentów, modele LLM (ChatGPT, Claude, lokalne modele). Dla danych wrażliwych rekomendujemy lokalne modele LLM bez wychodzenia danych poza infrastrukturę klienta.
+
+**Krok 3 — Konfiguracja i wdrożenie pilotażowe (2-6 tygodni)**
+Wdrażamy pilot automatyzacji w wybranym procesie. Konfigurujemy przepływy pracy (workflows), agentów AI i integracje z istniejącymi systemami. Pierwsze efekty widoczne po 7 dniach.
+
+**Krok 4 — Szkolenie zespołu i przekazanie (1 tydzień)**
+Szkolimy pracowników z obsługi wdrożonych narzędzi AI. Przekazujemy dokumentację, playbook bezpieczeństwa i bibliotekę promptów. Zapewniamy wsparcie poimplementacyjne.
+
+**Krok 5 — Optymalizacja i skalowanie (ciągłe)**
+Monitorujemy efekty wdrożenia, optymalizujemy przepływy i rozszerzamy automatyzację na kolejne obszary. Kompleksowe wdrożenia AI B2B trwają od 1 do 3 miesięcy.
+
+## Dlaczego BrightMind AI Solutions
+- 7 dni do pierwszych efektów
+- RODO-compliant + zgodność NIS2
+- Średnio 40% wzrost produktywności, 60% redukcja czasu zadań
+- Bezpłatna konsultacja wstępna
+- Jeden ekspert: radca prawny + GenAI + cybersec — kompleksowe podejście
+- Lokalne modele LLM — dane nie opuszczają infrastruktury klienta
+
+## Pakiet NIS2 (szczegóły)
+
+Kompleksowe wdrożenie zgodności z dyrektywą NIS2 w 90 dni (audyt → certyfikacja). Realizowane przez radcę prawnego z certyfikatami Google Cloud Generative AI Leader i Blue Team (HackerU). Cztery fazy: audyt zgodności (2 tyg.) → plan remediation (1 tydz.) → wdrożenie procedur (7 tyg.) → certyfikacja i audyt (2 tyg.). Pokrycie wszystkich 10 obszarów wymaganych przez Art. 21 NIS2.
+
+**Pakiety NIS2:**
+- Audyt wstępny — od 4 900 zł (2 tygodnie)
+- Pełne wdrożenie — od 24 900 zł (12 tygodni)
+- Retainer compliance — od 2 900 zł / mies. (umowa roczna)
+
+**Co grozi za brak zgodności z NIS2:**
+- Kara administracyjna do 10 mln EUR lub 2% globalnego obrotu (podmioty kluczowe), 7 mln EUR / 1,4% obrotu (podmioty ważne)
+- Odpowiedzialność osobista członków zarządu, możliwy zakaz pełnienia funkcji kierowniczych
+- Obowiązek zgłoszenia incydentu w 24h, pełny raport w 72h
+
+**Kto podlega NIS2:** Podmioty kluczowe (energetyka, transport, banki, ochrona zdrowia, woda, infrastruktura cyfrowa, administracja publiczna) i ważne (poczta, gospodarka odpadami, produkcja chemikaliów/leków/maszyn, dostawcy usług cyfrowych, badania naukowe). Próg: 50+ pracowników lub obrót >10 mln EUR. Także dostawcy/podwykonawcy podmiotów objętych NIS2.
+
+## Materiały referencyjne
+- YouTube (kanał edukacyjny): https://www.youtube.com/@Neural_Update
+- LinkedIn założyciela: https://www.linkedin.com/in/patryk-gli%C5%84ski-172370215
+- Strona O mnie: https://brightmindsolutions.pl/o-mnie/
+- Pakiet NIS2 (szczegóły): https://brightmindsolutions.pl/NIS2/
+- Praktyczne case studies AI: https://brightmindsolutions.pl/ai-w-praktyce/
