@@ -11,6 +11,9 @@ export interface Props {
   ogDescription?: string;
   ldJson?: object[];
   fbPixelId?: string;
+  lang?: string;
+  ogLocale?: string;
+  hreflang?: { pl?: string; en?: string; xDefault?: string };
 }
 
 const {
@@ -25,6 +28,9 @@ const {
   ogDescription,
   ldJson = [],
   fbPixelId,
+  lang = "pl",
+  ogLocale = "pl_PL",
+  hreflang,
 } = Astro.props;
 
 const resolvedOgTitle = ogTitle ?? title;
@@ -32,7 +38,7 @@ const resolvedOgDesc = ogDescription ?? description;
 ---
 
 <!doctype html>
-<html lang="pl">
+<html lang={lang}>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -47,7 +53,7 @@ const resolvedOgDesc = ogDescription ?? description;
   <meta property="og:title" content={resolvedOgTitle} />
   <meta property="og:description" content={resolvedOgDesc} />
   <meta property="og:image" content={ogImage} />
-  <meta property="og:locale" content="pl_PL" />
+  <meta property="og:locale" content={ogLocale} />
   <meta property="og:site_name" content="BrightMind AI Solutions" />
 
   <meta property="twitter:card" content="summary_large_image" />
@@ -58,7 +64,10 @@ const resolvedOgDesc = ogDescription ?? description;
 
   <meta name="theme-color" content="#0a0d12" />
   <meta name="msapplication-TileColor" content="#0a0d12" />
-  <link rel="alternate" hreflang="pl" href={canonical} />
+  {hreflang?.pl && <link rel="alternate" hreflang="pl" href={hreflang.pl} />}
+  {hreflang?.en && <link rel="alternate" hreflang="en" href={hreflang.en} />}
+  {hreflang?.xDefault && <link rel="alternate" hreflang="x-default" href={hreflang.xDefault} />}
+  {!hreflang && <link rel="alternate" hreflang={lang} href={canonical} />}
   <link rel="canonical" href={canonical} />
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />

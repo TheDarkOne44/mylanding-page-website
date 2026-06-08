@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>AI in Practice - Real Use Cases | BrightMind AI Solutions</title>
+    <meta name="description" content="Discover practical applications of artificial intelligence: Claude AI in Excel, MRI analysis with MedGemma, OCR, mobile apps and genomics with Evo 2.">
+    <meta name="keywords" content="AI in practice, Claude AI Excel, MedGemma MRI analysis, OCR text recognition, AI mobile apps, Evo 2 genetics, AI process automation examples">
+    <meta name="author" content="BrightMind AI Solutions">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brightmindsolutions.pl/en/ai-in-practice.html">
+    <meta property="og:title" content="AI in Practice - Real Use Cases | BrightMind AI Solutions">
+    <meta property="og:description" content="Discover practical applications of artificial intelligence: Claude AI in Excel, MRI analysis with MedGemma, OCR, mobile apps and genomics with Evo 2.">
+    <meta property="og:image" content="https://brightmindsolutions.pl/og-image.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="BrightMind AI Solutions">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://brightmindsolutions.pl/en/ai-in-practice.html">
+    <meta property="twitter:title" content="AI in Practice — Real Use Cases | BrightMind AI Solutions">
+    <meta property="twitter:description" content="Claude AI in Excel, MedGemma MRI analysis, OCR, AI mobile apps, genomics with Evo 2 — real AI deployments.">
+    <meta property="twitter:image" content="https://brightmindsolutions.pl/og-image.jpg">
+
+    <meta name="theme-color" content="#0a0d12">
+    <meta name="msapplication-TileColor" content="#0a0d12">
+    <link rel="alternate" hreflang="pl" href="https://brightmindsolutions.pl/ai-w-praktyce.html">
+    <link rel="alternate" hreflang="en" href="https://brightmindsolutions.pl/en/ai-in-practice.html">
+    <link rel="alternate" hreflang="x-default" href="https://brightmindsolutions.pl/ai-w-praktyce.html">
+    <link rel="canonical" href="https://brightmindsolutions.pl/en/ai-in-practice.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brightmindsolutions.pl/en/" },
+        { "@type": "ListItem", "position": 2, "name": "AI in Practice", "item": "https://brightmindsolutions.pl/en/ai-in-practice.html" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Practical AI applications — BrightMind AI Solutions",
+      "url": "https://brightmindsolutions.pl/en/ai-in-practice.html",
+      "numberOfItems": 5,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Claude AI in Excel workflow automation" },
+        { "@type": "ListItem", "position": 2, "name": "MedGemma — MRI image analysis with AI" },
+        { "@type": "ListItem", "position": 3, "name": "OCR — text recognition with AI" },
+        { "@type": "ListItem", "position": 4, "name": "Mobile apps built with AI" },
+        { "@type": "ListItem", "position": 5, "name": "Evo 2 — genomics and DNA analysis with AI" }
+      ]
+    }
+    </script>
+
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '857800850017857');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=857800850017857&ev=PageView&noscript=1"
+    /></noscript>
+</head>
+
+<body>
+<div id="app"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="shared.jsx"></script>
+
+<script type="text/babel">
+const CASES = [
+  {
+    id: "excel",
+    tab: "Claude AI in Excel",
+    icon: "chart",
+    tag: "Business Automation",
+    title: "Claude AI in Microsoft Excel — Data Analysis in Natural Language",
+    desc: "Integrating Claude AI with Microsoft Excel eliminates the need for complex formulas and macros. Analysts and business specialists can now process data, build reports and generate insights using simple natural-language prompts.",
+    features: [
+      { icon: "clock", h: "60–80% time saved", p: "Cut analysis time from 45 minutes to 2 minutes. Automatic segmentation and reporting in seconds." },
+      { icon: "target", h: "No formulas needed", p: "Data analysis without advanced Excel formulas. Anyone can be an analyst — just describe what you want to achieve." },
+      { icon: "zap", h: "Versatile use cases", p: "Customer segmentation, marketing personalization, data cleanup, anomaly detection — with a single prompt." },
+    ],
+    results: ["Customer segmentation by revenue and region", "Generating personalized communication templates", "Validating and standardizing contact data", "Creating business reports without pivot tables", "Detecting duplicates and anomalies in databases"],
+    media: () => (
+      <div style={{ borderRadius: "var(--radius-lg)", overflow: "hidden", border: "1px solid var(--border-strong)", background: "var(--bg-elev-2)" }}>
+        <video controls preload="metadata" playsinline muted style={{ width: "100%", display: "block" }}>
+          <source src="../EXCEL_Claude.mp4" type="video/mp4" />
+        </video>
+      </div>
+    ),
+  },
+  {
+    id: "medgemma",
+    tab: "MedGemma MRI",
+    icon: "eye",
+    tag: "Medicine & AI",
+    title: "MRI Scan Analysis with MedGemma 1.5",
+    desc: "Advanced medical image analysis system powered by MedGemma — a specialized AI model trained for medicine by Google DeepMind.",
+    features: [
+      { icon: "lock", h: "Full privacy", p: "The model runs fully locally — no data is sent to external servers. Your medical data stays safe." },
+      { icon: "zap", h: "Instant analysis", p: "Fast MRI image interpretation using the latest advances in medical AI." },
+      { icon: "target", h: "Specialist knowledge", p: "A model trained on medical data provides professional diagnostic support." },
+    ],
+    results: null,
+    media: () => (
+      <div style={{ borderRadius: "var(--radius-lg)", overflow: "hidden", border: "1px solid var(--border-strong)", position: "relative" }}>
+        <img src="../medgemma-demo.png" alt="MRI image analysis with MedGemma" style={{ width: "100%", display: "block" }} loading="lazy" />
+        <span className="chip" style={{ position: "absolute", top: 16, right: 16, color: "var(--accent)", borderColor: "var(--accent)" }}>100% local</span>
+      </div>
+    ),
+  },
+  {
+    id: "ocr",
+    tab: "OCR — Text from Image",
+    icon: "file",
+    tag: "Text Recognition",
+    title: "OCR — How to turn an image into editable text?",
+    desc: 'OCR (Optical Character Recognition) "reads" text from photos, scans or PDF documents and converts it into a format you can copy and edit. Like a digital assistant transcribing notes from a photo of a whiteboard — instantly and without typos.',
+    features: [
+      { icon: "cpu", h: "DeepSeek-VL2 / DeepSeek OCR", p: "A modern multimodal model with excellent performance-to-resource ratio. Combines image understanding with text recognition." },
+      { icon: "book", h: "Tesseract OCR", p: "The OCR classic developed by Google — the most popular open-source engine. Supports over 100 languages." },
+      { icon: "users", h: "PaddleOCR", p: "A versatile framework from Baidu — great for many languages, including Asian scripts." },
+    ],
+    results: ["Accounting automation — reading invoices and receipts", "Digitizing paper-based archives", "Extracting data from forms and contracts", "Scanning business cards and auto-adding contacts", "Processing correspondence and official documents"],
+    media: () => (
+      <div className="card" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16, padding: 40 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 20, fontSize: "3rem" }}>
+          <span>📄</span>
+          <span style={{ color: "var(--accent)", fontSize: "1.5rem" }}>→</span>
+          <span>🔍</span>
+          <span style={{ color: "var(--accent)", fontSize: "1.5rem" }}>→</span>
+          <span>📝</span>
+        </div>
+        <p className="text-muted" style={{ textAlign: "center", margin: 0, fontSize: "0.9rem" }}>Image → Recognition → Editable Text</p>
+        <span className="chip" style={{ color: "var(--success)", borderColor: "var(--success)" }}>Open Source</span>
+      </div>
+    ),
+  },
+  {
+    id: "mobile",
+    tab: "Mobile App",
+    icon: "code",
+    tag: "Mobile Apps",
+    title: "Your Own Mobile App — No Coding Required!",
+    desc: "Dream of your own mobile app but can't program? Thanks to AI that's no longer a problem! Artificial intelligence writes the code for you — just describe what you need.",
+    features: [
+      { icon: "zap", h: "From idea to app in hours", p: "Instead of weeks of learning to code — describe your idea and AI generates the complete app code." },
+      { icon: "bot", h: "Zero experience? No problem", p: "You don't need to know React Native, Swift or Kotlin. AI understands natural language — say what you want and you get ready-to-use code." },
+      { icon: "eye", h: "Professional design included", p: "AI doesn't just write code — it also creates modern, elegant interfaces with animations and intuitive navigation." },
+    ],
+    results: ["Task management and productivity apps", "Calculators, converters and everyday tools", "Fitness, health and habit-tracking apps", "Simple mobile games and educational quizzes", "Apps for small businesses — bookings, catalogs, CRM"],
+    media: () => (
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+        <div style={{ borderRadius: "var(--radius-lg)", overflow: "hidden", border: "1px solid var(--border-strong)", position: "relative" }}>
+          <img src="../to-do_app.png" alt="TaskFlow — a mobile app built with AI assistance" style={{ width: "100%", display: "block" }} loading="lazy" />
+          <span className="chip" style={{ position: "absolute", top: 12, right: 12 }}>Finished app</span>
+        </div>
+        <div style={{ borderRadius: "var(--radius-lg)", overflow: "hidden", border: "1px solid var(--border-strong)", position: "relative" }}>
+          <img src="../kod_mobileapp.png" alt="Mobile app source code generated by AI" style={{ width: "100%", display: "block" }} loading="lazy" />
+          <span className="chip" style={{ position: "absolute", top: 12, right: 12 }}>AI code</span>
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: "evo2",
+    tab: "Evo 2 — Genetics",
+    icon: "target",
+    tag: "Genomics & AI",
+    title: "Predicting Genetic Mutations with Evo 2",
+    desc: "Evo 2 is a breakthrough, fully open-source AI model trained on 9 trillion DNA base pairs from across all domains of life. It can predict the effects of genetic mutations without additional training.",
+    features: [
+      { icon: "target", h: "Precise variant analysis", p: "Zero-shot assessment of the pathogenicity of genetic mutations (e.g. BRCA1, clinical variants from the ClinVar database)." },
+      { icon: "zap", h: "Genome-scale analysis", p: "Processes DNA sequences up to 1 million base pairs long, enabling the study of entire genes together with their regulatory environment." },
+      { icon: "cpu", h: "Designing new sequences", p: "Beyond prediction, Evo 2 generates new DNA sequences — from mitochondrial genomes to eukaryotic chromosomes." },
+    ],
+    results: ["Predicting pathogenicity of clinical variants in oncology", "Analyzing the impact of mutations in non-coding DNA regions", "Supporting gene therapy design", "Automatic annotation of functional genome elements", "Identifying potentially harmful mutations in screening studies"],
+    media: () => (
+      <div className="card" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16, padding: 40 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 20, fontSize: "3rem" }}>
+          <span>🧬</span>
+          <span style={{ color: "var(--accent)", fontSize: "1.5rem" }}>→</span>
+          <span>🤖</span>
+          <span style={{ color: "var(--accent)", fontSize: "1.5rem" }}>→</span>
+          <span>🔬</span>
+        </div>
+        <p className="text-muted" style={{ textAlign: "center", margin: 0, fontSize: "0.9rem" }}>DNA sequence → Evo 2 AI → Mutation analysis</p>
+        <span className="chip" style={{ color: "var(--success)", borderColor: "var(--success)" }}>Open Source · 9B base pairs</span>
+      </div>
+    ),
+  },
+];
+
+function PracticeApp() {
+  const [active, setActive] = React.useState(0);
+  const c = CASES[active];
+
+  return (
+    <>
+      <Nav active="practice" />
+
+      <section style={{ padding: "80px 0 48px", borderBottom: "1px solid var(--border)" }}>
+        <div className="container">
+          <span className="eyebrow">/ Demos</span>
+          <h1 style={{ marginTop: 16, marginBottom: 12 }}>AI in Practice</h1>
+          <p className="text-muted" style={{ fontSize: "1.1rem", maxWidth: 600 }}>
+            Discover specific applications of artificial intelligence in business and science. Each example is a real-world use case we can deploy in your company.
+          </p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          {/* Tab navigation */}
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 48, borderBottom: "1px solid var(--border)", paddingBottom: 0 }}>
+            {CASES.map((c, i) => (
+              <button key={i} onClick={() => setActive(i)} style={{
+                background: "transparent", border: "none", cursor: "pointer",
+                padding: "12px 20px", fontFamily: "inherit", fontSize: "0.9rem",
+                fontWeight: active === i ? 600 : 400,
+                color: active === i ? "var(--fg)" : "var(--fg-muted)",
+                borderBottom: active === i ? "2px solid var(--accent)" : "2px solid transparent",
+                marginBottom: -1, transition: "color 0.15s",
+                display: "flex", alignItems: "center", gap: 8,
+              }}>
+                <Icon name={c.icon} size={15} />
+                {c.tab}
+              </button>
+            ))}
+          </div>
+
+          {/* Content */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 56, alignItems: "start" }}>
+            {/* Media */}
+            <div>
+              {c.media()}
+            </div>
+
+            {/* Text */}
+            <div>
+              <span className="chip" style={{ marginBottom: 16 }}>{c.tag}</span>
+              <h2 style={{ marginBottom: 16, fontSize: "1.5rem" }}>{c.title}</h2>
+              <p className="text-muted" style={{ marginBottom: 32, lineHeight: 1.8 }}>{c.desc}</p>
+
+              <div style={{ display: "flex", flexDirection: "column", gap: 20, marginBottom: 32 }}>
+                {c.features.map((f, i) => (
+                  <div key={i} style={{ display: "flex", gap: 16 }}>
+                    <div style={{ color: "var(--accent)", marginTop: 2, flexShrink: 0 }}><Icon name={f.icon} size={18} /></div>
+                    <div>
+                      <div style={{ fontWeight: 500, marginBottom: 4 }}>{f.h}</div>
+                      <p className="text-muted" style={{ margin: 0, fontSize: "0.9rem" }}>{f.p}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {c.results && (
+                <div style={{ marginBottom: 32 }}>
+                  <div style={{ fontSize: "0.85rem", fontWeight: 600, marginBottom: 12, color: "var(--fg-muted)", textTransform: "uppercase", letterSpacing: "0.05em" }}>Use cases</div>
+                  <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
+                    {c.results.map((r, i) => (
+                      <li key={i} style={{ display: "flex", gap: 10, fontSize: "0.9rem", alignItems: "flex-start" }}>
+                        <span style={{ color: "var(--accent)", marginTop: 3, flexShrink: 0 }}><Icon name="check" size={14} /></span>
+                        <span className="text-muted">{r}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              <a href="index.html#contact" className="btn btn-primary">Book a free consultation<Icon name="arrow" size={16} /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+      <CookieBanner />
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("app")).render(<PracticeApp />);
+</script>
+</body>
+</html>

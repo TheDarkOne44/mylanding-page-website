@@ -1,25 +1,25 @@
-// Shared components for BrightMind redesign
+// Shared components for BrightMind — English version
 
 const Nav = ({ active = "home" }) => {
   const links = [
-    { id: "home", label: "Strona Główna", href: "index.html" },
-    { id: "about", label: "O mnie", href: "o-mnie.html" },
-    { id: "services", label: "Usługi", href: "index.html#uslugi" },
-    { id: "nis2", label: "NIS2", href: "NIS2.html" },
-    { id: "practice", label: "AI w Praktyce", href: "ai-w-praktyce.html" },
-    { id: "contact", label: "Kontakt", href: "index.html#kontakt" },
+    { id: "home", label: "Home", href: "/en/" },
+    { id: "about", label: "About", href: "/en/about.html" },
+    { id: "services", label: "Services", href: "/en/#services" },
+    { id: "nis2", label: "NIS2", href: "/NIS2/" },
+    { id: "practice", label: "AI in Practice", href: "/en/ai-in-practice.html" },
+    { id: "contact", label: "Contact", href: "/en/#contact" },
   ];
 
-  const enHref = {
-    home: "en/index.html",
-    about: "en/about.html",
-    practice: "en/ai-in-practice.html",
-  }[active] || "en/index.html";
+  const plHref = {
+    home: "/",
+    about: "/o-mnie/",
+    practice: "/ai-w-praktyce/",
+  }[active] || "/";
 
   return (
     <nav className="nav">
       <div className="container nav-inner">
-        <a href="index.html" className="nav-brand">
+        <a href="/en/" className="nav-brand">
           <span className="nav-brand-mark">B</span>
           <span>BrightMind <span style={{ color: "var(--fg-muted)" }}>/ AI</span></span>
         </a>
@@ -29,17 +29,17 @@ const Nav = ({ active = "home" }) => {
               {l.label}
             </a>
           ))}
-          <a href={enHref} className="lang-switch" style={{
+          <a href={plHref} className="lang-switch" style={{
             display: "inline-flex", alignItems: "center", gap: 6,
             padding: "6px 12px", border: "1px solid var(--border)",
             borderRadius: "var(--radius)", fontSize: "0.8rem",
             color: "var(--fg-muted)", textDecoration: "none",
-          }} aria-label="English version">
-            <span style={{ color: "var(--accent)" }}>PL</span>
-            <span style={{ opacity: 0.4 }}>/</span>
+          }} aria-label="Polska wersja">
             <span style={{ fontWeight: 600, color: "var(--fg-muted)" }}>EN</span>
+            <span style={{ opacity: 0.4 }}>/</span>
+            <span style={{ color: "var(--accent)" }}>PL</span>
           </a>
-          <a href="#kontakt" className="nav-cta">Bezpłatna konsultacja →</a>
+          <a href="#contact" className="nav-cta">Free consultation →</a>
         </div>
       </div>
     </nav>
@@ -56,31 +56,31 @@ const Footer = () => (
             <span>BrightMind <span style={{ color: "var(--fg-muted)" }}>/ AI</span></span>
           </div>
           <p className="text-muted" style={{ fontSize: "0.9rem", maxWidth: 320 }}>
-            Profesjonalne wdrożenia AI B2B dla polskich firm. Automatyzacja procesów, agenci AI, doradztwo. Zgodne z RODO i NIS2.
+            Professional B2B AI implementations for European companies. Process automation, AI agents, consulting. GDPR and NIS2 compliant.
           </p>
         </div>
         <div className="footer-col">
-          <h4>Usługi</h4>
+          <h4>Services</h4>
           <ul>
-            <li><a href="index.html#uslugi">Doradztwo AI dla Firm</a></li>
-            <li><a href="index.html#uslugi">Korepetycje AI</a></li>
-            <li><a href="index.html#uslugi">Automatyzacja marketingu</a></li>
-            <li><a href="index.html#uslugi">Agenci AI dla firm</a></li>
-            <li><a href="NIS2.html">Wdrożenia NIS2</a></li>
-            <li><a href="index.html#strony">Strony internetowe</a></li>
+            <li><a href="/en/#services">AI Consulting for Business</a></li>
+            <li><a href="/en/#services">AI Tutoring</a></li>
+            <li><a href="/en/#services">Marketing Automation</a></li>
+            <li><a href="/en/#services">AI Agents for Business</a></li>
+            <li><a href="/NIS2/">NIS2 Implementations</a></li>
+            <li><a href="/en/#websites">Websites</a></li>
           </ul>
         </div>
         <div className="footer-col">
-          <h4>Firma</h4>
+          <h4>Company</h4>
           <ul>
-            <li><a href="o-mnie.html">O mnie</a></li>
-            <li><a href="ai-w-praktyce.html">AI w Praktyce</a></li>
-            <li><a href="index.html#cennik">Cennik</a></li>
-            <li><a href="index.html#kontakt">Kontakt</a></li>
+            <li><a href="/en/about.html">About</a></li>
+            <li><a href="/en/ai-in-practice.html">AI in Practice</a></li>
+            <li><a href="/en/#pricing">Pricing</a></li>
+            <li><a href="/en/#contact">Contact</a></li>
           </ul>
         </div>
         <div className="footer-col">
-          <h4>Kontakt</h4>
+          <h4>Contact</h4>
           <ul style={{ fontSize: "0.85rem", color: "var(--fg-muted)" }}>
             <li>BrightMind AI Solutions</li>
             <li>Patryk Gliński</li>
@@ -90,7 +90,7 @@ const Footer = () => (
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© 2026 BrightMind AI Solutions. Wszystkie prawa zastrzeżone.</span>
+        <span>© 2026 BrightMind AI Solutions. All rights reserved.</span>
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
           <a
             href="https://www.youtube.com/@Neural_Update"
@@ -112,7 +112,7 @@ const Footer = () => (
             <Icon name="youtube" size={16} />
             YouTube
           </a>
-          <a href="privacy-policy.html" style={{ color: "var(--fg-muted)" }}>Polityka prywatności</a>
+          <a href="/privacy-policy/" style={{ color: "var(--fg-muted)" }}>Privacy Policy</a>
         </div>
       </div>
     </div>
@@ -185,9 +185,9 @@ const CookieBanner = () => {
       flexWrap: "wrap",
     }}>
       <p style={{ margin: 0, fontSize: "0.875rem", color: "var(--fg-muted)", flex: 1, minWidth: 240 }}>
-        Używamy plików cookie (w tym Facebook Pixel) w celu analizy ruchu i poprawy jakości usług.
-        Więcej informacji znajdziesz w naszej{" "}
-        <a href="privacy-policy.html" style={{ color: "var(--accent)" }}>Polityce prywatności</a>.
+        We use cookies (including Facebook Pixel) to analyze traffic and improve service quality.
+        Learn more in our{" "}
+        <a href="/privacy-policy/" style={{ color: "var(--accent)" }}>Privacy Policy</a>.
       </p>
       <div style={{ display: "flex", gap: 8, flexShrink: 0 }}>
         <button
@@ -203,7 +203,7 @@ const CookieBanner = () => {
             cursor: "pointer",
           }}
         >
-          Odrzuć
+          Decline
         </button>
         <button
           onClick={accept}
@@ -219,7 +219,7 @@ const CookieBanner = () => {
             cursor: "pointer",
           }}
         >
-          Akceptuję
+          Accept
         </button>
       </div>
     </div>
