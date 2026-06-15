@@ -81,6 +81,13 @@ const resolvedOgDesc = ogDescription ?? description;
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
 
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script is:inline async src="https://plausible.io/js/pa-YOjnFuvYPJadUrR0uHLdh.js"></script>
+  <script is:inline>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init();
+  </script>
+
   {ldJson.map(schema => (
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   ))}
