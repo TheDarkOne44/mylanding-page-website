@@ -1,0 +1,200 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CookieBanner from '../components/CookieBanner.jsx';
+
+const projects = [
+  {
+    name: "Customer Feedback Hub",
+    desc: "Platforma B2B do zbierania i analizy feedbacku klientów (NPS, CSAT, komentarze tekstowe). Dashboard z trendami, segmentacją i automatycznym tagowaniem tematów oraz analizą sentymentu (lokalny LLM + fallback regułowy).",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "SQLite", "Drizzle ORM", "Recharts", "Ollama"],
+    github: "https://github.com/p-bek/customer-feedback-hub",
+  },
+  {
+    name: "Helpdesk Ticketing",
+    desc: "System obsługi zgłoszeń wsparcia z kolejką ticketów, śledzeniem SLA, dashboardami i kontrolą dostępu opartą o role (RBAC).",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "SQLite", "Drizzle ORM", "Recharts"],
+    github: "https://github.com/p-bek/helpdesk-ticketing",
+  },
+  {
+    name: "Email Triage",
+    desc: "Aplikacja do triażu skrzynki odbiorczej z klasyfikacją wiadomości wspieraną przez AI, routingiem i podglądem inboxu.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "SQLite", "Drizzle ORM", "Ollama"],
+    github: "https://github.com/p-bek/email-triage",
+  },
+];
+
+const ldJson = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Portfolio — Patryk Gliński | BrightMind AI Solutions",
+    "description": "Portfolio projektów full-stack — aplikacje B2B zbudowane lokalnie, bez zewnętrznej infrastruktury (Next.js, TypeScript, SQLite, lokalne modele LLM).",
+    "url": "https://brightmindsolutions.pl/portfolio/",
+    "isPartOf": { "@type": "WebSite", "name": "BrightMind AI Solutions", "url": "https://brightmindsolutions.pl/" },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": projects.map((p, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": p.name,
+        "description": p.desc,
+        "url": p.github,
+      })),
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Strona Główna", "item": "https://brightmindsolutions.pl/" },
+      { "@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://brightmindsolutions.pl/portfolio/" }
+    ]
+  }
+];
+---
+
+<Layout
+  title="Portfolio — Patryk Gliński | BrightMind AI Solutions"
+  description="Portfolio projektów full-stack: aplikacje B2B (feedback klientów, helpdesk, triaż maili) zbudowane lokalnie w Next.js i TypeScript, z lokalnymi modelami LLM — bez zewnętrznej infrastruktury."
+  canonical="https://brightmindsolutions.pl/portfolio/"
+  keywords="portfolio, projekty full-stack, Next.js, TypeScript, lokalne LLM, Ollama, aplikacje B2B, Patryk Gliński, BrightMind AI Solutions"
+  ldJson={ldJson}
+  fbPixelId="1597309774579617"
+>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand">
+        <span class="nav-brand-mark">B</span>
+        <span>BrightMind <span style="color:var(--fg-muted)">/ AI</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Strona Główna</a>
+        <a href="/o-mnie/">O mnie</a>
+        <a href="/#uslugi">Usługi</a>
+        <a href="/NIS2/">NIS2</a>
+        <a href="/ai-w-praktyce/">AI w Praktyce</a>
+        <a href="/portfolio/" class="active">Portfolio</a>
+        <a href="/#kontakt">Kontakt</a>
+        <a href="/#kontakt" class="nav-cta">Bezpłatna konsultacja →</a>
+      </div>
+    </div>
+  </nav>
+
+  <section style="padding:80px 0 64px;border-bottom:1px solid var(--border)">
+    <div class="container">
+      <span class="eyebrow">/ Portfolio</span>
+      <h1 style="margin-top:16px;margin-bottom:12px">Portfolio</h1>
+      <p style="color:var(--fg-muted);font-size:1.1rem;max-width:640px">
+        Wybrane projekty full-stack zbudowane lokalnie — działające na własnej infrastrukturze, bez zewnętrznych usług. Aplikacje B2B w Next.js i TypeScript, z lokalnymi modelami LLM tam, gdzie potrzebna jest analiza języka.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        {projects.map(project => (
+          <article class="card" style="display:flex;flex-direction:column;gap:18px">
+            <h3 style="margin:0;font-size:1.25rem">{project.name}</h3>
+            <p class="text-muted" style="margin:0;font-size:0.95rem;line-height:1.65;flex:1">{project.desc}</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              {project.stack.map(tech => (
+                <span class="chip">{tech}</span>
+              ))}
+            </div>
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary"
+              style="align-self:flex-start"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.37.5 0 5.78 0 12.29c0 5.2 3.44 9.6 8.21 11.16.6.11.82-.25.82-.56 0-.28-.01-1.02-.02-2-3.34.71-4.04-1.58-4.04-1.58-.55-1.36-1.33-1.73-1.33-1.73-1.09-.73.08-.71.08-.71 1.2.08 1.84 1.21 1.84 1.21 1.07 1.8 2.81 1.28 3.49.98.11-.76.42-1.28.76-1.57-2.67-.3-5.47-1.3-5.47-5.79 0-1.28.47-2.33 1.23-3.15-.12-.3-.53-1.5.12-3.13 0 0 1-.32 3.3 1.2a11.6 11.6 0 016 0c2.29-1.52 3.29-1.2 3.29-1.2.65 1.63.24 2.83.12 3.13.77.82 1.23 1.87 1.23 3.15 0 4.5-2.81 5.48-5.49 5.78.43.36.81 1.08.81 2.18 0 1.58-.01 2.85-.01 3.24 0 .31.21.68.83.56A12.02 12.02 0 0024 12.29C24 5.78 18.63.5 12 .5z"/></svg>
+              Zobacz na GitHubie
+            </a>
+          </article>
+        ))}
+      </div>
+
+      <div style="display:flex;justify-content:center;margin-top:56px">
+        <a
+          href="https://github.com/p-bek"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.37.5 0 5.78 0 12.29c0 5.2 3.44 9.6 8.21 11.16.6.11.82-.25.82-.56 0-.28-.01-1.02-.02-2-3.34.71-4.04-1.58-4.04-1.58-.55-1.36-1.33-1.73-1.33-1.73-1.09-.73.08-.71.08-.71 1.2.08 1.84 1.21 1.84 1.21 1.07 1.8 2.81 1.28 3.49.98.11-.76.42-1.28.76-1.57-2.67-.3-5.47-1.3-5.47-5.79 0-1.28.47-2.33 1.23-3.15-.12-.3-.53-1.5.12-3.13 0 0 1-.32 3.3 1.2a11.6 11.6 0 016 0c2.29-1.52 3.29-1.2 3.29-1.2.65 1.63.24 2.83.12 3.13.77.82 1.23 1.87 1.23 3.15 0 4.5-2.81 5.48-5.49 5.78.43.36.81 1.08.81 2.18 0 1.58-.01 2.85-.01 3.24 0 .31.21.68.83.56A12.02 12.02 0 0024 12.29C24 5.78 18.63.5 12 .5z"/></svg>
+          Zobacz wszystkie repozytoria na GitHubie
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--bg-elev)">
+    <div class="container-narrow" style="text-align:center">
+      <span class="eyebrow">/ Współpraca</span>
+      <h2 style="margin:16px 0 20px">Potrzebujesz podobnej aplikacji?</h2>
+      <p class="text-muted" style="font-size:1.05rem;max-width:520px;margin:0 auto 32px">
+        Buduję aplikacje B2B z AI dopasowane do procesów w Twojej firmie. Skontaktuj się i porozmawiajmy o szczegółach.
+      </p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="mailto:kontakt@brightmind-solutions.com" class="btn btn-primary">
+          Napisz do mnie
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="tel:+48730152161" class="btn btn-secondary">+48 730 152 161</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="nav-brand" style="margin-bottom:16px">
+            <span class="nav-brand-mark">B</span>
+            <span>BrightMind <span style="color:var(--fg-muted)">/ AI</span></span>
+          </div>
+          <p class="text-muted" style="font-size:0.9rem;max-width:320px">Profesjonalne wdrożenia AI B2B dla polskich firm. Automatyzacja procesów, agenci AI, doradztwo. Zgodne z RODO i NIS2.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Usługi</h4>
+          <ul>
+            <li><a href="/#uslugi">Doradztwo AI dla Firm</a></li>
+            <li><a href="/#uslugi">Korepetycje AI</a></li>
+            <li><a href="/NIS2/">Wdrożenia NIS2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Firma</h4>
+          <ul>
+            <li><a href="/o-mnie/">O mnie</a></li>
+            <li><a href="/portfolio/">Portfolio</a></li>
+            <li><a href="/ai-w-praktyce/">AI w Praktyce</a></li>
+            <li><a href="/#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul style="font-size:0.85rem;color:var(--fg-muted)">
+            <li>Patryk Gliński</li>
+            <li><a href="mailto:kontakt@brightmind-solutions.com">kontakt@brightmind-solutions.com</a></li>
+            <li><a href="tel:+48730152161">+48 730 152 161</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 BrightMind AI Solutions. Wszystkie prawa zastrzeżone.</span>
+        <div style="display:flex;align-items:center;gap:20px">
+          <a href="https://www.youtube.com/@Neural_Update" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:#ff0000;color:#fff;border-radius:var(--radius);font-weight:600;font-size:0.8rem;text-decoration:none">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="3"/><polygon points="10 9.5 16 13 10 16.5 10 9.5"/></svg>
+            YouTube
+          </a>
+          <a href="/privacy-policy/" style="color:var(--fg-muted)">Polityka prywatności</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <CookieBanner client:load />
+</Layout>
