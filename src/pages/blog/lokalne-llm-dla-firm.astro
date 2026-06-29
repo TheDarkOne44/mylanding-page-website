@@ -1,0 +1,109 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+---
+
+<BlogLayout slug="lokalne-llm-dla-firm">
+
+  <div class="takeaways">
+    <h2>W skrócie</h2>
+    <ul>
+      <li><strong>Lokalny model LLM</strong> działa na infrastrukturze firmy — dane nigdy nie opuszczają Twojej sieci.</li>
+      <li>To realna przewaga przy <strong>RODO, NIS2 i tajemnicy przedsiębiorstwa</strong>, gdzie wysyłanie danych do chmury bywa problematyczne.</li>
+      <li>Modele open-source (Llama, Mistral, Qwen) osiągnęły jakość wystarczającą do większości zadań biznesowych.</li>
+      <li>Lokalny LLM opłaca się przy <strong>danych wrażliwych</strong> lub <strong>dużych, stałych wolumenach</strong>; do lekkich zastosowań API chmurowe bywa prostsze i tańsze.</li>
+    </ul>
+  </div>
+
+  <p>Przez ostatnie lata „korzystanie z AI” oznaczało w praktyce „wysyłanie danych do OpenAI, Anthropic albo Google”. Dla wielu firm to bariera nie do przejścia — kancelaria prawna, przychodnia, firma przetwarzająca dane osobowe klientów albo podmiot objęty NIS2 nie zawsze może pozwolić sobie na wysyłanie wrażliwych informacji poza własną infrastrukturę. Tu wkraczają <strong>lokalne modele LLM</strong>: sztuczna inteligencja, która działa w całości na sprzęcie firmy. W tym artykule wyjaśniam, kiedy to się naprawdę opłaca, czego wymaga i jak zacząć bez przepalania budżetu.</p>
+
+  <h2>Czym jest lokalny model LLM</h2>
+
+  <p>Lokalny (on-premise) model LLM to model językowy uruchomiony na serwerze lub stacji roboczej należącej do firmy, zamiast wywoływania zewnętrznego API. Zapytania, dokumenty i odpowiedzi pozostają w obrębie Twojej sieci. Dzięki rozwojowi modeli open-source — rodzin takich jak <strong>Llama</strong> (Meta), <strong>Mistral</strong> czy <strong>Qwen</strong> — oraz narzędzi ułatwiających ich uruchamianie (np. <a href="https://ollama.com/" target="_blank" rel="noopener noreferrer">Ollama</a> czy <a href="https://github.com/ggml-org/llama.cpp" target="_blank" rel="noopener noreferrer">llama.cpp</a>), wdrożenie własnego modelu jest dziś osiągalne także dla średniej firmy, a nie tylko korporacji z działem badawczym.</p>
+
+  <h2>Główna przewaga: prywatność i zgodność</h2>
+
+  <p>To najczęstszy powód, dla którego firmy w ogóle rozważają lokalny model:</p>
+
+  <ul>
+    <li><strong>Dane nie opuszczają firmy.</strong> Nie wysyłasz dokumentów do zewnętrznego dostawcy, więc znika cała klasa pytań o przekazywanie danych do podmiotów trzecich i poza EOG.</li>
+    <li><strong>Łatwiejsza zgodność z RODO.</strong> Pełna kontrola nad tym, gdzie i jak długo przetwarzane są dane osobowe.</li>
+    <li><strong>Wsparcie dla NIS2.</strong> Mniejsza powierzchnia ataku i pełna kontrola nad łańcuchem przetwarzania to argumenty, które dobrze wyglądają w analizie ryzyka.</li>
+    <li><strong>Ochrona tajemnicy przedsiębiorstwa.</strong> Kod, umowy, dane finansowe i know-how zostają u Ciebie.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Połączenie z automatyzacją:</strong> lokalny model w parze z n8n self-hosted daje przepływ AI, w którym wrażliwe dane nie trafiają do żadnej chmury — od wyzwalacza, przez analizę modelem, po zapis wyniku. Dla branż regulowanych to często jedyna akceptowalna architektura.</p>
+  </div>
+
+  <h2>Pozostałe korzyści</h2>
+
+  <ul>
+    <li><strong>Przewidywalny koszt.</strong> Zamiast płacić za każdy token, ponosisz stały koszt sprzętu i energii — przy dużych wolumenach to się zwraca.</li>
+    <li><strong>Brak limitów zapytań i niezależność.</strong> Nie dotyczą Cię limity API ani zmiany cennika czy polityki dostawcy.</li>
+    <li><strong>Pełna personalizacja.</strong> Model można dostroić (fine-tuning) do języka i specyfiki Twojej branży.</li>
+    <li><strong>Działanie offline.</strong> System działa nawet bez dostępu do internetu, co bywa istotne w środowiskach odizolowanych.</li>
+  </ul>
+
+  <h2>Czego wymaga lokalny model — realia sprzętowe</h2>
+
+  <p>Najważniejszy zasób to <strong>pamięć karty graficznej (VRAM)</strong> — to ona głównie decyduje, jak duży model uruchomisz. Z grubsza:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Rozmiar modelu</th><th>Typowe zastosowanie</th><th>Wymagania (orientacyjnie)</th></tr></thead>
+      <tbody>
+        <tr><td>Małe (≈3–8 mld parametrów)</td><td>Klasyfikacja, ekstrakcja, proste odpowiedzi</td><td>Wydajny desktop z GPU lub nawet dobry CPU</td></tr>
+        <tr><td>Średnie (≈8–14 mld)</td><td>Streszczenia, analiza dokumentów, asystent</td><td>GPU z większą ilością VRAM</td></tr>
+        <tr><td>Duże (≈30–70 mld)</td><td>Złożone rozumowanie, wymagające zadania</td><td>Serwer z mocnym GPU / wieloma GPU</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Pomaga tu <strong>kwantyzacja</strong> — technika zmniejszania zapotrzebowania na pamięć kosztem minimalnej utraty jakości, która pozwala uruchomić większe modele na skromniejszym sprzęcie. Dzięki niej wiele zastosowań biznesowych obsłużysz modelem średniej wielkości na pojedynczej, rozsądnej karcie.</p>
+
+  <h2>Kiedy lokalny LLM bije API chmurowe — i kiedy nie</h2>
+
+  <h3>Lokalny model wygrywa, gdy:</h3>
+  <ul>
+    <li>przetwarzasz dane wrażliwe (osobowe, medyczne, prawne, objęte tajemnicą),</li>
+    <li>masz duży, stały wolumen zapytań,</li>
+    <li>podlegasz wymogom zgodności wymuszającym kontrolę nad danymi,</li>
+    <li>zależy Ci na niezależności od dostawcy i przewidywalnych kosztach.</li>
+  </ul>
+
+  <h3>API chmurowe wygrywa, gdy:</h3>
+  <ul>
+    <li>chcesz wystartować od zaraz, bez inwestycji w sprzęt,</li>
+    <li>Twoje wolumeny są niskie lub nieregularne,</li>
+    <li>potrzebujesz absolutnie najwyższej jakości rozumowania flagowych modeli,</li>
+    <li>dane nie są szczególnie wrażliwe.</li>
+  </ul>
+
+  <blockquote>W praktyce wiele firm stosuje model hybrydowy: lokalny LLM do wrażliwych i masowych zadań, a chmurowe API do pojedynczych, najtrudniejszych przypadków wymagających najmocniejszego modelu.</blockquote>
+
+  <h2>Jak zacząć — bezpieczna ścieżka</h2>
+
+  <ol>
+    <li><strong>Wybierz jeden konkretny proces.</strong> Najlepiej taki z danymi wrażliwymi, gdzie chmura jest problemem — np. wstępna analiza umów czy klasyfikacja zgłoszeń.</li>
+    <li><strong>Przetestuj na istniejącym sprzęcie.</strong> Zacznij od małego modelu uruchomionego narzędziem typu Ollama, żeby zweryfikować jakość na Twoich danych, zanim kupisz GPU.</li>
+    <li><strong>Zmierz jakość i wydajność.</strong> Sprawdź, czy mniejszy model wystarcza — bardzo często tak.</li>
+    <li><strong>Dobierz sprzęt do potwierdzonych potrzeb.</strong> Inwestuj w GPU dopiero, gdy znasz realny rozmiar modelu i wolumen.</li>
+    <li><strong>Wepnij model w bezpieczny przepływ.</strong> Połącz go z n8n self-hosted i kontrolą dostępu, by całość była zgodna i audytowalna.</li>
+  </ol>
+
+  <h2>Najczęstsze pytania</h2>
+
+  <h3>Czy lokalny model dorównuje jakością ChatGPT?</h3>
+  <p>Do większości zadań biznesowych — tak. Czołowe modele open-source średniej wielkości spokojnie obsługują streszczenia, ekstrakcję danych, klasyfikację czy asystę. Do najbardziej wymagającego rozumowania flagowe modele chmurowe wciąż potrafią mieć przewagę.</p>
+
+  <h3>Czy to drogie?</h3>
+  <p>Koszt początkowy to przede wszystkim sprzęt (GPU). Przy dużych wolumenach inwestycja zwraca się względem rosnących opłat za API. Przy małych — chmura bywa tańsza. Dlatego decyzję zawsze opieram na realnym wolumenie i wrażliwości danych.</p>
+
+  <h3>Czy potrzebuję zespołu data science?</h3>
+  <p>Nie do uruchomienia. Dzisiejsze narzędzia mocno upraszczają wdrożenie gotowych modeli. Zespół badawczy bywa potrzebny dopiero przy zaawansowanym fine-tuningu, którego większość firm na starcie nie wymaga.</p>
+
+  <hr />
+
+  <p><strong>Podsumowanie.</strong> Lokalne modele LLM przestały być ciekawostką dla korporacji — to dziś praktyczny sposób, by korzystać z AI bez wynoszenia danych poza firmę. Opłacają się szczególnie przy danych wrażliwych i dużych wolumenach, zwłaszcza w branżach pod RODO i NIS2. Zastanawiasz się, czy lokalny model pasuje do Twoich procesów? <a href="/#kontakt">Umów bezpłatną konsultację</a> — ocenimy, czy w Twoim przypadku wygra chmura, lokalny model, czy hybryda.</p>
+
+</BlogLayout>

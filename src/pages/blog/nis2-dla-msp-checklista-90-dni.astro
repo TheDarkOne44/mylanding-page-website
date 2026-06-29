@@ -1,0 +1,243 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+---
+
+<BlogLayout slug="nis2-dla-msp-checklista-90-dni">
+
+  <div class="takeaways">
+    <h2>W skrócie</h2>
+    <ul>
+      <li>Dyrektywa <strong>NIS2</strong> obejmuje w Polsce tysiące firm, które nigdy wcześniej nie podlegały regulacjom cyberbezpieczeństwa — także wiele <strong>małych i średnich przedsiębiorstw</strong> z 18 sektorów.</li>
+      <li>Za brak zgodności grożą kary do <strong>10 mln euro lub 2% rocznego obrotu</strong> oraz osobista odpowiedzialność członków zarządu.</li>
+      <li>Realne wdrożenie w MŚP da się przeprowadzić w <strong>90 dni</strong> — pod warunkiem, że pracujesz według planu, a nie gasisz pożary.</li>
+      <li>Poniżej znajdziesz checklistę podzieloną na trzy fazy po 30 dni: <strong>analiza luki → polityki i zabezpieczenia → testy i raportowanie</strong>.</li>
+    </ul>
+  </div>
+
+  <p>Jeszcze dwa lata temu dyrektywa o bezpieczeństwie sieci i informacji była tematem wyłącznie dla banków, operatorów telekomunikacyjnych i dużych dostawców energii. <strong>NIS2 zmienia tę logikę całkowicie.</strong> Nowa dyrektywa rozszerza katalog podmiotów objętych obowiązkami na 18 sektorów i — co kluczowe dla czytelników tego bloga — przestaje patrzeć wyłącznie na wielkość firmy. Liczy się to, <em>co</em> robisz, a nie tylko <em>jak duży</em> jesteś.</p>
+
+  <p>Jeśli prowadzisz średniej wielkości firmę produkcyjną, software house, hurtownię, firmę z branży spożywczej, podmiot świadczący usługi cyfrowe albo dostawcę dla sektora zdrowia — istnieje realna szansa, że NIS2 dotyczy właśnie Ciebie. A termin na dostosowanie nie jest abstrakcyjną przyszłością. W tym artykule pokazuję, jak przejść od „nie wiem, czy mnie to dotyczy” do udokumentowanej zgodności w <strong>90 dni</strong>, bez budżetu rzędu setek tysięcy złotych na konsulting korporacyjny.</p>
+
+  <h2>Czym właściwie jest NIS2 i kogo obejmuje</h2>
+
+  <p>NIS2 (dyrektywa <a href="https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX%3A32022L2555" target="_blank" rel="noopener noreferrer">UE 2022/2555</a>) to unijna regulacja, która zastąpiła pierwotną dyrektywę NIS z 2016 roku. Jej celem jest podniesienie poziomu cyberbezpieczeństwa w całej Unii poprzez nałożenie konkretnych obowiązków na podmioty uznane za istotne dla funkcjonowania gospodarki i społeczeństwa. W Polsce dyrektywa jest wdrażana poprzez nowelizację <strong>ustawy o krajowym systemie cyberbezpieczeństwa (KSC)</strong> — to właśnie ten akt określa szczegółowe wymagania, którym musisz sprostać.</p>
+
+  <p>Dyrektywa dzieli objęte podmioty na dwie kategorie:</p>
+
+  <ul>
+    <li><strong>Podmioty kluczowe (essential)</strong> — m.in. energia, transport, bankowość, infrastruktura rynku finansowego, ochrona zdrowia, woda pitna, infrastruktura cyfrowa, administracja publiczna.</li>
+    <li><strong>Podmioty ważne (important)</strong> — m.in. usługi pocztowe i kurierskie, gospodarka odpadami, produkcja i dystrybucja chemikaliów, produkcja żywności, produkcja (w tym wyrobów medycznych, elektroniki, maszyn, pojazdów), dostawcy usług cyfrowych, badania naukowe.</li>
+  </ul>
+
+  <p>Różnica między kategoriami przekłada się na intensywność nadzoru i wysokość kar, ale <strong>zakres podstawowych obowiązków technicznych i organizacyjnych jest zbliżony</strong>. Z perspektywy MŚP najważniejsze jest jedno: jeśli działasz w jednym z wymienionych sektorów i zatrudniasz co najmniej 50 osób lub masz obrót powyżej 10 mln euro, najprawdopodobniej podlegasz dyrektywie. Ale uwaga — istnieją wyjątki, w których próg wielkości nie obowiązuje (np. dostawcy usług DNS, rejestry domen, niektórzy dostawcy infrastruktury krytycznej). Pełną klasyfikację sektorów znajdziesz w materiałach <a href="https://www.gov.pl/web/cyfryzacja" target="_blank" rel="noopener noreferrer">Ministerstwa Cyfryzacji</a> oraz w wytycznych europejskiej agencji <a href="https://www.enisa.europa.eu/topics/nis-directive" target="_blank" rel="noopener noreferrer">ENISA</a>.</p>
+
+  <div class="callout">
+    <p><strong>Najczęstszy błąd:</strong> „Jesteśmy małą firmą, więc nas to nie dotyczy”. NIS2 obejmuje także średnie przedsiębiorstwa, a w niektórych przypadkach mniejsze podmioty świadczące krytyczne usługi. Pierwszym krokiem nie jest zakup oprogramowania — jest nim <strong>rzetelne ustalenie, czy i jako jaki podmiot podlegasz dyrektywie.</strong></p>
+  </div>
+
+  <h2>Co grozi za brak zgodności</h2>
+
+  <p>To nie jest regulacja „na papierze”. NIS2 wprowadza realne sankcje:</p>
+
+  <ul>
+    <li>Dla podmiotów kluczowych — kary do <strong>10 mln euro lub 2% całkowitego rocznego światowego obrotu</strong> (stosuje się kwotę wyższą).</li>
+    <li>Dla podmiotów ważnych — kary do <strong>7 mln euro lub 1,4% obrotu</strong>.</li>
+    <li><strong>Osobista odpowiedzialność kierownictwa</strong> — organy nadzoru mogą czasowo zakazać pełnienia funkcji zarządczych osobom odpowiedzialnym za rażące zaniedbania.</li>
+    <li>Obowiązek zatwierdzania i nadzorowania środków zarządzania ryzykiem przez <strong>zarząd</strong> — to nie jest już temat „dla działu IT”.</li>
+  </ul>
+
+  <p>Ten ostatni punkt zmienia wszystko. NIS2 świadomie przenosi odpowiedzialność na poziom zarządu, bo doświadczenie pokazało, że cyberbezpieczeństwo traktowane jako koszt techniczny jest spychane na koniec listy priorytetów. Teraz członek zarządu, który zignoruje obowiązki, ryzykuje osobiście.</p>
+
+  <h2>Plan na 90 dni — przegląd</h2>
+
+  <p>Wdrożenie podzieliłem na trzy 30-dniowe fazy. Taki rytm sprawdza się w MŚP, bo pozwala pokazać postęp zarządowi co miesiąc i nie blokuje bieżącej działalności. Oto mapa:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Faza</th><th>Dni</th><th>Cel</th><th>Efekt</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Faza 1 — Diagnoza</strong></td><td>1–30</td><td>Ustalenie statusu, inwentaryzacja, analiza luki</td><td>Rejestr aktywów + raport luki</td></tr>
+        <tr><td><strong>Faza 2 — Wdrożenie</strong></td><td>31–60</td><td>Polityki, zabezpieczenia techniczne, szkolenia</td><td>Komplet polityk + wdrożone kontrole</td></tr>
+        <tr><td><strong>Faza 3 — Weryfikacja</strong></td><td>61–90</td><td>Testy, procedury incydentów, rejestracja</td><td>Plan ciągłości + gotowość do audytu</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Faza 1 (dni 1–30): diagnoza i analiza luki</h2>
+
+  <p>Nie da się naprawić czegoś, czego nie zmierzyłeś. Pierwsze 30 dni poświęcasz na zrozumienie, gdzie jesteś — bez kupowania jakichkolwiek narzędzi.</p>
+
+  <h3>Checklista fazy 1</h3>
+
+  <ul>
+    <li><strong>Ustal status podmiotu.</strong> Zweryfikuj swój sektor i wielkość względem kryteriów ustawy KSC. Udokumentuj wnioski (kategoria kluczowy/ważny lub uzasadnienie wyłączenia). Ten dokument to podstawa — od niego zależy zakres reszty prac.</li>
+    <li><strong>Wyznacz osobę odpowiedzialną.</strong> NIS2 wymaga jasnej odpowiedzialności. W MŚP nie musisz zatrudniać CISO — wystarczy wyznaczona osoba (wewnętrzna lub zewnętrzny doradca) z mandatem zarządu.</li>
+    <li><strong>Zinwentaryzuj aktywa.</strong> Spisz wszystkie systemy, aplikacje, serwery, urządzenia, konta w chmurze i przepływy danych. Nie możesz chronić zasobów, o których nie wiesz. Wystarczy arkusz: nazwa zasobu, właściciel, krytyczność, dane jakie przetwarza.</li>
+    <li><strong>Zmapuj dostawców i łańcuch dostaw.</strong> NIS2 kładzie duży nacisk na bezpieczeństwo łańcucha dostaw. Wypisz kluczowych dostawców IT i usług — to oni są dziś najczęstszym wektorem ataku.</li>
+    <li><strong>Przeprowadź analizę luki (gap analysis).</strong> Porównaj stan obecny z wymaganiami art. 21 dyrektywy (środki zarządzania ryzykiem). Dla każdego wymogu oznacz: spełnione / częściowo / brak.</li>
+    <li><strong>Oceń ryzyko.</strong> Dla najważniejszych aktywów oszacuj prawdopodobieństwo i skutek incydentu. Nie potrzebujesz zaawansowanej metodyki — wystarczy macierz 3×3 i lista priorytetów.</li>
+  </ul>
+
+  <p>Wymagania art. 21, do których będziesz się odnosić, obejmują m.in.: politykę analizy ryzyka, obsługę incydentów, ciągłość działania i kopie zapasowe, bezpieczeństwo łańcucha dostaw, bezpieczeństwo przy nabywaniu i utrzymaniu systemów, ocenę skuteczności środków, podstawową cyberhigienę i szkolenia, kryptografię, kontrolę dostępu i zarządzanie aktywami oraz uwierzytelnianie wieloskładnikowe. Pełny katalog opisuje <a href="https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX%3A32022L2555" target="_blank" rel="noopener noreferrer">tekst dyrektywy</a>, a praktyczne wskazówki — przewodniki ENISA.</p>
+
+  <blockquote>Analiza luki to nie biurokracja. To moment, w którym zwykle okazuje się, że firma ma backupy, których nikt nigdy nie odtworzył, oraz konta administratorów po pracownikach sprzed dwóch lat. Sam ten audyt często zwraca koszty wdrożenia.</blockquote>
+
+  <h2>Faza 2 (dni 31–60): polityki i zabezpieczenia techniczne</h2>
+
+  <p>Mając raport luki, wiesz dokładnie, co naprawić. Druga faza to wdrażanie — równolegle na poziomie organizacyjnym (polityki) i technicznym (kontrole).</p>
+
+  <h3>Warstwa organizacyjna — polityki</h3>
+
+  <ul>
+    <li><strong>Polityka bezpieczeństwa informacji</strong> — dokument nadrzędny, zatwierdzony przez zarząd, opisujący podejście firmy do ochrony danych i systemów.</li>
+    <li><strong>Polityka zarządzania ryzykiem</strong> — jak identyfikujecie, oceniacie i ograniczacie ryzyka; jak często przeglądacie ocenę.</li>
+    <li><strong>Procedura obsługi incydentów</strong> — kto, co i w jakiej kolejności robi, gdy dojdzie do naruszenia (do tego wrócę w fazie 3).</li>
+    <li><strong>Polityka kontroli dostępu</strong> — zasada minimalnych uprawnień, przegląd kont, rozdzielenie ról.</li>
+    <li><strong>Polityka kopii zapasowych i ciągłości działania</strong> — co, jak często i gdzie backupujecie oraz jak przywracacie działanie.</li>
+    <li><strong>Wymagania bezpieczeństwa wobec dostawców</strong> — klauzule w umowach, weryfikacja kluczowych partnerów.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Wskazówka praktyczna:</strong> polityki nie muszą być stustronicowe. Lepsza jest zwięzła, faktycznie przestrzegana polityka na 3 strony niż imponujący dokument, którego nikt nie czytał. Organ nadzoru ocenia, czy środki są <em>realnie stosowane</em>, a nie ich objętość.</p>
+  </div>
+
+  <h3>Warstwa techniczna — kontrole</h3>
+
+  <ul>
+    <li><strong>Uwierzytelnianie wieloskładnikowe (MFA)</strong> na wszystkich kontach administracyjnych, poczcie i dostępie zdalnym. To pojedyncza zmiana o najwyższym stosunku efektu do kosztu.</li>
+    <li><strong>Zarządzanie aktualizacjami</strong> — proces łatania systemów i aplikacji; szczególnie krytycznych podatności.</li>
+    <li><strong>Segmentacja sieci i kontrola dostępu</strong> — oddzielenie systemów krytycznych, ograniczenie ruchu.</li>
+    <li><strong>Szyfrowanie</strong> danych wrażliwych w spoczynku i w tranzycie.</li>
+    <li><strong>Kopie zapasowe w modelu 3-2-1</strong> (trzy kopie, dwa nośniki, jedna poza siedzibą) i — co najważniejsze — <strong>przetestowane odtwarzanie</strong>.</li>
+    <li><strong>Logowanie i monitoring</strong> — zbieranie logów z kluczowych systemów, aby w razie incydentu dało się ustalić, co się stało.</li>
+    <li><strong>Ochrona stacji końcowych</strong> — aktualne EDR/antywirus, kontrola urządzeń.</li>
+  </ul>
+
+  <h3>Cyberhigiena i szkolenia</h3>
+
+  <p>Dyrektywa wprost wymaga podstawowych szkoleń z cyberhigieny — także dla zarządu. Phishing wciąż odpowiada za większość udanych włamań w sektorze MŚP, a żadne narzędzie nie zastąpi pracownika, który rozpozna podejrzaną wiadomość. Zaplanuj krótkie, regularne szkolenia i co najmniej jedną symulację phishingu w roku.</p>
+
+  <p>To również obszar, w którym <strong>AI realnie pomaga</strong>: lokalne modele LLM mogą analizować logi, wstępnie klasyfikować alerty i przygotowywać materiały szkoleniowe bez wysyłania wrażliwych danych firmy do chmury. O tym, kiedy lokalny model bije API chmurowe, piszę szerzej w osobnym artykule na tym blogu.</p>
+
+  <h2>Faza 3 (dni 61–90): testy, incydenty i raportowanie</h2>
+
+  <p>Trzecia faza zamienia „mamy polityki” w „wiemy, że to działa”. To także moment dopełnienia obowiązków formalnych.</p>
+
+  <h3>Procedura zgłaszania incydentów — serce NIS2</h3>
+
+  <p>NIS2 wprowadza rygorystyczne, wieloetapowe terminy zgłaszania poważnych incydentów do właściwego <strong>CSIRT</strong> (w Polsce m.in. <a href="https://csirt.gov.pl/" target="_blank" rel="noopener noreferrer">CSIRT GOV</a> oraz <a href="https://cert.pl/" target="_blank" rel="noopener noreferrer">CERT Polska / CSIRT NASK</a>):</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Etap</th><th>Termin</th><th>Zawartość</th></tr></thead>
+      <tbody>
+        <tr><td>Wczesne ostrzeżenie</td><td>do 24 godzin</td><td>Sygnał, że doszło do poważnego incydentu; podejrzenie działania bezprawnego/transgranicznego</td></tr>
+        <tr><td>Zgłoszenie incydentu</td><td>do 72 godzin</td><td>Wstępna ocena: charakter, dotkliwość, wskaźniki kompromitacji</td></tr>
+        <tr><td>Raport końcowy</td><td>do 1 miesiąca</td><td>Pełny opis, przyczyna źródłowa, zastosowane i planowane środki</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Dlatego procedura incydentów nie może być teoretyczna. W ciągu pierwszej doby od wykrycia poważnego incydentu firma musi wiedzieć, <em>kto</em> podejmuje decyzję o zgłoszeniu, <em>jak</em> kontaktuje się z CSIRT i <em>gdzie</em> znajdują się potrzebne informacje. Przygotuj jednostronicową kartę incydentu z rolami, telefonami i krokami — to ona uratuje Cię pod presją.</p>
+
+  <h3>Checklista fazy 3</h3>
+
+  <ul>
+    <li><strong>Przeprowadź test odtworzenia z backupu.</strong> Realnie przywróć wybrany system z kopii i zmierz czas. To jedyny dowód, że Twoja ciągłość działania nie jest fikcją.</li>
+    <li><strong>Wykonaj ćwiczenie incydentowe (tabletop).</strong> Zbierz zespół i przejdźcie scenariusz ataku ransomware krok po kroku według procedury. Zanotuj, gdzie procedura się sypie, i popraw ją.</li>
+    <li><strong>Zarejestruj podmiot.</strong> Dopełnij obowiązku rejestracji we właściwym organie zgodnie z ustawą KSC (terminy i tryb określa polska ustawa wdrażająca).</li>
+    <li><strong>Zatwierdź środki na poziomie zarządu.</strong> Udokumentuj, że zarząd zapoznał się z oceną ryzyka i zatwierdził środki — to wprost wymagane przez dyrektywę.</li>
+    <li><strong>Ustal cykl przeglądu.</strong> Wyznacz daty kwartalnych przeglądów ryzyka i rocznej aktualizacji polityk. Zgodność to proces, nie jednorazowy projekt.</li>
+    <li><strong>Przygotuj dokumentację do audytu.</strong> Zbierz w jednym miejscu: raport luki, rejestr aktywów, polityki, dowody szkoleń, logi testów. W razie kontroli organu nadzoru musisz to <em>pokazać</em>.</li>
+  </ul>
+
+  <h2>Bezpieczeństwo łańcucha dostaw — sektor, który zwykle umyka</h2>
+
+  <p>Jednym z najważniejszych — i najczęściej niedocenianych — elementów NIS2 jest <strong>bezpieczeństwo łańcucha dostaw</strong>. Dyrektywa wprost wymaga, byś uwzględniał podatności swoich dostawców oraz jakość ich praktyk bezpieczeństwa. Powód jest brutalnie praktyczny: większość głośnych incydentów ostatnich lat nie zaczęła się od włamania bezpośrednio do ofiary, lecz od przejęcia zaufanego dostawcy oprogramowania lub usług, przez którego napastnik wszedł „kuchennymi drzwiami”.</p>
+
+  <p>Dla MŚP nie oznacza to konieczności audytowania każdego kontrahenta. Oznacza to natomiast trzy konkretne działania:</p>
+
+  <ul>
+    <li><strong>Klasyfikację dostawców.</strong> Podziel partnerów na krytycznych (mają dostęp do Twoich systemów lub danych) i pozostałych. Energię skupiasz na tych pierwszych.</li>
+    <li><strong>Wymagania umowne.</strong> Wprowadź do umów z krytycznymi dostawcami klauzule dotyczące bezpieczeństwa, zgłaszania incydentów i prawa do informacji o stosowanych środkach.</li>
+    <li><strong>Okresowy przegląd.</strong> Raz w roku zweryfikuj, czy krytyczni dostawcy nadal spełniają oczekiwania — np. prosząc o certyfikaty lub wypełnienie krótkiej ankiety bezpieczeństwa.</li>
+  </ul>
+
+  <p>To także obszar, w którym Twoja własna zgodność staje się atutem handlowym: coraz częściej to <em>Twoi</em> więksi klienci, sami objęci NIS2, będą wymagać od Ciebie wykazania środków bezpieczeństwa. Wdrożenie dyrektywy przestaje być wtedy kosztem, a staje się warunkiem utrzymania kontraktów.</p>
+
+  <h2>Rola i odpowiedzialność zarządu</h2>
+
+  <p>Wspomniałem o tym wcześniej, ale temat jest na tyle istotny, że zasługuje na osobne omówienie. NIS2 świadomie zrywa z modelem, w którym cyberbezpieczeństwo jest „sprawą informatyków”. Dyrektywa nakłada na <strong>organy zarządzające</strong> dwa wyraźne obowiązki:</p>
+
+  <ul>
+    <li><strong>Zatwierdzanie środków zarządzania ryzykiem</strong> — zarząd musi formalnie przyjąć i nadzorować wdrożone środki, a nie jedynie „wiedzieć, że coś się dzieje”.</li>
+    <li><strong>Odbycie szkolenia</strong> — członkowie kierownictwa mają obowiązek uczestniczyć w szkoleniach pozwalających rozpoznawać ryzyka i oceniać praktyki zarządzania bezpieczeństwem.</li>
+  </ul>
+
+  <p>Za zaniedbania w tym zakresie odpowiedzialność jest osobista, a organ nadzoru może czasowo zakazać pełnienia funkcji zarządczych. W praktyce oznacza to, że projekt NIS2 musi mieć <strong>sponsora na poziomie zarządu</strong> — osobę, która podejmie decyzje, przydzieli budżet i podpisze dokumenty. Bez tego wdrożenie grzęźnie na etapie „ktoś powinien się tym zająć”.</p>
+
+  <div class="callout">
+    <p><strong>Praktyczna wskazówka:</strong> udokumentuj zaangażowanie zarządu od pierwszego dnia. Protokół z posiedzenia, na którym zarząd przyjął plan wdrożenia i ocenę ryzyka, to jeden z najważniejszych dowodów zgodności, a zarazem dokument, który najłatwiej zdobyć — wystarczy o nim pamiętać na starcie.</p>
+  </div>
+
+  <h2>Dokumentacja, którą musisz mieć</h2>
+
+  <p>W razie kontroli organ nadzoru nie ocenia Twoich intencji — ocenia dowody. Dlatego równolegle z wdrażaniem środków buduj „teczkę zgodności”. Minimalny zestaw dokumentów dla MŚP wygląda tak:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Dokument</th><th>Po co</th></tr></thead>
+      <tbody>
+        <tr><td>Ustalenie statusu podmiotu</td><td>Dowód, że poprawnie zaklasyfikowałeś firmę</td></tr>
+        <tr><td>Rejestr aktywów</td><td>Pokazuje, co i jak chronisz</td></tr>
+        <tr><td>Ocena ryzyka</td><td>Podstawa doboru środków</td></tr>
+        <tr><td>Komplet polityk</td><td>Warstwa organizacyjna zgodności</td></tr>
+        <tr><td>Procedura incydentów</td><td>Gotowość do zgłoszeń w terminach 24h/72h/miesiąc</td></tr>
+        <tr><td>Rejestr szkoleń</td><td>Dowód cyberhigieny, także dla zarządu</td></tr>
+        <tr><td>Dowody testów (backup, tabletop)</td><td>Potwierdzenie, że środki działają</td></tr>
+        <tr><td>Protokoły zarządu</td><td>Zatwierdzenie środków na właściwym szczeblu</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Trzymaj te dokumenty w jednym, uporządkowanym miejscu i nadaj im daty oraz wersje. Audyt zgodności wygrywa lub przegrywa nie na poziomie technologii, lecz na poziomie tego, czy potrafisz <em>pokazać</em>, że robisz to, co deklarujesz.</p>
+
+  <h2>Najczęstsze błędy przy wdrażaniu NIS2</h2>
+
+  <ul>
+    <li><strong>Zaczynanie od zakupu narzędzi.</strong> Bez analizy luki kupujesz rozwiązania problemów, których możesz nie mieć, a pomijasz te realne.</li>
+    <li><strong>Polityki „z internetu”.</strong> Skopiowany szablon, którego nikt nie stosuje, jest gorszy niż jego brak — sugeruje pozorność działań.</li>
+    <li><strong>Pominięcie testów.</strong> Backup, którego nigdy nie odtworzono, i procedura, której nigdy nie przećwiczono, to fikcja, która ujawni się w najgorszym momencie.</li>
+    <li><strong>Traktowanie zgodności jako projektu jednorazowego.</strong> NIS2 wymaga cyklicznych przeglądów — bez ustalonego rytmu zgodność „wygasa” w kilka miesięcy.</li>
+    <li><strong>Zostawienie zarządu poza procesem.</strong> Bez decyzyjnego sponsora wdrożenie nie ma jak ruszyć z miejsca.</li>
+  </ul>
+
+  <h2>Ile to kosztuje w praktyce</h2>
+
+  <p>W MŚP gros wymagań NIS2 da się spełnić narzędziami, które firma już posiada (MFA w pakietach Microsoft 365 czy Google Workspace, wbudowane szyfrowanie, polityki w katalogu użytkowników). Największym kosztem nie jest software, lecz <strong>czas i kompetencje</strong> potrzebne do uporządkowania procesów oraz napisania polityk, które przejdą audyt. Dlatego rozsądny model dla średniej firmy to wsparcie doradcze przy diagnozie i politykach plus samodzielne wdrożenie kontroli technicznych. Szczegółowy rozkład kosztów wdrożeń (w tym AI wspierającego bezpieczeństwo) omawiam w artykule o kosztach AI w firmie B2B.</p>
+
+  <div class="callout">
+    <p><strong>Połączenie prawa i technologii ma tu znaczenie.</strong> NIS2 to regulacja na styku przepisów i cyberbezpieczeństwa. Jako radca prawny z certyfikatem Blue Team (HackerU) i Google Cloud Generative AI Leader patrzę na nią z obu stron — prawnej zgodności i realnej obrony systemów. To pozwala uniknąć dwóch skrajności: „papierowej” zgodności bez realnego bezpieczeństwa oraz dobrych zabezpieczeń bez dokumentacji, której wymaga organ nadzoru.</p>
+  </div>
+
+  <h2>Najczęstsze pytania o NIS2 w MŚP</h2>
+
+  <h3>Czy mała firma na pewno podlega NIS2?</h3>
+  <p>Zależy od sektora i wielkości. Większość mikrofirm jest wyłączona, ale średnie przedsiębiorstwa (od 50 osób lub 10 mln euro obrotu) w 18 sektorach zwykle podlegają. Niektóre podmioty świadczące krytyczne usługi cyfrowe podlegają niezależnie od wielkości. Status zawsze ustalaj indywidualnie i dokumentuj wniosek.</p>
+
+  <h3>Czy muszę zatrudnić specjalistę ds. bezpieczeństwa?</h3>
+  <p>Nie ma takiego wprost wymogu. Potrzebujesz jasno przypisanej odpowiedzialności i realnie stosowanych środków. W MŚP rolę tę często pełni wyznaczony pracownik wspierany przez zewnętrznego doradcę.</p>
+
+  <h3>Co jeśli nie zdążę w terminie ustawowym?</h3>
+  <p>Najgorsza strategia to bezczynność. Udokumentowany, realizowany plan naprawczy jest oceniany zupełnie inaczej niż brak jakichkolwiek działań. Zacznij od fazy 1 — sama analiza luki i przypisanie odpowiedzialności pokazują, że traktujesz obowiązki poważnie.</p>
+
+  <h3>Czy AI może pomóc w spełnieniu wymogów NIS2?</h3>
+  <p>Tak — w analizie logów, wstępnej klasyfikacji alertów, generowaniu i utrzymywaniu dokumentacji oraz szkoleniach. Dla danych wrażliwych rekomenduję rozwiązania lokalne (on-premise LLM), które nie wynoszą informacji poza infrastrukturę firmy, co samo w sobie wspiera zgodność.</p>
+
+  <hr />
+
+  <p><strong>Podsumowanie.</strong> NIS2 nie jest powodem do paniki, ale nie jest też regulacją, którą można przeczekać. Realny plan na 90 dni — diagnoza, wdrożenie, weryfikacja — pozwala średniej firmie osiągnąć udokumentowaną zgodność bez korporacyjnego budżetu. Klucz to zacząć od rzetelnej analizy luki i pracować według checklisty, a nie reagować po incydencie. Jeśli chcesz, by ktoś przeszedł z Tobą tę ścieżkę od strony prawnej i technicznej jednocześnie — <a href="/NIS2/">zobacz, jak wygląda wdrożenie NIS2 w BrightMind</a> albo umów bezpłatną konsultację.</p>
+
+</BlogLayout>
