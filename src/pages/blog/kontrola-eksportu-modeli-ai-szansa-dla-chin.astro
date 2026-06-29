@@ -1,0 +1,70 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+---
+
+<BlogLayout slug="kontrola-eksportu-modeli-ai-szansa-dla-chin">
+
+  <div class="takeaways">
+    <h2>W skrócie</h2>
+    <p>W czerwcu 2026 roku rząd USA w ciągu dwóch tygodni dwukrotnie ograniczył dostęp do czołowych amerykańskich modeli AI — najpierw kontrolą eksportową na modele Anthropic (Fable 5 i Mythos 5), potem prośbą do OpenAI o etapowe udostępnianie GPT-5.6. Powodem w obu przypadkach były zaawansowane zdolności w obszarze cyberbezpieczeństwa. Paradoks polega na tym, że restrykcje pomyślane jako ochrona przewagi technologicznej mogą tę przewagę przyspieszyć w stronę chińskich laboratoriów.</p>
+  </div>
+
+  <p>Kontrola eksportu modeli AI przestała być teoretycznym scenariuszem. W czerwcu 2026 roku administracja Donalda Trumpa dwukrotnie w ciągu dwóch tygodni ograniczyła publiczny dostęp do najnowszych modeli amerykańskich laboratoriów. Dla firm, które planują wdrożenia oparte na frontier AI, to nie ciekawostka geopolityczna, lecz realne ryzyko: model, na którym chcesz zbudować proces, może nie być dostępny wtedy, kiedy go potrzebujesz.</p>
+
+  <h2>Co dokładnie się wydarzyło w czerwcu 2026?</h2>
+
+  <p>W ciągu dwóch tygodni rząd USA dwa razy ograniczył dostęp do czołowych modeli — za każdym razem inaczej i z innego źródła. 12 czerwca 2026 Departament Handlu wydał dyrektywę o kontroli eksportowej wobec Anthropic, w wyniku której firma musiała wycofać z publicznego dostępu swoje najnowsze modele Fable 5 i Mythos 5. Powodem były obawy o ich zdolności w obszarze cyberbezpieczeństwa i ryzyko dostępu zagranicznych podmiotów.</p>
+
+  <p>Niespełna dwa tygodnie później, 25 czerwca, ujawniono drugą sprawę. Tym razem nie była to formalna kontrola eksportowa, lecz prośba Białego Domu skierowana do OpenAI, by najnowszy model GPT-5.6 trafił najpierw wyłącznie do wąskiej grupy zatwierdzonych klientów biznesowych. Dostęp każdego z nich administracja ma zatwierdzać — według wewnętrznego memo Sama Altmana — „klient po kliencie”. Szerszy rollout ma nastąpić dopiero po okresie preview, jeśli rządowy proces zatwierdzania przebiegnie pomyślnie.</p>
+
+  <p>Warto rozróżnić te dwa mechanizmy, bo bywają mylone. W przypadku Anthropic mówimy o kontroli eksportowej z Departamentu Handlu. W przypadku OpenAI — o prośbie dwóch agencji: Office of the National Cyber Director oraz Office of Science and Technology Policy. Wspólny mianownik jest jeden: model uznano za zbyt zaawansowany w zdolnościach ofensywnych, by udostępnić go publicznie bez nadzoru.</p>
+
+  <h2>Dlaczego rząd USA ogranicza własne modele AI?</h2>
+
+  <p>Powodem są zdolności tych modeli w cyberbezpieczeństwie, które według administracji osiągnęły poziom zagrażający bezpieczeństwu narodowemu. Zarówno OpenAI, jak i rząd oceniają GPT-5.6 jako porównywalny z modelem Mythos od Anthropic — a to właśnie ta klasa zaawansowania uruchomiła interwencję.</p>
+
+  <p>Kluczowy problem leży gdzie indziej. W USA nie istnieje dziś spójne ramy prawne regulujące przedpremierowy przegląd zaawansowanych modeli AI. Trump podpisał wprawdzie w czerwcu rozporządzenie wykonawcze zachęcające laboratoria do dobrowolnego przekazywania modeli rządowi do oceny na 30 dni przed premierą, ale procedura tej oceny wciąż nie powstała. W efekcie mamy działanie ad hoc — raz przez Departament Handlu, raz przez Biały Dom, bez jednego, przejrzystego trybu. Sam Altman w memo do pracowników napisał wprost, że obecny model współpracy nie jest docelowy i firma będzie szukać bardziej zrównoważonego podejścia.</p>
+
+  <h2>Kto zyskuje na restrykcjach eksportowych — Chiny</h2>
+
+  <p>Na ograniczaniu dostępu do amerykańskich modeli najbardziej skorzystać mogą chińskie laboratoria. Jeśli czołowe modele z USA będą trafiać na rynek z opóźnieniem i pod kontrolą, a chińskie laboratoria publikują bez takich hamulców, asymetria tempa zaczyna działać na korzyść Pekinu.</p>
+
+  <p>To nie jest abstrakcja. Największe chińskie modele już dziś dorównują najlepszym amerykańskim — GLM-5.2 jest tego przykładem. Kolejne iteracje DeepSeeka, Qwena i GLM mają przed sobą wolne pole, jeśli amerykańska konkurencja sama zwolni własne tempo wdrożeń. I tu tkwi paradoks: restrykcje pomyślane jako ochrona przewagi technologicznej mogą tę przewagę oddać — nie dlatego, że Chiny dokonają technologicznego przeskoku, ale dlatego, że Zachód spowolni dystrybucję własnych narzędzi.</p>
+
+  <h2>Co to oznacza dla polskich firm wdrażających AI?</h2>
+
+  <p>Dla firmy planującej wdrożenie AI płynie z tego jeden praktyczny wniosek: dostępność konkretnego modelu przestaje być pewnikiem. Strategia oparta na jednym dostawcy frontier AI staje się ryzykowna, jeśli ten dostawca może z dnia na dzień zostać objęty restrykcją regulacyjną w swoim kraju.</p>
+
+  <p>Rozsądne podejście to:</p>
+
+  <ul>
+    <li>Projektowanie procesów tak, by były przenośne między modelami, zamiast twardego przywiązania do jednego API.</li>
+    <li>Realna ocena, czy dany proces faktycznie wymaga najnowszego frontier modelu, czy wystarczy stabilniejszy, szeroko dostępny model starszej generacji.</li>
+    <li>Świadome śledzenie dostępności i statusu prawnego modeli — także tych spoza USA, które mogą okazać się zarówno alternatywą, jak i źródłem własnych pytań o zgodność z RODO i bezpieczeństwo danych.</li>
+  </ul>
+
+  <p>Z perspektywy łączącej prawo cyfrowe i wdrożenia AI ta ostatnia kwestia jest najważniejsza. Wybór chińskiego modelu jako alternatywy dla niedostępnego modelu amerykańskiego to nie tylko decyzja techniczna — to decyzja o tym, gdzie i pod jakim reżimem prawnym przetwarzane są dane Twojej firmy. Dostępność i zgodność to dwie różne rzeczy, a w 2026 roku trzeba patrzeć na obie naraz.</p>
+
+  <div class="callout">
+    <p>Jednym ze sposobów na uniezależnienie się od zawirowań wokół dostępu do modeli chmurowych jest oparcie wrażliwych procesów o <a href="/blog/lokalne-llm-dla-firm/">lokalne modele LLM</a>, które działają na infrastrukturze firmy. Jeśli zastanawiasz się, jak zbudować strategię wdrożenia AI odporną na takie zmiany regulacyjne, BrightMind pomaga przejść przez ten proces od strony technicznej i prawnej — <a href="/#kontakt">umów bezpłatną konsultację</a>.</p>
+  </div>
+
+  <h2>Najczęstsze pytania</h2>
+
+  <h3>Czy USA wprowadziły kontrolę eksportową na GPT-5.6?</h3>
+  <p>Nie w sensie formalnym. GPT-5.6 objęła prośba Białego Domu o etapowe udostępnianie wąskiej grupie zatwierdzonych klientów, a nie dyrektywa eksportowa. Formalną kontrolę eksportową z Departamentu Handlu objęto natomiast modele Anthropic — Fable 5 i Mythos 5 — w czerwcu 2026.</p>
+
+  <h3>Dlaczego te modele uznano za niebezpieczne?</h3>
+  <p>Powodem były ich zaawansowane zdolności w obszarze cyberbezpieczeństwa, ocenione jako potencjalnie zagrażające bezpieczeństwu narodowemu. Administracja chciała mieć pewność, że laboratoria mają odpowiednie zabezpieczenia, zanim modele trafią do szerokiego obiegu.</p>
+
+  <h3>Czy chińskie modele AI naprawdę dorównują amerykańskim?</h3>
+  <p>Najlepsze chińskie modele, jak GLM-5.2, są już porównywalne z czołowymi modelami amerykańskimi. Tempo kolejnych iteracji DeepSeeka, Qwena i GLM sprawia, że luka, która jeszcze niedawno była wyraźna, szybko się zamyka.</p>
+
+  <h3>Co powinna zrobić firma planująca wdrożenie AI w tej sytuacji?</h3>
+  <p>Unikać twardego przywiązania do jednego dostawcy frontier AI, projektować procesy przenośne między modelami i osobno oceniać dostępność oraz zgodność prawną wybranego modelu — zwłaszcza przy modelach spoza UE i USA.</p>
+
+  <hr />
+
+  <p><strong>Podsumowanie.</strong> Kontrola eksportu modeli AI pokazała, że dostępność czołowych modeli bywa kwestią decyzji regulacyjnej, a nie tylko technologii. Dla firm oznacza to jedno: buduj wdrożenia odporne na zmianę dostawcy i patrz równolegle na dostępność oraz zgodność prawną. <a href="/#kontakt">Umów bezpłatną konsultację</a> — pomożemy zaprojektować strategię AI, która przetrwa kolejne zawirowania na rynku.</p>
+
+</BlogLayout>

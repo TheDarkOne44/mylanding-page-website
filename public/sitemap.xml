@@ -26,9 +26,21 @@
   </url>
   <url>
     <loc>https://brightmindsolutions.pl/blog/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://brightmindsolutions.pl/blog/kontrola-eksportu-modeli-ai-szansa-dla-chin/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://brightmindsolutions.pl/blog/chatgpt-a-rodo-obsluga-klienta/</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://brightmindsolutions.pl/blog/nis2-dla-msp-checklista-90-dni/</loc>

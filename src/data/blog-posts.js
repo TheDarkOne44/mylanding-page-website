@@ -16,6 +16,36 @@ export const author = {
 // Kolejność w tablicy = kolejność wyświetlania na liście bloga (najnowsze pierwsze).
 export const posts = [
   {
+    slug: 'kontrola-eksportu-modeli-ai-szansa-dla-chin',
+    title: 'Kontrola eksportu modeli AI: jak USA mogą oddać przewagę Chinom',
+    description:
+      'Kontrola eksportu modeli AI w USA: Fable 5 i GPT-5.6 pod restrykcjami w 2026. Dlaczego może na tym zyskać Chiny i co to znaczy dla Twojej firmy.',
+    excerpt:
+      'W czerwcu 2026 rząd USA dwukrotnie w dwa tygodnie ograniczył dostęp do czołowych modeli AI. Restrykcje pomyślane jako ochrona przewagi mogą ją przyspieszyć w stronę chińskich laboratoriów — i zmieniają kalkulację firm wdrażających AI.',
+    category: 'Rynek AI',
+    date: '2026-06-26',
+    dateModified: '2026-06-26',
+    readingTime: 9,
+    keywords:
+      'kontrola eksportu modeli AI, restrykcje eksportowe AI, GPT-5.6, modele AI Chiny, GLM-5.2, wdrożenie AI w firmie',
+    cover: { hue: 'globe', label: 'Rynek AI' },
+  },
+  {
+    slug: 'chatgpt-a-rodo-obsluga-klienta',
+    title: 'ChatGPT a RODO: czy mała firma może legalnie używać AI do obsługi klienta?',
+    description:
+      'Czy mała firma może używać ChatGPT do obsługi klienta zgodnie z RODO? Sprawdź zasady, ryzyka i bezpieczne wdrożenie AI krok po kroku.',
+    excerpt:
+      'Obsługa klienta prawie zawsze oznacza przetwarzanie danych osobowych, a to wprost podlega RODO. Wyjaśniam, kiedy użycie ChatGPT jest legalne, a kiedy naraża firmę na karę — i jak wdrożyć AI zgodnie z prawem.',
+    category: 'AI i Prawo',
+    date: '2026-06-23',
+    dateModified: '2026-06-23',
+    readingTime: 8,
+    keywords:
+      'ChatGPT a RODO, AI w obsłudze klienta, RODO a sztuczna inteligencja, dane osobowe w ChatGPT, umowa powierzenia przetwarzania, AI w małej firmie',
+    cover: { hue: 'scale', label: 'AI i Prawo' },
+  },
+  {
     slug: 'nis2-dla-msp-checklista-90-dni',
     title: 'NIS2 dla MŚP — checklista wdrożenia w 90 dni',
     description:
