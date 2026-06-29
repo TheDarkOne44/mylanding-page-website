@@ -1,0 +1,165 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogCover from '../../components/BlogCover.astro';
+import CookieBanner from '../../components/CookieBanner.jsx';
+import { SITE, posts, formatDate } from '../../data/blog-posts.js';
+
+const ldJson = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog BrightMind AI Solutions",
+    "description": "Praktyczna wiedza o wdrożeniach AI B2B, automatyzacji procesów, agentach AI, lokalnych modelach LLM i compliance NIS2 dla polskich firm.",
+    "url": `${SITE}/blog/`,
+    "inLanguage": "pl-PL",
+    "publisher": { "@type": "Organization", "name": "BrightMind AI Solutions", "url": `${SITE}/` },
+    "blogPost": posts.map(p => ({
+      "@type": "BlogPosting",
+      "headline": p.title,
+      "description": p.description,
+      "url": `${SITE}/blog/${p.slug}/`,
+      "datePublished": p.date,
+      "dateModified": p.dateModified ?? p.date,
+      "articleSection": p.category,
+      "author": { "@type": "Person", "name": "Patryk Gliński", "url": `${SITE}/o-mnie/` }
+    }))
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Strona Główna", "item": `${SITE}/` },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${SITE}/blog/` }
+    ]
+  }
+];
+
+const [featured, ...rest] = posts;
+---
+
+<Layout
+  title="Blog AI dla firm — wdrożenia, automatyzacja, NIS2 | BrightMind AI Solutions"
+  description="Praktyczny blog o wdrożeniach AI B2B: koszty AI w firmie, n8n vs Zapier, lokalne modele LLM, agenci AI i checklista NIS2 dla MŚP. Wiedza z polskiego rynku."
+  canonical={`${SITE}/blog/`}
+  keywords="blog AI dla firm, wdrożenia AI B2B, automatyzacja procesów, agenci AI, lokalne LLM, NIS2 MŚP, koszty AI"
+  ldJson={ldJson}
+  fbPixelId="857800850017857"
+>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand">
+        <span class="nav-brand-mark">B</span>
+        <span>BrightMind <span style="color:var(--fg-muted)">/ AI</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Strona Główna</a>
+        <a href="/o-mnie/">O mnie</a>
+        <a href="/#uslugi">Usługi</a>
+        <a href="/NIS2/">NIS2</a>
+        <a href="/ai-w-praktyce/">AI w Praktyce</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/#kontakt">Kontakt</a>
+        <a href="/#kontakt" class="nav-cta">Bezpłatna konsultacja →</a>
+      </div>
+    </div>
+  </nav>
+
+  <section style="padding:80px 0 48px;border-bottom:1px solid var(--border)">
+    <div class="container">
+      <span class="eyebrow">/ Blog</span>
+      <h1 style="margin-top:16px;margin-bottom:12px">Wiedza o AI dla firm</h1>
+      <p class="text-muted" style="font-size:1.1rem;max-width:640px">
+        Praktyczne artykuły o wdrożeniach AI B2B, automatyzacji procesów, agentach AI, lokalnych modelach LLM i zgodności z NIS2. Bez marketingowego żargonu — konkrety, koszty i checklisty, które możesz wdrożyć u siebie.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:56px">
+    <div class="container">
+      <!-- Wyróżniony, najnowszy wpis -->
+      <a href={`/blog/${featured.slug}/`} class="post-card" style="margin-bottom:48px">
+        <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:0">
+          <div class="post-cover" style="aspect-ratio:auto;min-height:260px;border-bottom:none;border-right:1px solid var(--border)">
+            <BlogCover hue={featured.cover?.hue} size={72} />
+          </div>
+          <div class="post-body" style="justify-content:center;padding:36px">
+            <div class="post-meta"><span class="tag">{featured.category}</span> · <time datetime={featured.date}>{formatDate(featured.date)}</time> · {featured.readingTime} min</div>
+            <h3 style="font-size:1.6rem">{featured.title}</h3>
+            <p class="post-excerpt">{featured.excerpt}</p>
+            <span class="post-readmore">Czytaj artykuł
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Pozostałe wpisy -->
+      <div class="grid grid-3">
+        {rest.map(p => (
+          <a href={`/blog/${p.slug}/`} class="post-card">
+            <div class="post-cover"><BlogCover hue={p.cover?.hue} size={48} /></div>
+            <div class="post-body">
+              <div class="post-meta"><span class="tag">{p.category}</span> · {p.readingTime} min</div>
+              <h3>{p.title}</h3>
+              <p class="post-excerpt">{p.excerpt}</p>
+              <span class="post-readmore">Czytaj artykuł
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="nav-brand" style="margin-bottom:16px">
+            <span class="nav-brand-mark">B</span>
+            <span>BrightMind <span style="color:var(--fg-muted)">/ AI</span></span>
+          </div>
+          <p class="text-muted" style="font-size:0.9rem;max-width:320px">Profesjonalne wdrożenia AI B2B dla polskich firm. Automatyzacja procesów, agenci AI, doradztwo. Zgodne z RODO i NIS2.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Usługi</h4>
+          <ul>
+            <li><a href="/#uslugi">Doradztwo AI dla Firm</a></li>
+            <li><a href="/#uslugi">Korepetycje AI</a></li>
+            <li><a href="/NIS2/">Wdrożenia NIS2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Firma</h4>
+          <ul>
+            <li><a href="/o-mnie/">O mnie</a></li>
+            <li><a href="/ai-w-praktyce/">AI w Praktyce</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul style="font-size:0.85rem;color:var(--fg-muted)">
+            <li>Patryk Gliński</li>
+            <li><a href="mailto:kontakt@brightmind-solutions.com">kontakt@brightmind-solutions.com</a></li>
+            <li><a href="tel:+48730152161">+48 730 152 161</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 BrightMind AI Solutions. Wszystkie prawa zastrzeżone.</span>
+        <div style="display:flex;align-items:center;gap:20px">
+          <a href="https://www.youtube.com/@Neural_Update" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:#ff0000;color:#fff;border-radius:var(--radius);font-weight:600;font-size:0.8rem;text-decoration:none">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="3"/><polygon points="10 9.5 16 13 10 16.5 10 9.5"/></svg>
+            YouTube
+          </a>
+          <a href="/privacy-policy/" style="color:var(--fg-muted)">Polityka prywatności</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <CookieBanner client:load />
+</Layout>
