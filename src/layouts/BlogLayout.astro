@@ -11,6 +11,7 @@ const post = getPost(slug);
 if (!post) throw new Error(`Brak metadanych wpisu dla slug: ${slug}`);
 const url = `${SITE}/blog/${post.slug}/`;
 const related = relatedPosts(post.slug, 2);
+const ogImage = post.cover?.image ? `${SITE}${post.cover.image}` : `${SITE}/og-image.jpg`;
 
 const ldJson = [
   {
@@ -25,7 +26,7 @@ const ldJson = [
     "inLanguage": "pl-PL",
     "articleSection": post.category,
     "keywords": post.keywords,
-    "image": `${SITE}/og-image.jpg`,
+    "image": ogImage,
     "author": {
       "@type": "Person",
       "name": author.name,
@@ -56,6 +57,7 @@ const ldJson = [
   description={post.description}
   canonical={url}
   ogType="article"
+  ogImage={ogImage}
   keywords={post.keywords}
   ldJson={ldJson}
   fbPixelId="857800850017857"
@@ -93,9 +95,15 @@ const ldJson = [
         </div>
         <h1 style="margin-top:18px;font-size:clamp(2rem,4vw,3rem)">{post.title}</h1>
         <p class="text-muted" style="font-size:1.15rem;margin-top:18px;max-width:680px">{post.excerpt}</p>
-        <div class="article-cover" role="img" aria-label={`Ilustracja artykułu: ${post.title}`}>
-          <BlogCover hue={post.cover?.hue} />
-        </div>
+        {post.cover?.image ? (
+          <figure class="article-cover article-cover--image">
+            <img src={post.cover.image} alt={post.cover.alt ?? `Ilustracja artykułu: ${post.title}`} width="1456" height="624" fetchpriority="high" />
+          </figure>
+        ) : (
+          <div class="article-cover" role="img" aria-label={`Ilustracja artykułu: ${post.title}`}>
+            <BlogCover hue={post.cover?.hue} />
+          </div>
+        )}
       </div>
     </header>
 
@@ -135,7 +143,11 @@ const ldJson = [
         <div class="grid grid-2">
           {related.map(r => (
             <a href={`/blog/${r.slug}/`} class="post-card">
-              <div class="post-cover"><BlogCover hue={r.cover?.hue} size={44} /></div>
+              <div class="post-cover">
+                {r.cover?.image
+                  ? <img src={r.cover.image} alt={r.cover.alt ?? r.title} loading="lazy" width="1456" height="819" />
+                  : <BlogCover hue={r.cover?.hue} size={44} />}
+              </div>
               <div class="post-body">
                 <div class="post-meta"><span class="tag">{r.category}</span> · {r.readingTime} min</div>
                 <h3>{r.title}</h3>
