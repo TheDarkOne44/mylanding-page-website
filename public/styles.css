@@ -579,6 +579,22 @@ a:hover { color: var(--accent-strong); }
   background-size: 24px 24px;
   opacity: 0.16;
 }
+/* Cover rendered as a real illustration (photo/render) instead of the decorative SVG */
+.article-cover--image { padding: 0; background: var(--bg-elev); }
+.article-cover--image::after { display: none; }
+.article-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.post-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.post-cover:has(img)::after { display: none; }
 
 /* Prose typography for article bodies */
 .prose { font-size: 1.06rem; line-height: 1.8; color: var(--fg); }

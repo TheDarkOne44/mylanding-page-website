@@ -28,7 +28,12 @@ export const posts = [
     readingTime: 9,
     keywords:
       'kontrola eksportu modeli AI, restrykcje eksportowe AI, GPT-5.6, modele AI Chiny, GLM-5.2, wdrożenie AI w firmie',
-    cover: { hue: 'globe', label: 'Rynek AI' },
+    cover: {
+      hue: 'globe',
+      label: 'Rynek AI',
+      image: '/blog/blog_01_eksport_ai.png',
+      alt: 'Kontrola eksportu zaawansowanych modeli AI i jej skutki dla globalnego wyścigu technologicznego',
+    },
   },
   {
     slug: 'chatgpt-a-rodo-obsluga-klienta',
@@ -43,7 +48,12 @@ export const posts = [
     readingTime: 8,
     keywords:
       'ChatGPT a RODO, AI w obsłudze klienta, RODO a sztuczna inteligencja, dane osobowe w ChatGPT, umowa powierzenia przetwarzania, AI w małej firmie',
-    cover: { hue: 'scale', label: 'AI i Prawo' },
+    cover: {
+      hue: 'scale',
+      label: 'AI i Prawo',
+      image: '/blog/blog_02_chatgpt_rodo.png',
+      alt: 'ChatGPT a zgodność z RODO przy obsłudze klienta i przetwarzaniu danych osobowych',
+    },
   },
   {
     slug: 'nis2-dla-msp-checklista-90-dni',
@@ -58,7 +68,12 @@ export const posts = [
     readingTime: 16,
     keywords:
       'NIS2 dla MŚP, wdrożenie NIS2, checklista NIS2, audyt NIS2 cena, dyrektywa NIS2 małe firmy, compliance NIS2, cyberbezpieczeństwo MŚP',
-    cover: { hue: 'shield', label: 'Compliance' },
+    cover: {
+      hue: 'shield',
+      label: 'Compliance',
+      image: '/blog/blog_03_nis2_checklista_v2.png',
+      alt: 'Checklista wdrożenia dyrektywy NIS2 w małej i średniej firmie w 90 dni',
+    },
   },
   {
     slug: 'ile-kosztuje-wdrozenie-ai-w-firmie-b2b',
@@ -73,7 +88,12 @@ export const posts = [
     readingTime: 12,
     keywords:
       'ile kosztuje wdrożenie AI, koszty AI B2B, cena automatyzacji AI, ROI sztucznej inteligencji, budżet AI dla firmy',
-    cover: { hue: 'cost', label: 'Koszty i ROI' },
+    cover: {
+      hue: 'cost',
+      label: 'Koszty i ROI',
+      image: '/blog/blog_04_koszty_ai.png',
+      alt: 'Rozkład kosztów i zwrotu z inwestycji przy wdrożeniu AI w firmie B2B',
+    },
   },
   {
     slug: 'n8n-vs-zapier-automatyzacja-dla-firm',
@@ -88,7 +108,12 @@ export const posts = [
     readingTime: 11,
     keywords:
       'n8n vs Zapier, automatyzacja procesów, n8n self-hosted, Zapier alternatywa, automatyzacja AI dla firm, no-code automatyzacja',
-    cover: { hue: 'flow', label: 'Automatyzacja' },
+    cover: {
+      hue: 'flow',
+      label: 'Automatyzacja',
+      image: '/blog/blog_05_n8n_vs_zapier.png',
+      alt: 'Porównanie platform automatyzacji n8n i Zapier dla firm',
+    },
   },
   {
     slug: 'lokalne-llm-dla-firm',
@@ -103,7 +128,12 @@ export const posts = [
     readingTime: 13,
     keywords:
       'lokalne LLM, lokalne modele LLM dla firm, Llama dla firmy, prywatność danych AI, RODO AI, on-premise LLM, Ollama firma',
-    cover: { hue: 'lock', label: 'Prywatność' },
+    cover: {
+      hue: 'lock',
+      label: 'Prywatność',
+      image: '/blog/blog_06_lokalne_llm.png',
+      alt: 'Lokalne modele LLM uruchomione na własnej infrastrukturze firmy dla prywatności danych',
+    },
   },
   {
     slug: '7-zastosowan-agentow-ai-w-firmie',
@@ -118,7 +148,12 @@ export const posts = [
     readingTime: 12,
     keywords:
       'agenci AI dla firm, zastosowania agentów AI, AI agent use case, automatyzacja obsługi klienta AI, agent AI analiza dokumentów',
-    cover: { hue: 'bot', label: 'Agenci AI' },
+    cover: {
+      hue: 'bot',
+      label: 'Agenci AI',
+      image: '/blog/blog_07_agenci_ai.png',
+      alt: 'Zastosowania agentów AI w firmie — od obsługi klienta po analizę dokumentów',
+    },
   },
 ];
 
