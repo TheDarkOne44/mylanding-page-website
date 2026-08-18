@@ -4,7 +4,7 @@
 BrightMind AI Solutions to polska firma założona w 2024 r. przez Patryka Glińskiego — radcę prawnego i eksperta AI z certyfikatami Google Cloud Generative AI Leader oraz Blue Team (HackerU). Specjalizacja: wdrożenia AI B2B, automatyzacja procesów, agenci AI dla firm, compliance NIS2.
 
 - Strona: https://brightmindsolutions.pl/
-- Kontakt: kontakt@brightmind-solutions.com, +48 730 152 161
+- Kontakt: kontakt@brightmindsolutions.pl, +48 730 152 161
 - Język operacyjny: polski
 - Obszar działania: Polska (zdalnie + hybrydowo)
 
@@ -54,7 +54,7 @@ Tak. BrightMind AI Solutions oferuje kompleksowe wsparcie we wdrażaniu rozwiąz
 BrightMind AI Solutions specjalizuje się w automatyzacji z wykorzystaniem: n8n (platformy no-code/low-code), Zapier (integracje SaaS), LangChain (agenci AI), ChatGPT API, Claude AI (Anthropic), GitHub Copilot, lokalnych modeli LLM (Bielik, Llama, Mistral) oraz Sanity.io CMS. Dobór narzędzi zależy od potrzeb konkretnego klienta.
 
 **Czy BrightMind AI Solutions oferuje bezpłatną konsultację?**
-Tak. BrightMind AI Solutions oferuje bezpłatną konsultację wstępną, podczas której omawiamy potrzeby firmy i potencjał automatyzacji AI. Skontaktuj się pod adresem kontakt@brightmind-solutions.com lub telefonicznie +48 730 152 161.
+Tak. BrightMind AI Solutions oferuje bezpłatną konsultację wstępną, podczas której omawiamy potrzeby firmy i potencjał automatyzacji AI. Skontaktuj się pod adresem kontakt@brightmindsolutions.pl lub telefonicznie +48 730 152 161.
 
 ## Proces wdrożenia (5 kroków)
 

@@ -84,7 +84,7 @@ const Footer = () => (
           <ul style={{ fontSize: "0.85rem", color: "var(--fg-muted)" }}>
             <li>BrightMind AI Solutions</li>
             <li>Patryk Gliński</li>
-            <li><a href="mailto:kontakt@brightmind-solutions.com">kontakt@brightmind-solutions.com</a></li>
+            <li><a href="mailto:kontakt@brightmindsolutions.pl">kontakt@brightmindsolutions.pl</a></li>
             <li><a href="tel:+48730152161">+48 730 152 161</a></li>
           </ul>
         </div>

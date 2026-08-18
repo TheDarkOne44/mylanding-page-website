@@ -362,11 +362,11 @@ const Contact = () => (
           <span className="eyebrow">/ Kontakt</span>
           <h2 style={{ margin: "12px 0 32px" }}>Skontaktuj się z nami</h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 32 }}>
-            <a href="mailto:kontakt@brightmind-solutions.com" style={{ display: "flex", gap: 16, alignItems: "center", padding: 16, border: "1px solid var(--border)", borderRadius: "var(--radius)", color: "var(--fg)" }}>
+            <a href="mailto:kontakt@brightmindsolutions.pl" style={{ display: "flex", gap: 16, alignItems: "center", padding: 16, border: "1px solid var(--border)", borderRadius: "var(--radius)", color: "var(--fg)" }}>
               <Icon name="file" />
               <div>
                 <div className="text-dim" style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.1em" }}>Email</div>
-                <div>kontakt@brightmind-solutions.com</div>
+                <div>kontakt@brightmindsolutions.pl</div>
               </div>
             </a>
             <a href="tel:+48730152161" style={{ display: "flex", gap: 16, alignItems: "center", padding: 16, border: "1px solid var(--border)", borderRadius: "var(--radius)", color: "var(--fg)" }}>
